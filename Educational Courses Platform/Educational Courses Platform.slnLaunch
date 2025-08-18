@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "Educational Courses Platform.DataAccess\\Educational Courses Platform.DataAccess.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

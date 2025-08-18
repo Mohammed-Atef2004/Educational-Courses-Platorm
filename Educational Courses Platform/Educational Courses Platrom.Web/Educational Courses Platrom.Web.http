@@ -1,0 +1,6 @@
+@Educational_Courses_Platrom.Web_HostAddress = http://localhost:5160
+
+GET {{Educational_Courses_Platrom.Web_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

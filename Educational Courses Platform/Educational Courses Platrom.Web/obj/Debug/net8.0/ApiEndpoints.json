@@ -1,0 +1,50 @@
+[
+  {
+    "ContainingType": "Educational_Courses_Platform.Web.Controllers.AccountController",
+    "Method": "Login",
+    "RelativePath": "api/Account/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserDto",
+        "Type": "Educational_Courses_Platform.Entities.Dto.LoginUserDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educational_Courses_Platform.Web.Controllers.AccountController",
+    "Method": "Registration",
+    "RelativePath": "api/Account/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserDto",
+        "Type": "Educational_Courses_Platform.Entities.Dto.RegisterUserDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educational_Courses_Platrom.Web.Controllers.CourseController",
+    "Method": "CreateCourse",
+    "RelativePath": "api/Course/api/Course/CreateCourse",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "course",
+        "Type": "Educational_Courses_Platform.Entities.Models.Course",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

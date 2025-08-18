@@ -1,0 +1,14 @@
+D:\visual studio programs\MVC Course\Educational-Courses-Platorm\Educational Courses Platform\Educational Courses Platform.Models\obj\Debug\net8.0\Educational Courses Platform.Entities.csproj.AssemblyReference.cache
+D:\visual studio programs\MVC Course\Educational-Courses-Platorm\Educational Courses Platform\Educational Courses Platform.Models\obj\Debug\net8.0\Educational Courses Platform.Entities.GeneratedMSBuildEditorConfig.editorconfig
+D:\visual studio programs\MVC Course\Educational-Courses-Platorm\Educational Courses Platform\Educational Courses Platform.Models\obj\Debug\net8.0\Educational Courses Platform.Entities.AssemblyInfoInputs.cache
+D:\visual studio programs\MVC Course\Educational-Courses-Platorm\Educational Courses Platform\Educational Courses Platform.Models\obj\Debug\net8.0\Educational Courses Platform.Entities.AssemblyInfo.cs
+D:\visual studio programs\MVC Course\Educational-Courses-Platorm\Educational Courses Platform\Educational Courses Platform.Models\obj\Debug\net8.0\Educational Courses Platform.Entities.csproj.CoreCompileInputs.cache
+D:\visual studio programs\MVC Course\Educational-Courses-Platorm\Educational Courses Platform\Educational Courses Platform.Models\bin\Debug\net8.0\Educational Courses Platform.Entities.deps.json
+D:\visual studio programs\MVC Course\Educational-Courses-Platorm\Educational Courses Platform\Educational Courses Platform.Models\bin\Debug\net8.0\Educational Courses Platform.Entities.runtimeconfig.json
+D:\visual studio programs\MVC Course\Educational-Courses-Platorm\Educational Courses Platform\Educational Courses Platform.Models\bin\Debug\net8.0\Educational Courses Platform.Entities.dll
+D:\visual studio programs\MVC Course\Educational-Courses-Platorm\Educational Courses Platform\Educational Courses Platform.Models\bin\Debug\net8.0\Educational Courses Platform.Entities.pdb
+D:\visual studio programs\MVC Course\Educational-Courses-Platorm\Educational Courses Platform\Educational Courses Platform.Models\obj\Debug\net8.0\Educational Courses Platform.Entities.dll
+D:\visual studio programs\MVC Course\Educational-Courses-Platorm\Educational Courses Platform\Educational Courses Platform.Models\obj\Debug\net8.0\refint\Educational Courses Platform.Entities.dll
+D:\visual studio programs\MVC Course\Educational-Courses-Platorm\Educational Courses Platform\Educational Courses Platform.Models\obj\Debug\net8.0\Educational Courses Platform.Entities.pdb
+D:\visual studio programs\MVC Course\Educational-Courses-Platorm\Educational Courses Platform\Educational Courses Platform.Models\obj\Debug\net8.0\Educational Courses Platform.Entities.genruntimeconfig.cache
+D:\visual studio programs\MVC Course\Educational-Courses-Platorm\Educational Courses Platform\Educational Courses Platform.Models\obj\Debug\net8.0\ref\Educational Courses Platform.Entities.dll
