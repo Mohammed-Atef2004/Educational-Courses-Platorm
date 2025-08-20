@@ -1,10 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\visual studio programs\\MVC Course\\Educational-Courses-Platorm\\Educational Courses Platform\\",
+  "WorkspaceRootPath": "D:\\Educational-Courses-Platorm-Devo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\visual studio programs\\MVC Course\\Educational-Courses-Platorm\\Educational Courses Platform\\Educational Courses Platform.DataAccess\\Migrations\\20250818233101_updating-course-state.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Educational Courses Platform.DataAccess\\Migrations\\20250818233101_updating-course-state.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{46A15066-DD07-4FDE-9A11-881D4D874A85}|Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj|d:\\educational-courses-platorm-devo\\educational courses platrom.web\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46A15066-DD07-4FDE-9A11-881D4D874A85}|Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj|solutionrelative:educational courses platrom.web\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46A15066-DD07-4FDE-9A11-881D4D874A85}|Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj|d:\\educational-courses-platorm-devo\\educational courses platrom.web\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46A15066-DD07-4FDE-9A11-881D4D874A85}|Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj|solutionrelative:educational courses platrom.web\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B1EC70F-18A8-4507-B755-E06B3517A20E}|Educational-Courses-Platform.Services\\Educational-Courses-Platform.Services.csproj|d:\\educational-courses-platorm-devo\\educational-courses-platform.services\\implementation\\courseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3B1EC70F-18A8-4507-B755-E06B3517A20E}|Educational-Courses-Platform.Services\\Educational-Courses-Platform.Services.csproj|solutionrelative:educational-courses-platform.services\\implementation\\courseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B1EC70F-18A8-4507-B755-E06B3517A20E}|Educational-Courses-Platform.Services\\Educational-Courses-Platform.Services.csproj|d:\\educational-courses-platorm-devo\\educational-courses-platform.services\\interfaces\\icourseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3B1EC70F-18A8-4507-B755-E06B3517A20E}|Educational-Courses-Platform.Services\\Educational-Courses-Platform.Services.csproj|solutionrelative:educational-courses-platform.services\\interfaces\\icourseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +26,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\Educational-Courses-Platorm-Devo\\Educational Courses Platrom.Web\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Educational Courses Platrom.Web\\Controllers\\AccountController.cs",
+              "ToolTip": "D:\\Educational-Courses-Platorm-Devo\\Educational Courses Platrom.Web\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Educational Courses Platrom.Web\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAYAAABgyszMzIwjwA8AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T23:11:03.574Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ICourseService.cs",
+              "DocumentMoniker": "D:\\Educational-Courses-Platorm-Devo\\Educational-Courses-Platform.Services\\Interfaces\\ICourseService.cs",
+              "RelativeDocumentMoniker": "Educational-Courses-Platform.Services\\Interfaces\\ICourseService.cs",
+              "ToolTip": "D:\\Educational-Courses-Platorm-Devo\\Educational-Courses-Platform.Services\\Interfaces\\ICourseService.cs",
+              "RelativeToolTip": "Educational-Courses-Platform.Services\\Interfaces\\ICourseService.cs",
+              "ViewState": "AgIAAAAAAAAAMzMzMzMbwA4AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T22:52:32.883Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
@@ -34,20 +72,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20250818233101_updating-course-state.cs",
-              "DocumentMoniker": "D:\\visual studio programs\\MVC Course\\Educational-Courses-Platorm\\Educational Courses Platform\\Educational Courses Platform.DataAccess\\Migrations\\20250818233101_updating-course-state.cs",
-              "RelativeDocumentMoniker": "Educational Courses Platform.DataAccess\\Migrations\\20250818233101_updating-course-state.cs",
-              "ToolTip": "D:\\visual studio programs\\MVC Course\\Educational-Courses-Platorm\\Educational Courses Platform\\Educational Courses Platform.DataAccess\\Migrations\\20250818233101_updating-course-state.cs",
-              "RelativeToolTip": "Educational Courses Platform.DataAccess\\Migrations\\20250818233101_updating-course-state.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "CourseController.cs",
+              "DocumentMoniker": "D:\\Educational-Courses-Platorm-Devo\\Educational Courses Platrom.Web\\Controllers\\CourseController.cs",
+              "RelativeDocumentMoniker": "Educational Courses Platrom.Web\\Controllers\\CourseController.cs",
+              "ToolTip": "D:\\Educational-Courses-Platorm-Devo\\Educational Courses Platrom.Web\\Controllers\\CourseController.cs",
+              "RelativeToolTip": "Educational Courses Platrom.Web\\Controllers\\CourseController.cs",
+              "ViewState": "AgIAAFMAAACA28zMzKw4wHUAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T23:31:01.698Z",
+              "WhenOpened": "2025-08-20T22:50:02.765Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CourseService.cs",
+              "DocumentMoniker": "D:\\Educational-Courses-Platorm-Devo\\Educational-Courses-Platform.Services\\Implementation\\CourseService.cs",
+              "RelativeDocumentMoniker": "Educational-Courses-Platform.Services\\Implementation\\CourseService.cs",
+              "ToolTip": "D:\\Educational-Courses-Platorm-Devo\\Educational-Courses-Platform.Services\\Implementation\\CourseService.cs",
+              "RelativeToolTip": "Educational-Courses-Platform.Services\\Implementation\\CourseService.cs",
+              "ViewState": "AgIAABUAAACAzczMzMwqwEQAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T22:49:58.645Z",
+              "EditorCaption": ""
             }
           ]
         }

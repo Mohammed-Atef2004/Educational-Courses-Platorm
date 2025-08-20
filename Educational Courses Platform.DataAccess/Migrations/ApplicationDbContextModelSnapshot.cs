@@ -116,7 +116,7 @@ namespace Educational_Courses_Platform.DataAccess.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("CourseId")
+                    b.Property<int?>("CourseId")
                         .HasColumnType("int");
 
                     b.Property<string>("Description")
@@ -298,15 +298,17 @@ namespace Educational_Courses_Platform.DataAccess.Migrations
 
             modelBuilder.Entity("Educational_Courses_Platform.Entities.Models.Episode", b =>
                 {
-                    b.HasOne("Educational_Courses_Platform.Entities.Models.Course", null)
+                    b.HasOne("Educational_Courses_Platform.Entities.Models.Course", "Course")
                         .WithMany("Episodes")
-                        .HasForeignKey("CourseId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("CourseId");
 
-                    b.HasOne("Educational_Courses_Platform.Entities.Models.PaidCourse", null)
+                    b.HasOne("Educational_Courses_Platform.Entities.Models.PaidCourse", "PaidCourse")
                         .WithMany("Episodes")
                         .HasForeignKey("PaidCourseId");
+
+                    b.Navigation("Course");
+
+                    b.Navigation("PaidCourse");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

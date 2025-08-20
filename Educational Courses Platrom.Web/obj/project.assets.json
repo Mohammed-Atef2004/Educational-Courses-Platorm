@@ -1659,6 +1659,20 @@
         "runtime": {
           "bin/placeholder/Educational Courses Platform.Entities.dll": {}
         }
+      },
+      "Educational-Courses-Platform.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Educational Courses Platform.DataAccess": "1.0.0",
+          "Educational Courses Platform.Entities": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Educational-Courses-Platform.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Educational-Courses-Platform.Services.dll": {}
+        }
       }
     }
   },
@@ -4372,12 +4386,18 @@
       "type": "project",
       "path": "../Educational Courses Platform.Models/Educational Courses Platform.Entities.csproj",
       "msbuildProject": "../Educational Courses Platform.Models/Educational Courses Platform.Entities.csproj"
+    },
+    "Educational-Courses-Platform.Services/1.0.0": {
+      "type": "project",
+      "path": "../Educational-Courses-Platform.Services/Educational-Courses-Platform.Services.csproj",
+      "msbuildProject": "../Educational-Courses-Platform.Services/Educational-Courses-Platform.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "Educational Courses Platform.DataAccess >= 1.0.0",
       "Educational Courses Platform.Entities >= 1.0.0",
+      "Educational-Courses-Platform.Services >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 8.0.19",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.19",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.19",
@@ -4392,11 +4412,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\visual studio programs\\MVC Course\\Educational-Courses-Platorm\\Educational Courses Platform\\Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj",
+      "projectUniqueName": "D:\\Educational-Courses-Platorm-Devo\\Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj",
       "projectName": "Educational Courses Platrom.Web",
-      "projectPath": "D:\\visual studio programs\\MVC Course\\Educational-Courses-Platorm\\Educational Courses Platform\\Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj",
+      "projectPath": "D:\\Educational-Courses-Platorm-Devo\\Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj",
       "packagesPath": "C:\\Users\\Ashrafshams\\.nuget\\packages\\",
-      "outputPath": "D:\\visual studio programs\\MVC Course\\Educational-Courses-Platorm\\Educational Courses Platform\\Educational Courses Platrom.Web\\obj\\",
+      "outputPath": "D:\\Educational-Courses-Platorm-Devo\\Educational Courses Platrom.Web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -4417,11 +4437,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\visual studio programs\\MVC Course\\Educational-Courses-Platorm\\Educational Courses Platform\\Educational Courses Platform.DataAccess\\Educational Courses Platform.DataAccess.csproj": {
-              "projectPath": "D:\\visual studio programs\\MVC Course\\Educational-Courses-Platorm\\Educational Courses Platform\\Educational Courses Platform.DataAccess\\Educational Courses Platform.DataAccess.csproj"
+            "D:\\Educational-Courses-Platorm-Devo\\Educational Courses Platform.DataAccess\\Educational Courses Platform.DataAccess.csproj": {
+              "projectPath": "D:\\Educational-Courses-Platorm-Devo\\Educational Courses Platform.DataAccess\\Educational Courses Platform.DataAccess.csproj"
             },
-            "D:\\visual studio programs\\MVC Course\\Educational-Courses-Platorm\\Educational Courses Platform\\Educational Courses Platform.Models\\Educational Courses Platform.Entities.csproj": {
-              "projectPath": "D:\\visual studio programs\\MVC Course\\Educational-Courses-Platorm\\Educational Courses Platform\\Educational Courses Platform.Models\\Educational Courses Platform.Entities.csproj"
+            "D:\\Educational-Courses-Platorm-Devo\\Educational Courses Platform.Models\\Educational Courses Platform.Entities.csproj": {
+              "projectPath": "D:\\Educational-Courses-Platorm-Devo\\Educational Courses Platform.Models\\Educational Courses Platform.Entities.csproj"
+            },
+            "D:\\Educational-Courses-Platorm-Devo\\Educational-Courses-Platform.Services\\Educational-Courses-Platform.Services.csproj": {
+              "projectPath": "D:\\Educational-Courses-Platorm-Devo\\Educational-Courses-Platform.Services\\Educational-Courses-Platform.Services.csproj"
             }
           }
         }
@@ -4487,13 +4510,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1900",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json."
-    }
-  ]
+  }
 }

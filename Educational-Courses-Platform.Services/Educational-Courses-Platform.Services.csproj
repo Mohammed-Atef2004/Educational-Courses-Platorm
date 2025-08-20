@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>Educational_Courses_Platform.Services</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Educational Courses Platform.DataAccess\Educational Courses Platform.DataAccess.csproj" />
+    <ProjectReference Include="..\Educational Courses Platform.Models\Educational Courses Platform.Entities.csproj" />
+  </ItemGroup>
+
+</Project>

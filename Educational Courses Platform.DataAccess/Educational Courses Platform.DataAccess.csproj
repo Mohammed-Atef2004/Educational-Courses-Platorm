@@ -21,4 +21,8 @@
     <ProjectReference Include="..\Educational Courses Platform.Models\Educational Courses Platform.Entities.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
 </Project>

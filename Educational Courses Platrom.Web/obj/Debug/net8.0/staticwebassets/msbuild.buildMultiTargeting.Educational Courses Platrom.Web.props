@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Educational Courses Platrom.Web.props" />
+</Project>

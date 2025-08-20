@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\visual studio programs\\MVC Course\\Educational-Courses-Platorm\\Educational Courses Platform\\Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj": {}
+    "D:\\Educational-Courses-Platorm-Devo\\Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj": {}
   },
   "projects": {
-    "D:\\visual studio programs\\MVC Course\\Educational-Courses-Platorm\\Educational Courses Platform\\Educational Courses Platform.DataAccess\\Educational Courses Platform.DataAccess.csproj": {
+    "D:\\Educational-Courses-Platorm-Devo\\Educational Courses Platform.DataAccess\\Educational Courses Platform.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\visual studio programs\\MVC Course\\Educational-Courses-Platorm\\Educational Courses Platform\\Educational Courses Platform.DataAccess\\Educational Courses Platform.DataAccess.csproj",
+        "projectUniqueName": "D:\\Educational-Courses-Platorm-Devo\\Educational Courses Platform.DataAccess\\Educational Courses Platform.DataAccess.csproj",
         "projectName": "Educational Courses Platform.DataAccess",
-        "projectPath": "D:\\visual studio programs\\MVC Course\\Educational-Courses-Platorm\\Educational Courses Platform\\Educational Courses Platform.DataAccess\\Educational Courses Platform.DataAccess.csproj",
+        "projectPath": "D:\\Educational-Courses-Platorm-Devo\\Educational Courses Platform.DataAccess\\Educational Courses Platform.DataAccess.csproj",
         "packagesPath": "C:\\Users\\Ashrafshams\\.nuget\\packages\\",
-        "outputPath": "D:\\visual studio programs\\MVC Course\\Educational-Courses-Platorm\\Educational Courses Platform\\Educational Courses Platform.DataAccess\\obj\\",
+        "outputPath": "D:\\Educational-Courses-Platorm-Devo\\Educational Courses Platform.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\visual studio programs\\MVC Course\\Educational-Courses-Platorm\\Educational Courses Platform\\Educational Courses Platform.Models\\Educational Courses Platform.Entities.csproj": {
-                "projectPath": "D:\\visual studio programs\\MVC Course\\Educational-Courses-Platorm\\Educational Courses Platform\\Educational Courses Platform.Models\\Educational Courses Platform.Entities.csproj"
+              "D:\\Educational-Courses-Platorm-Devo\\Educational Courses Platform.Models\\Educational Courses Platform.Entities.csproj": {
+                "projectPath": "D:\\Educational-Courses-Platorm-Devo\\Educational Courses Platform.Models\\Educational Courses Platform.Entities.csproj"
               }
             }
           }
@@ -93,14 +93,14 @@
         }
       }
     },
-    "D:\\visual studio programs\\MVC Course\\Educational-Courses-Platorm\\Educational Courses Platform\\Educational Courses Platform.Models\\Educational Courses Platform.Entities.csproj": {
+    "D:\\Educational-Courses-Platorm-Devo\\Educational Courses Platform.Models\\Educational Courses Platform.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\visual studio programs\\MVC Course\\Educational-Courses-Platorm\\Educational Courses Platform\\Educational Courses Platform.Models\\Educational Courses Platform.Entities.csproj",
+        "projectUniqueName": "D:\\Educational-Courses-Platorm-Devo\\Educational Courses Platform.Models\\Educational Courses Platform.Entities.csproj",
         "projectName": "Educational Courses Platform.Entities",
-        "projectPath": "D:\\visual studio programs\\MVC Course\\Educational-Courses-Platorm\\Educational Courses Platform\\Educational Courses Platform.Models\\Educational Courses Platform.Entities.csproj",
+        "projectPath": "D:\\Educational-Courses-Platorm-Devo\\Educational Courses Platform.Models\\Educational Courses Platform.Entities.csproj",
         "packagesPath": "C:\\Users\\Ashrafshams\\.nuget\\packages\\",
-        "outputPath": "D:\\visual studio programs\\MVC Course\\Educational-Courses-Platorm\\Educational Courses Platform\\Educational Courses Platform.Models\\obj\\",
+        "outputPath": "D:\\Educational-Courses-Platorm-Devo\\Educational Courses Platform.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -186,14 +186,14 @@
         }
       }
     },
-    "D:\\visual studio programs\\MVC Course\\Educational-Courses-Platorm\\Educational Courses Platform\\Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj": {
+    "D:\\Educational-Courses-Platorm-Devo\\Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\visual studio programs\\MVC Course\\Educational-Courses-Platorm\\Educational Courses Platform\\Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj",
+        "projectUniqueName": "D:\\Educational-Courses-Platorm-Devo\\Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj",
         "projectName": "Educational Courses Platrom.Web",
-        "projectPath": "D:\\visual studio programs\\MVC Course\\Educational-Courses-Platorm\\Educational Courses Platform\\Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj",
+        "projectPath": "D:\\Educational-Courses-Platorm-Devo\\Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj",
         "packagesPath": "C:\\Users\\Ashrafshams\\.nuget\\packages\\",
-        "outputPath": "D:\\visual studio programs\\MVC Course\\Educational-Courses-Platorm\\Educational Courses Platform\\Educational Courses Platrom.Web\\obj\\",
+        "outputPath": "D:\\Educational-Courses-Platorm-Devo\\Educational Courses Platrom.Web\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -214,11 +214,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\visual studio programs\\MVC Course\\Educational-Courses-Platorm\\Educational Courses Platform\\Educational Courses Platform.DataAccess\\Educational Courses Platform.DataAccess.csproj": {
-                "projectPath": "D:\\visual studio programs\\MVC Course\\Educational-Courses-Platorm\\Educational Courses Platform\\Educational Courses Platform.DataAccess\\Educational Courses Platform.DataAccess.csproj"
+              "D:\\Educational-Courses-Platorm-Devo\\Educational Courses Platform.DataAccess\\Educational Courses Platform.DataAccess.csproj": {
+                "projectPath": "D:\\Educational-Courses-Platorm-Devo\\Educational Courses Platform.DataAccess\\Educational Courses Platform.DataAccess.csproj"
               },
-              "D:\\visual studio programs\\MVC Course\\Educational-Courses-Platorm\\Educational Courses Platform\\Educational Courses Platform.Models\\Educational Courses Platform.Entities.csproj": {
-                "projectPath": "D:\\visual studio programs\\MVC Course\\Educational-Courses-Platorm\\Educational Courses Platform\\Educational Courses Platform.Models\\Educational Courses Platform.Entities.csproj"
+              "D:\\Educational-Courses-Platorm-Devo\\Educational Courses Platform.Models\\Educational Courses Platform.Entities.csproj": {
+                "projectPath": "D:\\Educational-Courses-Platorm-Devo\\Educational Courses Platform.Models\\Educational Courses Platform.Entities.csproj"
+              },
+              "D:\\Educational-Courses-Platorm-Devo\\Educational-Courses-Platform.Services\\Educational-Courses-Platform.Services.csproj": {
+                "projectPath": "D:\\Educational-Courses-Platorm-Devo\\Educational-Courses-Platform.Services\\Educational-Courses-Platform.Services.csproj"
               }
             }
           }
@@ -277,6 +280,78 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Educational-Courses-Platorm-Devo\\Educational-Courses-Platform.Services\\Educational-Courses-Platform.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Educational-Courses-Platorm-Devo\\Educational-Courses-Platform.Services\\Educational-Courses-Platform.Services.csproj",
+        "projectName": "Educational-Courses-Platform.Services",
+        "projectPath": "D:\\Educational-Courses-Platorm-Devo\\Educational-Courses-Platform.Services\\Educational-Courses-Platform.Services.csproj",
+        "packagesPath": "C:\\Users\\Ashrafshams\\.nuget\\packages\\",
+        "outputPath": "D:\\Educational-Courses-Platorm-Devo\\Educational-Courses-Platform.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Ashrafshams\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\Educational-Courses-Platorm-Devo\\Educational Courses Platform.DataAccess\\Educational Courses Platform.DataAccess.csproj": {
+                "projectPath": "D:\\Educational-Courses-Platorm-Devo\\Educational Courses Platform.DataAccess\\Educational Courses Platform.DataAccess.csproj"
+              },
+              "D:\\Educational-Courses-Platorm-Devo\\Educational Courses Platform.Models\\Educational Courses Platform.Entities.csproj": {
+                "projectPath": "D:\\Educational-Courses-Platorm-Devo\\Educational Courses Platform.Models\\Educational Courses Platform.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

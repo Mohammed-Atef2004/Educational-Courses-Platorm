@@ -21,6 +21,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Educational Courses Platform.DataAccess\Educational Courses Platform.DataAccess.csproj" />
     <ProjectReference Include="..\Educational Courses Platform.Models\Educational Courses Platform.Entities.csproj" />
+    <ProjectReference Include="..\Educational-Courses-Platform.Services\Educational-Courses-Platform.Services.csproj" />
   </ItemGroup>
 
 </Project>
