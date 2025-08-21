@@ -407,6 +407,28 @@
         }
       }
     },
+    "/api/Episode/GetByPaidCourse": {
+      "get": {
+        "tags": [
+          "Episode"
+        ],
+        "parameters": [
+          {
+            "name": "_PaidCourseId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/PaidCourse/CreatePaidCourse": {
       "post": {
         "tags": [

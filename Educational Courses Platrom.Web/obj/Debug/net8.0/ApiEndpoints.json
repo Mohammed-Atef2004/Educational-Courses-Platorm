@@ -202,6 +202,22 @@
   },
   {
     "ContainingType": "Educational_Courses_Platrom.Web.Controllers.EpisodeController",
+    "Method": "GetEpisodesByPaidCourse",
+    "RelativePath": "api/Episode/GetByPaidCourse",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "_PaidCourseId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educational_Courses_Platrom.Web.Controllers.EpisodeController",
     "Method": "GetEpisodes",
     "RelativePath": "api/Episode/GetEpisodesById",
     "HttpMethod": "GET",

@@ -17,6 +17,8 @@ namespace Educational_Courses_Platform.Services.Interfaces
 
         public Task<bool> UpdateEpisodeAsync(int id, EpisodeDto courseDto);
 
+        public Task<Episode> CreateEpisodePaidCourseAsync(int courseId, EpisodeDto Dto);
+        public Task<IEnumerable<EpisodeDto>> GetAllEpisodeOfPaidCourseAsync(int _paidCourseId);
 
     }
 }

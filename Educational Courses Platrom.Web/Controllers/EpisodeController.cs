@@ -102,26 +102,43 @@ namespace Educational_Courses_Platrom.Web.Controllers
             return Ok("Episode Deleted Successfully");
         }
 
-        [HttpPost]
-        [Route("AddEpisodeToPaidCourse")]
-        public IActionResult AddEpisodeToPaidCourse(int courseId, EpisodeDto dto)
+
+        [HttpPost("AddEpisodeToPaidCourse")]
+        public async Task<IActionResult> AddEpisodeToPaidCourse(int courseId, EpisodeDto dto)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var episode = await _episodeService.CreateEpisodePaidCourseAsync(courseId, dto);
+
+            if (episode == null)
+                return BadRequest("Failed to add episode.");
+
+            return Ok(new
             {
-                var episode = new Episode
+                Message = "Episode Added Successfully",
+                Episode = new
                 {
-                    Name = dto.Name,
-                    Description = dto.Description,
-                    PaidCourseId = courseId
-                };
+                    episode.Name,
+                    episode.Description,
+                    episode.PaidCourseId
+                }
+            });
+        }
 
-                _unitOfWork.Episode.Add(episode);
-                _unitOfWork.Complete();
 
-                return Ok("Episode Added Successfully to Paid Course");
-            }
+        [HttpGet("GetByPaidCourse")]
+        public async Task<IActionResult> GetEpisodesByPaidCourse(int _PaidCourseId)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
 
-            return BadRequest();
+            var episodes = await _episodeService.GetAllEpisodeOfPaidCourseAsync(_PaidCourseId);
+
+            if (!episodes.Any())
+                return NotFound("No episodes found for this course.");
+
+            return Ok(episodes);
         }
     }
 }
