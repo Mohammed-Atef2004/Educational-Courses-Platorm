@@ -104,6 +104,7 @@ namespace Educational_Courses_Platform
             // UnitOfWork
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
             builder.Services.AddScoped<ICourseService, CourseService>();
+            builder.Services.AddScoped<IEpisodeService, EpisodeService>();
 
             // Swagger
             builder.Services.AddEndpointsApiExplorer();
@@ -113,7 +114,7 @@ namespace Educational_Courses_Platform
                 {
                     Version = "v1",
                     Title = "Educational Courses Platform API",
-                    Description = "ITI Project - Educational Courses Platform"
+                    Description = " Educational Courses Platform"
                 });
 
                 swagger.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme

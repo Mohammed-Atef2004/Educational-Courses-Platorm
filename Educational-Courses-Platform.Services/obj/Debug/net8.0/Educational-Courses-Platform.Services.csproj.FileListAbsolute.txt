@@ -15,3 +15,21 @@ D:\Educational-Courses-Platorm-Devo\Educational-Courses-Platform.Services\obj\De
 D:\Educational-Courses-Platorm-Devo\Educational-Courses-Platform.Services\obj\Debug\net8.0\refint\Educational-Courses-Platform.Services.dll
 D:\Educational-Courses-Platorm-Devo\Educational-Courses-Platform.Services\obj\Debug\net8.0\Educational-Courses-Platform.Services.pdb
 D:\Educational-Courses-Platorm-Devo\Educational-Courses-Platform.Services\obj\Debug\net8.0\ref\Educational-Courses-Platform.Services.dll
+D:\ASU\Real Projects\v1\Educational-Courses-Platform.Services\bin\Debug\net8.0\Educational-Courses-Platform.Services.deps.json
+D:\ASU\Real Projects\v1\Educational-Courses-Platform.Services\bin\Debug\net8.0\Educational-Courses-Platform.Services.dll
+D:\ASU\Real Projects\v1\Educational-Courses-Platform.Services\bin\Debug\net8.0\Educational-Courses-Platform.Services.pdb
+D:\ASU\Real Projects\v1\Educational-Courses-Platform.Services\bin\Debug\net8.0\Educational Courses Platform.DataAccess.dll
+D:\ASU\Real Projects\v1\Educational-Courses-Platform.Services\bin\Debug\net8.0\Educational Courses Platform.Entities.dll
+D:\ASU\Real Projects\v1\Educational-Courses-Platform.Services\bin\Debug\net8.0\Educational Courses Platform.DataAccess.pdb
+D:\ASU\Real Projects\v1\Educational-Courses-Platform.Services\bin\Debug\net8.0\Educational Courses Platform.Entities.pdb
+D:\ASU\Real Projects\v1\Educational-Courses-Platform.Services\obj\Debug\net8.0\Educational-Courses-Platform.Services.csproj.AssemblyReference.cache
+D:\ASU\Real Projects\v1\Educational-Courses-Platform.Services\obj\Debug\net8.0\Educational-Courses-Platform.Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\ASU\Real Projects\v1\Educational-Courses-Platform.Services\obj\Debug\net8.0\Educational-Courses-Platform.Services.AssemblyInfoInputs.cache
+D:\ASU\Real Projects\v1\Educational-Courses-Platform.Services\obj\Debug\net8.0\Educational-Courses-Platform.Services.AssemblyInfo.cs
+D:\ASU\Real Projects\v1\Educational-Courses-Platform.Services\obj\Debug\net8.0\Educational-Courses-Platform.Services.csproj.CoreCompileInputs.cache
+D:\ASU\Real Projects\v1\Educational-Courses-Platform.Services\obj\Debug\net8.0\Educational-Courses-Platform.Services.sourcelink.json
+D:\ASU\Real Projects\v1\Educational-Courses-Platform.Services\obj\Debug\net8.0\Educatio.8BF1CC2F.Up2Date
+D:\ASU\Real Projects\v1\Educational-Courses-Platform.Services\obj\Debug\net8.0\Educational-Courses-Platform.Services.dll
+D:\ASU\Real Projects\v1\Educational-Courses-Platform.Services\obj\Debug\net8.0\refint\Educational-Courses-Platform.Services.dll
+D:\ASU\Real Projects\v1\Educational-Courses-Platform.Services\obj\Debug\net8.0\Educational-Courses-Platform.Services.pdb
+D:\ASU\Real Projects\v1\Educational-Courses-Platform.Services\obj\Debug\net8.0\ref\Educational-Courses-Platform.Services.dll

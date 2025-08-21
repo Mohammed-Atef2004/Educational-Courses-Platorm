@@ -1,5 +1,8 @@
-﻿using Educational_Courses_Platform.Entities.Models;
+﻿using System.Threading.Tasks;
+using Educational_Courses_Platform.Entities.Models;
 using Educational_Courses_Platform.Entities.Repositories;
+using Educational_Courses_Platform.Services.Implementation;
+using Educational_Courses_Platform.Services.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,77 +13,95 @@ namespace Educational_Courses_Platrom.Web.Controllers
     [ApiController]
     public class EpisodeController : ControllerBase
     {
-
+        private readonly IEpisodeService _episodeService;
         private readonly IUnitOfWork _unitOfWork;
-        public EpisodeController(IUnitOfWork unitOfWork)
+
+       
+        public EpisodeController(IUnitOfWork unitOfWork, IEpisodeService episodeService)
         {
             _unitOfWork = unitOfWork;
+            _episodeService = episodeService;
         }
 
-
-
-        [HttpGet]
-        [Route("GetEpisodesById")]
-        public IActionResult GetEpisodes(int id)
+        [HttpGet("GetEpisodesById")]
+        public async Task<IActionResult> GetEpisodes(int id)
         {
-            if (ModelState.IsValid)
-            {
-                var episodes = _unitOfWork.Episode.GetFirstOrDefault(c => c.Id == id);
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
 
-                if (episodes == null)
+            var episode = await _episodeService.GetEpisodeByIdAsync(id);
+
+            if (episode == null)
+                return NotFound("Not found");
+
+            return Ok(episode);
+        }
+
+        [HttpGet("GetByCourse")]
+        public async Task<IActionResult> GetEpisodesByCourse(int courseId)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var episodes = await _episodeService.GetAllEpisodeOfCourseAsync(courseId);
+
+            if (!episodes.Any())
+                return NotFound("No episodes found for this course.");
+
+            return Ok(episodes);
+        }
+
+        [HttpPost("AddEpisode")]
+        public async Task<IActionResult> AddEpisode(int courseId, [FromBody] EpisodeDto dto)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var episode = await _episodeService.CreateEpisodeAsync(courseId, dto);
+
+            if (episode == null)
+                return BadRequest("Failed to add episode.");
+
+            return Ok(new
+            {
+                Message = "Episode Added Successfully",
+                Episode = new
                 {
-                    return NotFound("Not found ");
+                    episode.Name,
+                    episode.Description,
+                    episode.CourseId
                 }
-
-                return Ok(episodes);
-            }
-
-            return BadRequest();
+            });
         }
 
-        [HttpGet]
-        [Route("GetByCourse")]
-        public IActionResult GetEpisodesByCourse(int courseId)
+        [HttpPost("UpdateEpisode")]
+        public async Task<IActionResult> UpdateEpisode(int id, [FromBody] EpisodeDto dto)
         {
-            if (ModelState.IsValid)
-            {
-                var episodes = _unitOfWork.Episode
-                    .GetAll(e => e.CourseId == courseId)
-                    .ToList();
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
 
-                if (episodes == null || !episodes.Any())
-                {
-                    return NotFound("No episodes found for this course");
-                }
+            var updated = await _episodeService.UpdateEpisodeAsync(id, dto);
 
-                return Ok(episodes);
-            }
+            if (!updated)
+                return NotFound("Episode not found");
 
-            return BadRequest();
+            return Ok("Episode Updated Successfully");
         }
 
-
-        [HttpPost]
-        [Route("AddEpisode")]
-        public IActionResult AddEpisode(int courseId, EpisodeDto dto)
+        [HttpDelete("DeleteEpisode")]
+        public async Task<IActionResult> DeleteEpisode(int id)
         {
-            if (ModelState.IsValid)
-            {
-                var episode = new Episode
-                {
-                    Name = dto.Name,
-                    Description = dto.Description,
-                    CourseId = courseId   
-                };
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
 
-                _unitOfWork.Episode.Add(episode);
-                _unitOfWork.Complete();
+            var deleted = await _episodeService.RemoveEpisodeByIdAsync(id);
 
-                return Ok("Episode Added Successfully");
-            }
+            if (!deleted)
+                return NotFound("Episode not found");
 
-            return BadRequest();
+            return Ok("Episode Deleted Successfully");
         }
+
         [HttpPost]
         [Route("AddEpisodeToPaidCourse")]
         public IActionResult AddEpisodeToPaidCourse(int courseId, EpisodeDto dto)
@@ -102,76 +123,5 @@ namespace Educational_Courses_Platrom.Web.Controllers
 
             return BadRequest();
         }
-
-
-        [HttpPost]
-        [Route("UpdateEpisode")]
-        public IActionResult UpdateEpisode(int id, EpisodeDto dto)
-        {
-            if (ModelState.IsValid)
-            {
-                var episode = _unitOfWork.Episode.GetFirstOrDefault(e => e.Id == id);
-                if (episode == null)
-                {
-                    return NotFound("Episode not found");
-                }
-
-                episode.Name = dto.Name;
-                episode.Description = dto.Description;
-                //episode.CourseId =dto.CourseId;
-
-                _unitOfWork.Episode.Update(episode);
-                _unitOfWork.Complete();
-                return Ok("Episode Updated Successfully");
-            }
-            return BadRequest();
-        }
-
-
-        [HttpPost]
-        [Route("UpdateEpisodeCourseId")]
-        public IActionResult UpdateEpisodeCourseId(int id, EpisodeCourseIdDto dto)
-        {
-            if (ModelState.IsValid)
-            {
-                var episode = _unitOfWork.Episode.GetFirstOrDefault(e => e.Id == id);
-                if (episode == null)
-                {
-                    return NotFound("Episode not found");
-                }
-
-               
-                episode.CourseId =dto.CourseId;
-              
-                _unitOfWork.Episode.Update(episode);
-                _unitOfWork.Complete();
-                return Ok("Episode Updated Successfully");
-            }
-            return BadRequest();
-        }
-
-
-        [HttpDelete]
-        [Route("DeleteEpisode")]
-        public IActionResult DeleteEpisode(int id)
-        {
-            if (ModelState.IsValid)
-            {
-                var episode = _unitOfWork.Episode.GetFirstOrDefault(e => e.Id == id);
-                if (episode == null) { return NotFound("Episode not found"); }
-                _unitOfWork.Episode.Remove(episode);
-                _unitOfWork.Complete();
-                return Ok("Episode Deleted Successfully");
-            }
-            return BadRequest();
-
-
-
-        }
     }
-
-
-   
-
-   
 }

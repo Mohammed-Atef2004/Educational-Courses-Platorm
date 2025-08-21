@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "Educational Courses Platform API",
-    "description": "ITI Project - Educational Courses Platform",
+    "description": " Educational Courses Platform",
     "version": "v1"
   },
   "paths": {
@@ -303,47 +303,6 @@
         }
       }
     },
-    "/api/Episode/AddEpisodeToPaidCourse": {
-      "post": {
-        "tags": [
-          "Episode"
-        ],
-        "parameters": [
-          {
-            "name": "courseId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/EpisodeDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/EpisodeDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/EpisodeDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/api/Episode/UpdateEpisode": {
       "post": {
         "tags": [
@@ -385,47 +344,6 @@
         }
       }
     },
-    "/api/Episode/UpdateEpisodeCourseId": {
-      "post": {
-        "tags": [
-          "Episode"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/EpisodeCourseIdDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/EpisodeCourseIdDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/EpisodeCourseIdDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/api/Episode/DeleteEpisode": {
       "delete": {
         "tags": [
@@ -441,6 +359,47 @@
             }
           }
         ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Episode/AddEpisodeToPaidCourse": {
+      "post": {
+        "tags": [
+          "Episode"
+        ],
+        "parameters": [
+          {
+            "name": "courseId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EpisodeDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EpisodeDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EpisodeDto"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -607,16 +566,6 @@
               "$ref": "#/components/schemas/EpisodeDto"
             },
             "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "EpisodeCourseIdDto": {
-        "type": "object",
-        "properties": {
-          "courseId": {
-            "type": "integer",
-            "format": "int32"
           }
         },
         "additionalProperties": false

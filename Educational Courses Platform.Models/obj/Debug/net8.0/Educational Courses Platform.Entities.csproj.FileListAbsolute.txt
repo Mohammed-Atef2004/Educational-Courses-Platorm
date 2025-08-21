@@ -41,3 +41,18 @@ D:\Educational-Courses-Platorm-Devo\Educational Courses Platform.Models\obj\Debu
 D:\Educational-Courses-Platorm-Devo\Educational Courses Platform.Models\obj\Debug\net8.0\Educational Courses Platform.Entities.pdb
 D:\Educational-Courses-Platorm-Devo\Educational Courses Platform.Models\obj\Debug\net8.0\Educational Courses Platform.Entities.genruntimeconfig.cache
 D:\Educational-Courses-Platorm-Devo\Educational Courses Platform.Models\obj\Debug\net8.0\ref\Educational Courses Platform.Entities.dll
+D:\ASU\Real Projects\v1\Educational Courses Platform.Models\bin\Debug\net8.0\Educational Courses Platform.Entities.deps.json
+D:\ASU\Real Projects\v1\Educational Courses Platform.Models\bin\Debug\net8.0\Educational Courses Platform.Entities.runtimeconfig.json
+D:\ASU\Real Projects\v1\Educational Courses Platform.Models\bin\Debug\net8.0\Educational Courses Platform.Entities.dll
+D:\ASU\Real Projects\v1\Educational Courses Platform.Models\bin\Debug\net8.0\Educational Courses Platform.Entities.pdb
+D:\ASU\Real Projects\v1\Educational Courses Platform.Models\obj\Debug\net8.0\Educational Courses Platform.Entities.csproj.AssemblyReference.cache
+D:\ASU\Real Projects\v1\Educational Courses Platform.Models\obj\Debug\net8.0\Educational Courses Platform.Entities.GeneratedMSBuildEditorConfig.editorconfig
+D:\ASU\Real Projects\v1\Educational Courses Platform.Models\obj\Debug\net8.0\Educational Courses Platform.Entities.AssemblyInfoInputs.cache
+D:\ASU\Real Projects\v1\Educational Courses Platform.Models\obj\Debug\net8.0\Educational Courses Platform.Entities.AssemblyInfo.cs
+D:\ASU\Real Projects\v1\Educational Courses Platform.Models\obj\Debug\net8.0\Educational Courses Platform.Entities.csproj.CoreCompileInputs.cache
+D:\ASU\Real Projects\v1\Educational Courses Platform.Models\obj\Debug\net8.0\Educational Courses Platform.Entities.sourcelink.json
+D:\ASU\Real Projects\v1\Educational Courses Platform.Models\obj\Debug\net8.0\Educational Courses Platform.Entities.dll
+D:\ASU\Real Projects\v1\Educational Courses Platform.Models\obj\Debug\net8.0\refint\Educational Courses Platform.Entities.dll
+D:\ASU\Real Projects\v1\Educational Courses Platform.Models\obj\Debug\net8.0\Educational Courses Platform.Entities.pdb
+D:\ASU\Real Projects\v1\Educational Courses Platform.Models\obj\Debug\net8.0\Educational Courses Platform.Entities.genruntimeconfig.cache
+D:\ASU\Real Projects\v1\Educational Courses Platform.Models\obj\Debug\net8.0\ref\Educational Courses Platform.Entities.dll

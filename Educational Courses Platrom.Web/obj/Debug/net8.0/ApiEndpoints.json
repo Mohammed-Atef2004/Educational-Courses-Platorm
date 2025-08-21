@@ -238,27 +238,6 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Educational_Courses_Platrom.Web.Controllers.EpisodeController",
-    "Method": "UpdateEpisodeCourseId",
-    "RelativePath": "api/Episode/UpdateEpisodeCourseId",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "dto",
-        "Type": "EpisodeCourseIdDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "Educational_Courses_Platrom.Web.Controllers.PaidCourseController",
     "Method": "CreatePaidCourse",
     "RelativePath": "api/PaidCourse/CreatePaidCourse",
