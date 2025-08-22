@@ -29,6 +29,10 @@ namespace Educational_Courses_Platform.DataAccess.Data
             modelBuilder.Entity<PaidCourse>()
                 .Property(pc => pc.Id)
                 .ValueGeneratedOnAdd();
+
+            modelBuilder.Entity<ApplicationUser>()
+            .HasIndex(u => u.Email)
+             .IsUnique();
         }
     }
 }

@@ -630,3 +630,6 @@ D:\ASU\Real Projects\v1\Educational Courses Platrom.Web\obj\Debug\net8.0\refint\
 D:\ASU\Real Projects\v1\Educational Courses Platrom.Web\obj\Debug\net8.0\Educational Courses Platrom.Web.pdb
 D:\ASU\Real Projects\v1\Educational Courses Platrom.Web\obj\Debug\net8.0\Educational Courses Platrom.Web.genruntimeconfig.cache
 D:\ASU\Real Projects\v1\Educational Courses Platrom.Web\obj\Debug\net8.0\ref\Educational Courses Platrom.Web.dll
+D:\ASU\Real Projects\v1\Educational Courses Platrom.Web\bin\Debug\net8.0\Microsoft.Extensions.Http.Polly.dll
+D:\ASU\Real Projects\v1\Educational Courses Platrom.Web\bin\Debug\net8.0\Polly.dll
+D:\ASU\Real Projects\v1\Educational Courses Platrom.Web\bin\Debug\net8.0\Polly.Extensions.Http.dll

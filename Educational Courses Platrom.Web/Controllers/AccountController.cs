@@ -8,6 +8,7 @@ using Microsoft.IdentityModel.Tokens;
 using Educational_Courses_Platform.DataAccess;
 using Educational_Courses_Platform.Entities.Models;
 using Educational_Courses_Platform.Models.Dto;
+using Microsoft.IdentityModel.Tokens.Experimental;
 
 namespace Educational_Courses_Platform.Web.Controllers
 {
@@ -27,8 +28,31 @@ namespace Educational_Courses_Platform.Web.Controllers
         [HttpPost("Register")] // api/account/Register
         public async Task<IActionResult> Registration(RegisterUserDto userDto)
         {
+
+            var existingUser = await userManager.FindByEmailAsync(userDto.Email);
+            if (existingUser != null)
+            {
+                return BadRequest(new ResponseDto<object>(
+                  success: false,
+                  message: " Registration Failed",
+                  errors: new[] { "Email is already registered." }
+                ));
+
+            }
             if (!ModelState.IsValid)
-                return BadRequest(ModelState);
+            {
+               
+                var validationErrors = ModelState.Values
+                    .SelectMany(v => v.Errors)
+                    .Select(e => e.ErrorMessage);
+
+                return BadRequest(new ResponseDto<object>(
+                  success: false,
+                  errors: validationErrors
+                ));
+
+            }
+          
 
             var user = new ApplicationUser
             {
@@ -39,35 +63,68 @@ namespace Educational_Courses_Platform.Web.Controllers
             IdentityResult result = await userManager.CreateAsync(user, userDto.Password);
 
             if (result.Succeeded)
-                return Ok(new { message = "Account added successfully" });
+            {
+                return Ok(new ResponseDto<object>(
+                 success: true,
+                  message: "Account added successfully"
+                ));
+            }
 
-            foreach (var error in result.Errors)
-                ModelState.AddModelError("", error.Description);
+            var identityErrors = result.Errors.Select(e => e.Description);
 
-            return BadRequest(ModelState);
+            return BadRequest(new ResponseDto<object>(
+              success: false,
+              errors: identityErrors
+            ));
+
         }
+
 
         [HttpPost("Login")] // api/account/Login
         public async Task<IActionResult> Login(LoginUserDto userDto)
         {
             if (!ModelState.IsValid)
-                return BadRequest(ModelState);
+            {
+                var validationErrors = ModelState.Values
+                    .SelectMany(v => v.Errors)
+                    .Select(e => e.ErrorMessage);
+
+                return BadRequest(new ResponseDto<object>(
+                  success: false,
+                  errors: validationErrors
+                ));
+            }
 
             var user = await userManager.FindByEmailAsync(userDto.Email);
-            if (user == null || !await userManager.CheckPasswordAsync(user, userDto.Password))
-                return Unauthorized(new { message = "Invalid email or password" });
+            if (user == null)
+            {
+                return Unauthorized(new ResponseDto<object>(
+                     success: false,
+                     errors: new[] { "Email not found" }
+                ));
+
+            }
+
+            if (!await userManager.CheckPasswordAsync(user, userDto.Password))
+            {
+                return Unauthorized(new ResponseDto<object>(
+
+                    success: false,
+                    errors: new[] { "Invalid password" }
+                ));
+            }
 
             // Create claims with null checks
             var claims = new List<Claim>
-    {
-        new Claim(ClaimTypes.NameIdentifier, user.Id ?? ""),
-        new Claim(ClaimTypes.Name, user.UserName ?? ""),
-        new Claim(ClaimTypes.Email, user.Email ?? ""),
-        new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-        new Claim(JwtRegisteredClaimNames.Iat,
-                  new DateTimeOffset(DateTime.UtcNow).ToUnixTimeSeconds().ToString(),
-                  ClaimValueTypes.Integer64)
-    };
+            {
+             new Claim(ClaimTypes.NameIdentifier, user.Id ?? ""),
+             new Claim(ClaimTypes.Name, user.UserName ?? ""),
+             new Claim(ClaimTypes.Email, user.Email ?? ""),
+             new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+             new Claim(JwtRegisteredClaimNames.Iat, new DateTimeOffset(DateTime.UtcNow).
+             ToUnixTimeSeconds().
+             ToString(), ClaimValueTypes.Integer64)
+            };
 
             var roles = await userManager.GetRolesAsync(user);
             foreach (var role in roles)
@@ -91,17 +148,23 @@ namespace Educational_Courses_Platform.Web.Controllers
                 signingCredentials: signingCred
             );
 
-            return Ok(new
-            {
-                Token = new JwtSecurityTokenHandler().WriteToken(token),
-                Expiration = tokenExpiry,
-                User = new
-                {
-                    Id = user.Id,
-                    UserName = user.UserName,
-                    Email = user.Email
-                }
-            });
+            return Ok(new ResponseDto<object>(
+                  success: true,
+                  message: "Login successful",
+                  data: new
+                  {
+                    token = new JwtSecurityTokenHandler().WriteToken(token),
+                    expiration = tokenExpiry,
+                     user = new
+                     {
+                       Id = user.Id,
+                       UserName = user.UserName,
+                       Email = user.Email
+                     }
+                  }
+            ));
+
         }
+
     }
 }
