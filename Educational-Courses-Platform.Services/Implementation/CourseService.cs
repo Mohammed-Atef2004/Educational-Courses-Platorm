@@ -20,15 +20,42 @@ namespace Educational_Courses_Platform.Services.Implementation
         {
             _unitOfWork = unitOfWork;
         }
-        public async Task<IEnumerable<CourseDto>> GetAllCoursesAsync()
+        public async Task<IEnumerable<CourseWithIdDto>> GetAllCoursesAsync()
         {
-            List<Course> courses = _unitOfWork.Course.GetAll(includeword: "Episodes").ToList();
-            List<CourseDto> courseDtos = courses.Select(c => new CourseDto
+            List<Course> courses = _unitOfWork.Course.GetAll().ToList();
+            List<CourseWithIdDto> courseDtos = courses.Select(c => new CourseWithIdDto
             {
-
+                Id = c.Id,
                 Name = c.Name,
                 Description = c.Description,
-               
+                Price = c.Price
+
+            }).ToList();
+            return courseDtos;
+        }
+        public async Task<IEnumerable<CourseWithIdDto>> GetAllFreeCoursesAsync()
+        {
+            List<Course> courses = _unitOfWork.Course.GetAll(c=>c.Price==0).ToList();
+            List<CourseWithIdDto> courseDtos = courses.Select(c => new CourseWithIdDto
+            {
+                Id = c.Id,
+                Name = c.Name,
+                Description = c.Description,
+                Price = c.Price
+
+            }).ToList();
+            return courseDtos;
+        }
+        public async Task<IEnumerable<CourseWithIdDto>> GetAllPaidCoursesAsync()
+        {
+            List<Course> courses = _unitOfWork.Course.GetAll(c => c.Price > 0).ToList();
+            List<CourseWithIdDto> courseDtos = courses.Select(c => new CourseWithIdDto
+            {
+                Id = c.Id,
+                Name = c.Name,
+                Description = c.Description,
+                Price = c.Price
+
             }).ToList();
             return courseDtos;
         }
@@ -42,7 +69,8 @@ namespace Educational_Courses_Platform.Services.Implementation
             var course = new Course
             {
                 Name = courseDto.Name,
-                Description = courseDto.Description
+                Description = courseDto.Description,
+                Price = courseDto.Price
             };
 
             _unitOfWork.Course.Add(course);
@@ -85,6 +113,7 @@ namespace Educational_Courses_Platform.Services.Implementation
 
             course.Name = courseDto.Name;
             course.Description = courseDto.Description;
+            course.Price = courseDto.Price;
 
             _unitOfWork.Course.Update(course);
             _unitOfWork.Complete();
@@ -96,7 +125,7 @@ namespace Educational_Courses_Platform.Services.Implementation
             List<Course> courses = _unitOfWork.Course.GetAll(includeword: "Episodes").ToList();
             List<CourseWithEpisodesDto> courseDtos = courses.Select(c => new CourseWithEpisodesDto
             {
-
+                Id = c.Id,
                 Name = c.Name,
                 Description = c.Description,
                 Episodes = c.Episodes.Select(e => new EpisodeDto
@@ -107,6 +136,24 @@ namespace Educational_Courses_Platform.Services.Implementation
                 }).ToList()
             }).ToList();
             return courseDtos;
+        }
+        public Task<IEnumerable<EpisodeDto>> GetAllEpisodeOfCourseAsync(int courseId)
+        {
+            var episodes = _unitOfWork.Episode
+                .GetAll(c => c.CourseId == courseId)
+                .ToList();
+
+            if (!episodes.Any())
+                return Task.FromResult(Enumerable.Empty<EpisodeDto>());
+
+            var episodeDtos = episodes.Select(e => new EpisodeDto
+            {
+                Name = e.Name,
+                Description = e.Description,
+                //  CourseId = e.CourseId
+            });
+
+            return Task.FromResult(episodeDtos);
         }
     }
 }

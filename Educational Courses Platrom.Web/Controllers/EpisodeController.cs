@@ -14,12 +14,11 @@ namespace Educational_Courses_Platrom.Web.Controllers
     public class EpisodeController : ControllerBase
     {
         private readonly IEpisodeService _episodeService;
-        private readonly IUnitOfWork _unitOfWork;
+    
 
        
         public EpisodeController(IUnitOfWork unitOfWork, IEpisodeService episodeService)
         {
-            _unitOfWork = unitOfWork;
             _episodeService = episodeService;
         }
 
@@ -36,20 +35,7 @@ namespace Educational_Courses_Platrom.Web.Controllers
 
             return Ok(episode);
         }
-
-        [HttpGet("GetByCourse")]
-        public async Task<IActionResult> GetEpisodesByCourse(int courseId)
-        {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
-            var episodes = await _episodeService.GetAllEpisodeOfCourseAsync(courseId);
-
-            if (!episodes.Any())
-                return NotFound("No episodes found for this course.");
-
-            return Ok(episodes);
-        }
+        
 
         [HttpPost("AddEpisode")]
         public async Task<IActionResult> AddEpisode(int courseId, [FromBody] EpisodeDto dto)

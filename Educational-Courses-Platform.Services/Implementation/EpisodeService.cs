@@ -31,25 +31,7 @@ namespace Educational_Courses_Platform.Services.Implementation
             return await Task.FromResult(episode);
         }
 
-        public Task<IEnumerable<EpisodeDto>> GetAllEpisodeOfCourseAsync(int courseId)
-        {
-            var episodes = _unitOfWork.Episode
-                .GetAll(c => c.CourseId == courseId)
-                .ToList();
-
-            if (!episodes.Any())
-                return Task.FromResult(Enumerable.Empty<EpisodeDto>());
-
-            var episodeDtos = episodes.Select(e => new EpisodeDto
-            {
-                Name = e.Name,
-                Description = e.Description,
-                //  CourseId = e.CourseId
-            });
-
-            return Task.FromResult(episodeDtos);
-        }
-
+       
 
 
         public async Task<Episode> GetEpisodeByIdAsync(int id)
@@ -87,37 +69,6 @@ namespace Educational_Courses_Platform.Services.Implementation
             return Task.FromResult(true);
         }
 
-       /* public async Task<Episode> CreateEpisodePaidCourseAsync(int courseId, EpisodeDto Dto)
-        {
-            var episode = new Episode
-            {
-                Name = Dto.Name,
-                Description = Dto.Description,
-                PaidCourseId = courseId
-            };
-
-            _unitOfWork.Episode.Add(episode);
-            _unitOfWork.Complete();
-            return await Task.FromResult(episode);
-        }*/
-
-      /*public Task<IEnumerable<EpisodeDto>> GetAllEpisodeOfPaidCourseAsync(int _paidCourseId)
-        {
-            var episodes = _unitOfWork.Episode
-                .GetAll(c => c.PaidCourseId == _paidCourseId)
-                .ToList();
-
-            if (!episodes.Any())
-                return Task.FromResult(Enumerable.Empty<EpisodeDto>());
-
-            var episodeDtos = episodes.Select(e => new EpisodeDto
-            {
-                Name = e.Name,
-                Description = e.Description,
-                
-            });
-
-            return Task.FromResult(episodeDtos);
-        }*/
+       
     }
 }

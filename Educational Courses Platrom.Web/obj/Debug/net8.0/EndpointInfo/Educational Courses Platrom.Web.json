@@ -111,6 +111,30 @@
         }
       }
     },
+    "/api/Course/GetAllFreeCourses": {
+      "get": {
+        "tags": [
+          "Course"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Course/GetAllPaidCourses": {
+      "get": {
+        "tags": [
+          "Course"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Course/GetAllCoursesWithEpisodes": {
       "get": {
         "tags": [
@@ -171,34 +195,47 @@
         "tags": [
           "Course"
         ],
-        "parameters": [
-          {
-            "name": "name",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CourseDto"
+                "$ref": "#/components/schemas/CourseWithIdDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/CourseDto"
+                "$ref": "#/components/schemas/CourseWithIdDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/CourseDto"
+                "$ref": "#/components/schemas/CourseWithIdDto"
               }
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Course/GetEpisodesByCourse": {
+      "get": {
+        "tags": [
+          "Course"
+        ],
+        "parameters": [
+          {
+            "name": "courseId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -238,28 +275,6 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Episode/GetByCourse": {
-      "get": {
-        "tags": [
-          "Episode"
-        ],
-        "parameters": [
-          {
-            "name": "courseId",
             "in": "query",
             "schema": {
               "type": "integer",
@@ -391,6 +406,32 @@
           "description": {
             "type": "string",
             "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CourseWithIdDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double"
           }
         },
         "additionalProperties": false

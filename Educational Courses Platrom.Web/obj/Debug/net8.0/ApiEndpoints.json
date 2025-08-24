@@ -85,6 +85,42 @@
   },
   {
     "ContainingType": "Educational_Courses_Platrom.Web.Controllers.CourseController",
+    "Method": "GetAllFreeCourses",
+    "RelativePath": "api/Course/GetAllFreeCourses",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educational_Courses_Platrom.Web.Controllers.CourseController",
+    "Method": "GetAllPaidCourses",
+    "RelativePath": "api/Course/GetAllPaidCourses",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educational_Courses_Platrom.Web.Controllers.CourseController",
+    "Method": "GetEpisodesByCourse",
+    "RelativePath": "api/Course/GetEpisodesByCourse",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "courseId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educational_Courses_Platrom.Web.Controllers.CourseController",
     "Method": "RemoveCourse",
     "RelativePath": "api/Course/RemoveCourseById",
     "HttpMethod": "DELETE",
@@ -125,13 +161,8 @@
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "CourseDto",
+        "Type": "CourseWithIdDto",
         "IsRequired": true
-      },
-      {
-        "Name": "name",
-        "Type": "System.String",
-        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -167,22 +198,6 @@
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Educational_Courses_Platrom.Web.Controllers.EpisodeController",
-    "Method": "GetEpisodesByCourse",
-    "RelativePath": "api/Episode/GetByCourse",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "courseId",
         "Type": "System.Int32",
         "IsRequired": false
       }

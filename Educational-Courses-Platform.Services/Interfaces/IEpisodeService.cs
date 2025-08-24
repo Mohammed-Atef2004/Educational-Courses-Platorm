@@ -9,7 +9,7 @@ namespace Educational_Courses_Platform.Services.Interfaces
 {
     public interface IEpisodeService
     {
-        public Task<IEnumerable<EpisodeDto>> GetAllEpisodeOfCourseAsync(int courseId);
+        //public Task<IEnumerable<EpisodeDto>> GetAllEpisodeOfCourseAsync(int courseId);
         public Task<Episode> GetEpisodeByIdAsync(int id);
         public Task<Episode> CreateEpisodeAsync(int courseId,EpisodeDto Dto);
         public Task<bool> RemoveEpisodeByIdAsync(int id);

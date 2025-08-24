@@ -10,7 +10,9 @@ namespace Educational_Courses_Platform.Services.Interfaces
 {
     public interface ICourseService
     {
-        public Task<IEnumerable<CourseDto>> GetAllCoursesAsync();
+        public Task<IEnumerable<CourseWithIdDto>> GetAllCoursesAsync();
+        public  Task<IEnumerable<CourseWithIdDto>> GetAllFreeCoursesAsync();
+        public  Task<IEnumerable<CourseWithIdDto>> GetAllPaidCoursesAsync();
         public Task<Course> GetCourseByIdAsync(int id);
         public Task<Course> CreateCourseAsync(CourseDto courseDto);
         public Task<bool> RemoveCourseByIdAsync(int id);
@@ -20,6 +22,6 @@ namespace Educational_Courses_Platform.Services.Interfaces
 
         public Task<IEnumerable<CourseWithEpisodesDto>> GetAllCoursesWithEpisodesAsync();
 
-
+        public Task<IEnumerable<EpisodeDto>> GetAllEpisodeOfCourseAsync(int courseId);
     }
 }

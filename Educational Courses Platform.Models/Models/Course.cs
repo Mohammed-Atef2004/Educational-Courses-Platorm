@@ -14,9 +14,9 @@ namespace Educational_Courses_Platform.Entities.Models
      
         public string Name { get ; set ; }
         public string Description { get; set; }
+        public double Price { get; set;}
         public List<Episode>? Episodes { get; set; } = new List<Episode>();
 
-        public double Price { get; set; }
 
     }
 }

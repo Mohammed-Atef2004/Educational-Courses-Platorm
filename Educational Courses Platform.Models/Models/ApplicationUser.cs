@@ -9,5 +9,6 @@ namespace Educational_Courses_Platform.Entities.Models
 {
     public class ApplicationUser : IdentityUser
     {
+
     }
 }

@@ -1,11 +1,11 @@
-﻿using Educational_Courses_Platform.Entities.Models;
-using Educational_Courses_Platform.DataAccess.Data;
-
+﻿using Educational_Courses_Platform.DataAccess.Data;
+using Educational_Courses_Platform.Entities.Models;
+using Educational_Courses_Platform.Entities.Repositories;
+using Educational_Courses_Platform.Services.Implementation;
+using Educational_Courses_Platform.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Educational_Courses_Platform.Entities.Repositories;
-using Microsoft.AspNetCore.Authorization;
-using Educational_Courses_Platform.Services.Interfaces;
 
 namespace Educational_Courses_Platrom.Web.Controllers
 {
@@ -15,9 +15,9 @@ namespace Educational_Courses_Platrom.Web.Controllers
     public class CourseController : ControllerBase
     {
         private readonly ICourseService _courseService;
-        private readonly IUnitOfWork _unitOfWork;
+      
         public CourseController(IUnitOfWork unitOfWork,ICourseService courseService) { 
-            _unitOfWork = unitOfWork;
+           
             _courseService = courseService;
 
         }
@@ -27,14 +27,10 @@ namespace Educational_Courses_Platrom.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                var course = new Course
-                {
-                    Name = dto.Name,
-                    Description = dto.Description
-                };
-
-                _unitOfWork.Course.Add(course);
-                _unitOfWork.Complete();
+                
+                _courseService.CreateCourseAsync(dto)
+                    .ContinueWith(task => Ok(task.Result))
+                    .Wait();
 
                 return Ok("Course Added Successfully");
             }
@@ -57,7 +53,34 @@ namespace Educational_Courses_Platrom.Web.Controllers
             }
             return BadRequest();
         }
+        [HttpGet]
+        [Route("GetAllFreeCourses")]
+        public IActionResult GetAllFreeCourses()
+        {
 
+            if (ModelState.IsValid)
+            {
+
+                return _courseService.GetAllFreeCoursesAsync()
+                    .ContinueWith(task => Ok(task.Result))
+                    .Result;
+            }
+            return BadRequest();
+        }
+        [HttpGet]
+        [Route("GetAllPaidCourses")]
+        public IActionResult GetAllPaidCourses()
+        {
+
+            if (ModelState.IsValid)
+            {
+
+                return _courseService.GetAllPaidCoursesAsync()
+                    .ContinueWith(task => Ok(task.Result))
+                    .Result;
+            }
+            return BadRequest();
+        }
         [HttpGet]
         [Route("GetAllCoursesWithEpisodes")]
         public IActionResult GetAllCoursesWithEpisodes()
@@ -78,15 +101,16 @@ namespace Educational_Courses_Platrom.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                var course = _unitOfWork.Course.GetFirstOrDefault(c => c.Id == id);
+                var course = _courseService.RemoveCourseByIdAsync(id)
+                    .ContinueWith(task => task.Result)
+                    .Result;
 
-                if (course == null)
+                if (course == false)
                 {
                     return NotFound("Course not found");
                 }
 
-                _unitOfWork.Course.Remove(course);
-                _unitOfWork.Complete();
+               
 
                 return Ok("Course deleted successfully");
             }
@@ -99,15 +123,14 @@ namespace Educational_Courses_Platrom.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                var course = _unitOfWork.Course.GetFirstOrDefault(c => c.Name == name);
+                var course = _courseService.RemoveCourseByNameAsync(name)
+                    .ContinueWith(task => task.Result)
+                    .Result;
 
-                if (course == null)
+                if (course == false)
                 {
                     return NotFound("Course not found");
                 }
-
-                _unitOfWork.Course.Remove(course);
-                _unitOfWork.Complete();
 
                 return Ok("Course deleted successfully");
             } 
@@ -117,30 +140,39 @@ namespace Educational_Courses_Platrom.Web.Controllers
 
       [HttpPost]
         [Route("UpdateCourse")]
-        public IActionResult UpdateCourse(CourseDto dto,string name)
+        public IActionResult UpdateCourse(CourseWithIdDto dto)
         {
             if (ModelState.IsValid)
             {
-                var course = _unitOfWork.Course.GetFirstOrDefault(c => c.Name == name);
+                var course = _courseService.GetCourseByIdAsync(dto.Id)
+                    .ContinueWith(task => task.Result)
+                    .Result;
 
                 if (course == null)
                 {
                     return NotFound("Course not found");
                 }
 
-                course.Name = dto.Name;
-                course.Description = dto.Description;
-
-                _unitOfWork.Course.Update(course);
-                _unitOfWork.Complete();
 
                 return Ok("Course updated successfully");
 
             }
             return BadRequest();
         }
+        [HttpGet]
+        [Route("GetEpisodesByCourse")]
+        public async Task<IActionResult> GetEpisodesByCourse(int courseId)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
 
+            var episodes = await _courseService.GetAllEpisodeOfCourseAsync(courseId);
 
+            if (!episodes.Any())
+                return NotFound("No episodes found for this course.");
+
+            return Ok(episodes);
+        }
 
 
     }
