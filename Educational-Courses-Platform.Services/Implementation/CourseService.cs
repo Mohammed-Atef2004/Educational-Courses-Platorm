@@ -1,6 +1,7 @@
 ﻿using Educational_Courses_Platform.DataAccess.Data;
 using Educational_Courses_Platform.Entities.Models;
 using Educational_Courses_Platform.Entities.Repositories;
+using Educational_Courses_Platform.Models.Dto;
 using Educational_Courses_Platform.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -27,14 +28,9 @@ namespace Educational_Courses_Platform.Services.Implementation
 
                 Name = c.Name,
                 Description = c.Description,
-                Episodes = c.Episodes.Select(e => new EpisodeDto
-                {
-
-                    Name = e.Name,
-                    Description = e.Description
-                }).ToList()
+               
             }).ToList();
-            return  courseDtos;
+            return courseDtos;
         }
 
         public async Task<Course> GetCourseByIdAsync(int id)
@@ -93,6 +89,24 @@ namespace Educational_Courses_Platform.Services.Implementation
             _unitOfWork.Course.Update(course);
             _unitOfWork.Complete();
             return Task.FromResult(true);
+        }
+
+       public async Task<IEnumerable<CourseWithEpisodesDto>> GetAllCoursesWithEpisodesAsync()
+        {
+            List<Course> courses = _unitOfWork.Course.GetAll(includeword: "Episodes").ToList();
+            List<CourseWithEpisodesDto> courseDtos = courses.Select(c => new CourseWithEpisodesDto
+            {
+
+                Name = c.Name,
+                Description = c.Description,
+                Episodes = c.Episodes.Select(e => new EpisodeDto
+                {
+
+                    Name = e.Name,
+                    Description = e.Description
+                }).ToList()
+            }).ToList();
+            return courseDtos;
         }
     }
 }

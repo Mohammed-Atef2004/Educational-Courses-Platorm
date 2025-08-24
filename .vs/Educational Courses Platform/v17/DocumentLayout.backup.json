@@ -1,7 +1,28 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\ASU\\Real Projects\\e1\\",
-  "Documents": [],
+  "WorkspaceRootPath": "D:\\ASU\\Real Projects\\e2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{46A15066-DD07-4FDE-9A11-881D4D874A85}|Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj|d:\\asu\\real projects\\e2\\educational courses platrom.web\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46A15066-DD07-4FDE-9A11-881D4D874A85}|Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj|solutionrelative:educational courses platrom.web\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B1EC70F-18A8-4507-B755-E06B3517A20E}|Educational-Courses-Platform.Services\\Educational-Courses-Platform.Services.csproj|d:\\asu\\real projects\\e2\\educational-courses-platform.services\\implementation\\courseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3B1EC70F-18A8-4507-B755-E06B3517A20E}|Educational-Courses-Platform.Services\\Educational-Courses-Platform.Services.csproj|solutionrelative:educational-courses-platform.services\\implementation\\courseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B1EC70F-18A8-4507-B755-E06B3517A20E}|Educational-Courses-Platform.Services\\Educational-Courses-Platform.Services.csproj|d:\\asu\\real projects\\e2\\educational-courses-platform.services\\interfaces\\icourseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3B1EC70F-18A8-4507-B755-E06B3517A20E}|Educational-Courses-Platform.Services\\Educational-Courses-Platform.Services.csproj|solutionrelative:educational-courses-platform.services\\interfaces\\icourseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17B819EA-A962-4135-81B1-8C325F7B1118}|Educational Courses Platform.Models\\Educational Courses Platform.Entities.csproj|d:\\asu\\real projects\\e2\\educational courses platform.models\\dto\\coursewithepisodesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17B819EA-A962-4135-81B1-8C325F7B1118}|Educational Courses Platform.Models\\Educational Courses Platform.Entities.csproj|solutionrelative:educational courses platform.models\\dto\\coursewithepisodesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17B819EA-A962-4135-81B1-8C325F7B1118}|Educational Courses Platform.Models\\Educational Courses Platform.Entities.csproj|d:\\asu\\real projects\\e2\\educational courses platform.models\\dto\\coursedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17B819EA-A962-4135-81B1-8C325F7B1118}|Educational Courses Platform.Models\\Educational Courses Platform.Entities.csproj|solutionrelative:educational courses platform.models\\dto\\coursedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,6 +51,71 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CourseController.cs",
+              "DocumentMoniker": "D:\\ASU\\Real Projects\\e2\\Educational Courses Platrom.Web\\Controllers\\CourseController.cs",
+              "RelativeDocumentMoniker": "Educational Courses Platrom.Web\\Controllers\\CourseController.cs",
+              "ToolTip": "D:\\ASU\\Real Projects\\e2\\Educational Courses Platrom.Web\\Controllers\\CourseController.cs",
+              "RelativeToolTip": "Educational Courses Platrom.Web\\Controllers\\CourseController.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAAwEYAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T15:10:21.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ICourseService.cs",
+              "DocumentMoniker": "D:\\ASU\\Real Projects\\e2\\Educational-Courses-Platform.Services\\Interfaces\\ICourseService.cs",
+              "RelativeDocumentMoniker": "Educational-Courses-Platform.Services\\Interfaces\\ICourseService.cs",
+              "ToolTip": "D:\\ASU\\Real Projects\\e2\\Educational-Courses-Platform.Services\\Interfaces\\ICourseService.cs",
+              "RelativeToolTip": "Educational-Courses-Platform.Services\\Interfaces\\ICourseService.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAABQAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T15:04:34.228Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CourseWithEpisodesDto.cs",
+              "DocumentMoniker": "D:\\ASU\\Real Projects\\e2\\Educational Courses Platform.Models\\Dto\\CourseWithEpisodesDto.cs",
+              "RelativeDocumentMoniker": "Educational Courses Platform.Models\\Dto\\CourseWithEpisodesDto.cs",
+              "ToolTip": "D:\\ASU\\Real Projects\\e2\\Educational Courses Platform.Models\\Dto\\CourseWithEpisodesDto.cs",
+              "RelativeToolTip": "Educational Courses Platform.Models\\Dto\\CourseWithEpisodesDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T15:04:03.72Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CourseService.cs",
+              "DocumentMoniker": "D:\\ASU\\Real Projects\\e2\\Educational-Courses-Platform.Services\\Implementation\\CourseService.cs",
+              "RelativeDocumentMoniker": "Educational-Courses-Platform.Services\\Implementation\\CourseService.cs",
+              "ToolTip": "D:\\ASU\\Real Projects\\e2\\Educational-Courses-Platform.Services\\Implementation\\CourseService.cs",
+              "RelativeToolTip": "Educational-Courses-Platform.Services\\Implementation\\CourseService.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAAAG0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T14:59:18.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CourseDto.cs",
+              "DocumentMoniker": "D:\\ASU\\Real Projects\\e2\\Educational Courses Platform.Models\\Dto\\CourseDto.cs",
+              "RelativeDocumentMoniker": "Educational Courses Platform.Models\\Dto\\CourseDto.cs",
+              "ToolTip": "D:\\ASU\\Real Projects\\e2\\Educational Courses Platform.Models\\Dto\\CourseDto.cs",
+              "RelativeToolTip": "Educational Courses Platform.Models\\Dto\\CourseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T14:58:03.797Z",
+              "EditorCaption": ""
             }
           ]
         }

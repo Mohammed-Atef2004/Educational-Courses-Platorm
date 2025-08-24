@@ -58,6 +58,20 @@ namespace Educational_Courses_Platrom.Web.Controllers
             return BadRequest();
         }
 
+        [HttpGet]
+        [Route("GetAllCoursesWithEpisodes")]
+        public IActionResult GetAllCoursesWithEpisodes()
+        {
+
+            if (ModelState.IsValid)
+            {
+
+                return _courseService.GetAllCoursesWithEpisodesAsync()
+                    .ContinueWith(task => Ok(task.Result))
+                    .Result;
+            }
+            return BadRequest();
+        }
         [HttpDelete]
         [Route("RemoveCourseById")]
         public IActionResult RemoveCourse(int id)

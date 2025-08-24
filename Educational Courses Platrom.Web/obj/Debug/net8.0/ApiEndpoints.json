@@ -75,6 +75,16 @@
   },
   {
     "ContainingType": "Educational_Courses_Platrom.Web.Controllers.CourseController",
+    "Method": "GetAllCoursesWithEpisodes",
+    "RelativePath": "api/Course/GetAllCoursesWithEpisodes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educational_Courses_Platrom.Web.Controllers.CourseController",
     "Method": "RemoveCourse",
     "RelativePath": "api/Course/RemoveCourseById",
     "HttpMethod": "DELETE",

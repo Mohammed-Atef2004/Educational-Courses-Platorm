@@ -111,6 +111,18 @@
         }
       }
     },
+    "/api/Course/GetAllCoursesWithEpisodes": {
+      "get": {
+        "tags": [
+          "Course"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Course/RemoveCourseById": {
       "delete": {
         "tags": [
@@ -378,13 +390,6 @@
           },
           "description": {
             "type": "string",
-            "nullable": true
-          },
-          "episodes": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/EpisodeDto"
-            },
             "nullable": true
           }
         },
