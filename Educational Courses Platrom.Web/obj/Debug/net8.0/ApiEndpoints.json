@@ -48,6 +48,43 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Educational_Courses_Platrom.Web.Controllers.AdminController",
+    "Method": "AddCourseToAdmin",
+    "RelativePath": "api/Admin/AddCourseToAdmin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "adminId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "courseId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educational_Courses_Platrom.Web.Controllers.AdminController",
+    "Method": "GetCoursesOfAdmin",
+    "RelativePath": "api/Admin/GetCoursesOfAdmin",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "adminId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Educational_Courses_Platrom.Web.Controllers.CourseController",
     "Method": "CreateCourse",
     "RelativePath": "api/Course/CreateCourse",

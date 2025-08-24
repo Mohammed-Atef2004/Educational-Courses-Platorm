@@ -23,7 +23,9 @@ namespace Educational_Courses_Platform.Services.Implementation
             {
                 Name = Dto.Name,
                 Description = Dto.Description,
-                CourseId = courseId
+                CourseId = courseId,
+                ImageUrl = Dto.ImageUrl,
+                Link = Dto.Link
             };
 
             _unitOfWork.Episode.Add(episode);
@@ -63,6 +65,8 @@ namespace Educational_Courses_Platform.Services.Implementation
 
             episode.Name = courseDto.Name;
             episode.Description = courseDto.Description;
+            episode.ImageUrl = courseDto.ImageUrl;
+            episode.Link = courseDto.Link;
 
             _unitOfWork.Episode.Update(episode);
             _unitOfWork.Complete();

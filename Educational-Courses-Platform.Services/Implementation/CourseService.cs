@@ -28,7 +28,8 @@ namespace Educational_Courses_Platform.Services.Implementation
                 Id = c.Id,
                 Name = c.Name,
                 Description = c.Description,
-                Price = c.Price
+                Price = c.Price,
+                ImageUrl= c.ImageUrl
 
             }).ToList();
             return courseDtos;
@@ -41,7 +42,8 @@ namespace Educational_Courses_Platform.Services.Implementation
                 Id = c.Id,
                 Name = c.Name,
                 Description = c.Description,
-                Price = c.Price
+                Price = c.Price,
+                ImageUrl = c.ImageUrl
 
             }).ToList();
             return courseDtos;
@@ -54,7 +56,8 @@ namespace Educational_Courses_Platform.Services.Implementation
                 Id = c.Id,
                 Name = c.Name,
                 Description = c.Description,
-                Price = c.Price
+                Price = c.Price,
+                ImageUrl = c.ImageUrl
 
             }).ToList();
             return courseDtos;
@@ -114,6 +117,7 @@ namespace Educational_Courses_Platform.Services.Implementation
             course.Name = courseDto.Name;
             course.Description = courseDto.Description;
             course.Price = courseDto.Price;
+            course.ImageUrl = courseDto.ImageUrl;
 
             _unitOfWork.Course.Update(course);
             _unitOfWork.Complete();
@@ -128,11 +132,16 @@ namespace Educational_Courses_Platform.Services.Implementation
                 Id = c.Id,
                 Name = c.Name,
                 Description = c.Description,
+                ImageUrl=c.ImageUrl,
+
                 Episodes = c.Episodes.Select(e => new EpisodeDto
                 {
 
                     Name = e.Name,
-                    Description = e.Description
+                    Description = e.Description,
+                    ImageUrl = e.ImageUrl,
+                    Link = e.Link
+
                 }).ToList()
             }).ToList();
             return courseDtos;
@@ -150,6 +159,8 @@ namespace Educational_Courses_Platform.Services.Implementation
             {
                 Name = e.Name,
                 Description = e.Description,
+                ImageUrl = e.ImageUrl,
+                Link=e.Link
                 //  CourseId = e.CourseId
             });
 

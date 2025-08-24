@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Educational_Courses_Platform.Models.Repositories;
 
 namespace Educational_Courses_Platform.DataAccess.Implementation
 {
@@ -14,7 +15,7 @@ namespace Educational_Courses_Platform.DataAccess.Implementation
     {
         private readonly ApplicationDbContext _context;
         public ICourseRepository Course { get; private set; }
-     
+        public IAdminRepository Admin { get; private set; }
         public IEpisodeRepository Episode { get; private set; }
 
         public UnitOfWork(ApplicationDbContext context)
@@ -23,6 +24,7 @@ namespace Educational_Courses_Platform.DataAccess.Implementation
             Course=new CourseRepository(context);
            
             Episode=new EpisodeRepository(context);
+            Admin=new AdminRepository(context);
 
         }
 
