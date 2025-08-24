@@ -8,7 +8,7 @@ namespace Educational_Courses_Platform.DataAccess.Data
     {
         public DbSet<ApplicationUser> Users { get; set; }
         public DbSet<Course> Courses { get; set; }
-        public DbSet<PaidCourse> PaidCourses { get; set; }
+       
         public DbSet<Episode> Episodes { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
@@ -25,10 +25,8 @@ namespace Educational_Courses_Platform.DataAccess.Data
                 .Property(c => c.Id)
                 .ValueGeneratedOnAdd();
 
-            // PaidCourse Id auto-increment
-            modelBuilder.Entity<PaidCourse>()
-                .Property(pc => pc.Id)
-                .ValueGeneratedOnAdd();
+          
+           
 
             modelBuilder.Entity<ApplicationUser>()
             .HasIndex(u => u.Email)

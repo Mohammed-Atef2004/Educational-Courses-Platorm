@@ -4836,11 +4836,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ASU\\Real Projects\\v1\\Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj",
+      "projectUniqueName": "D:\\ASU\\Real Projects\\e1\\Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj",
       "projectName": "Educational Courses Platrom.Web",
-      "projectPath": "D:\\ASU\\Real Projects\\v1\\Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj",
+      "projectPath": "D:\\ASU\\Real Projects\\e1\\Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj",
       "packagesPath": "C:\\Users\\HP Elite BOOK\\.nuget\\packages\\",
-      "outputPath": "D:\\ASU\\Real Projects\\v1\\Educational Courses Platrom.Web\\obj\\",
+      "outputPath": "D:\\ASU\\Real Projects\\e1\\Educational Courses Platrom.Web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -4861,14 +4861,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\ASU\\Real Projects\\v1\\Educational Courses Platform.DataAccess\\Educational Courses Platform.DataAccess.csproj": {
-              "projectPath": "D:\\ASU\\Real Projects\\v1\\Educational Courses Platform.DataAccess\\Educational Courses Platform.DataAccess.csproj"
+            "D:\\ASU\\Real Projects\\e1\\Educational Courses Platform.DataAccess\\Educational Courses Platform.DataAccess.csproj": {
+              "projectPath": "D:\\ASU\\Real Projects\\e1\\Educational Courses Platform.DataAccess\\Educational Courses Platform.DataAccess.csproj"
             },
-            "D:\\ASU\\Real Projects\\v1\\Educational Courses Platform.Models\\Educational Courses Platform.Entities.csproj": {
-              "projectPath": "D:\\ASU\\Real Projects\\v1\\Educational Courses Platform.Models\\Educational Courses Platform.Entities.csproj"
+            "D:\\ASU\\Real Projects\\e1\\Educational Courses Platform.Models\\Educational Courses Platform.Entities.csproj": {
+              "projectPath": "D:\\ASU\\Real Projects\\e1\\Educational Courses Platform.Models\\Educational Courses Platform.Entities.csproj"
             },
-            "D:\\ASU\\Real Projects\\v1\\Educational-Courses-Platform.Services\\Educational-Courses-Platform.Services.csproj": {
-              "projectPath": "D:\\ASU\\Real Projects\\v1\\Educational-Courses-Platform.Services\\Educational-Courses-Platform.Services.csproj"
+            "D:\\ASU\\Real Projects\\e1\\Educational-Courses-Platform.Services\\Educational-Courses-Platform.Services.csproj": {
+              "projectPath": "D:\\ASU\\Real Projects\\e1\\Educational-Courses-Platform.Services\\Educational-Courses-Platform.Services.csproj"
             }
           }
         }

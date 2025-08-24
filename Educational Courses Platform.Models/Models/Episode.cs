@@ -14,6 +14,6 @@ namespace Educational_Courses_Platform.Entities.Models
         public int ?CourseId { get; set; }
         public Course ?Course { get; set; } 
         public int ? PaidCourseId { get; set; }
-        public PaidCourse ? PaidCourse { get; set; }
+        //public PaidCourse ? PaidCourse { get; set; }
     }
 }

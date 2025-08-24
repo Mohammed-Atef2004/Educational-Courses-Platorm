@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ASU\\Real Projects\\v1\\Educational Courses Platform.DataAccess\\Educational Courses Platform.DataAccess.csproj": {}
+    "D:\\ASU\\Real Projects\\e1\\Educational Courses Platform.DataAccess\\Educational Courses Platform.DataAccess.csproj": {}
   },
   "projects": {
-    "D:\\ASU\\Real Projects\\v1\\Educational Courses Platform.DataAccess\\Educational Courses Platform.DataAccess.csproj": {
+    "D:\\ASU\\Real Projects\\e1\\Educational Courses Platform.DataAccess\\Educational Courses Platform.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ASU\\Real Projects\\v1\\Educational Courses Platform.DataAccess\\Educational Courses Platform.DataAccess.csproj",
+        "projectUniqueName": "D:\\ASU\\Real Projects\\e1\\Educational Courses Platform.DataAccess\\Educational Courses Platform.DataAccess.csproj",
         "projectName": "Educational Courses Platform.DataAccess",
-        "projectPath": "D:\\ASU\\Real Projects\\v1\\Educational Courses Platform.DataAccess\\Educational Courses Platform.DataAccess.csproj",
+        "projectPath": "D:\\ASU\\Real Projects\\e1\\Educational Courses Platform.DataAccess\\Educational Courses Platform.DataAccess.csproj",
         "packagesPath": "C:\\Users\\HP Elite BOOK\\.nuget\\packages\\",
-        "outputPath": "D:\\ASU\\Real Projects\\v1\\Educational Courses Platform.DataAccess\\obj\\",
+        "outputPath": "D:\\ASU\\Real Projects\\e1\\Educational Courses Platform.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\ASU\\Real Projects\\v1\\Educational Courses Platform.Models\\Educational Courses Platform.Entities.csproj": {
-                "projectPath": "D:\\ASU\\Real Projects\\v1\\Educational Courses Platform.Models\\Educational Courses Platform.Entities.csproj"
+              "D:\\ASU\\Real Projects\\e1\\Educational Courses Platform.Models\\Educational Courses Platform.Entities.csproj": {
+                "projectPath": "D:\\ASU\\Real Projects\\e1\\Educational Courses Platform.Models\\Educational Courses Platform.Entities.csproj"
               }
             }
           }
@@ -97,14 +97,14 @@
         }
       }
     },
-    "D:\\ASU\\Real Projects\\v1\\Educational Courses Platform.Models\\Educational Courses Platform.Entities.csproj": {
+    "D:\\ASU\\Real Projects\\e1\\Educational Courses Platform.Models\\Educational Courses Platform.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ASU\\Real Projects\\v1\\Educational Courses Platform.Models\\Educational Courses Platform.Entities.csproj",
+        "projectUniqueName": "D:\\ASU\\Real Projects\\e1\\Educational Courses Platform.Models\\Educational Courses Platform.Entities.csproj",
         "projectName": "Educational Courses Platform.Entities",
-        "projectPath": "D:\\ASU\\Real Projects\\v1\\Educational Courses Platform.Models\\Educational Courses Platform.Entities.csproj",
+        "projectPath": "D:\\ASU\\Real Projects\\e1\\Educational Courses Platform.Models\\Educational Courses Platform.Entities.csproj",
         "packagesPath": "C:\\Users\\HP Elite BOOK\\.nuget\\packages\\",
-        "outputPath": "D:\\ASU\\Real Projects\\v1\\Educational Courses Platform.Models\\obj\\",
+        "outputPath": "D:\\ASU\\Real Projects\\e1\\Educational Courses Platform.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

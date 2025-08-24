@@ -14,14 +14,14 @@ namespace Educational_Courses_Platform.DataAccess.Implementation
     {
         private readonly ApplicationDbContext _context;
         public ICourseRepository Course { get; private set; }
-        public IPaidCourseRepository PaidCourse { get; private set; }
+     
         public IEpisodeRepository Episode { get; private set; }
 
         public UnitOfWork(ApplicationDbContext context)
         {
             _context= context;
             Course=new CourseRepository(context);
-            PaidCourse=new PaidCourseRepository(context);
+           
             Episode=new EpisodeRepository(context);
 
         }

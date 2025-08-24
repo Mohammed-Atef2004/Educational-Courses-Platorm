@@ -103,7 +103,7 @@ namespace Educational_Courses_Platrom.Web.Controllers
         }
 
 
-        [HttpPost("AddEpisodeToPaidCourse")]
+       /* [HttpPost("AddEpisodeToPaidCourse")]
         public async Task<IActionResult> AddEpisodeToPaidCourse(int courseId, EpisodeDto dto)
         {
             if (!ModelState.IsValid)
@@ -124,10 +124,10 @@ namespace Educational_Courses_Platrom.Web.Controllers
                     episode.PaidCourseId
                 }
             });
-        }
+        }*/
 
 
-        [HttpGet("GetByPaidCourse")]
+       /* [HttpGet("GetByPaidCourse")]
         public async Task<IActionResult> GetEpisodesByPaidCourse(int _PaidCourseId)
         {
             if (!ModelState.IsValid)
@@ -139,6 +139,6 @@ namespace Educational_Courses_Platrom.Web.Controllers
                 return NotFound("No episodes found for this course.");
 
             return Ok(episodes);
-        }
+        }*/
     }
 }

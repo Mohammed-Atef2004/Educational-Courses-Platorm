@@ -87,7 +87,7 @@ namespace Educational_Courses_Platform.Services.Implementation
             return Task.FromResult(true);
         }
 
-        public async Task<Episode> CreateEpisodePaidCourseAsync(int courseId, EpisodeDto Dto)
+       /* public async Task<Episode> CreateEpisodePaidCourseAsync(int courseId, EpisodeDto Dto)
         {
             var episode = new Episode
             {
@@ -99,9 +99,9 @@ namespace Educational_Courses_Platform.Services.Implementation
             _unitOfWork.Episode.Add(episode);
             _unitOfWork.Complete();
             return await Task.FromResult(episode);
-        }
+        }*/
 
-      public Task<IEnumerable<EpisodeDto>> GetAllEpisodeOfPaidCourseAsync(int _paidCourseId)
+      /*public Task<IEnumerable<EpisodeDto>> GetAllEpisodeOfPaidCourseAsync(int _paidCourseId)
         {
             var episodes = _unitOfWork.Episode
                 .GetAll(c => c.PaidCourseId == _paidCourseId)
@@ -118,6 +118,6 @@ namespace Educational_Courses_Platform.Services.Implementation
             });
 
             return Task.FromResult(episodeDtos);
-        }
+        }*/
     }
 }

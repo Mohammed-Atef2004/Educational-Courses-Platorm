@@ -10,7 +10,7 @@ namespace Educational_Courses_Platform.Entities.Repositories
     public interface IUnitOfWork:IDisposable
     {
         ICourseRepository Course { get; }
-        IPaidCourseRepository PaidCourse { get; }
+       
         IEpisodeRepository Episode { get; }
         int Complete();
     }
