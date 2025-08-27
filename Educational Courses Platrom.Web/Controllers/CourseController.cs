@@ -38,7 +38,7 @@ namespace Educational_Courses_Platrom.Web.Controllers
         }
 
 
-        //[Authorize]
+      
         [HttpGet]
         [Route("GetAllCourses")]
         public IActionResult GetAllCourses()
@@ -67,6 +67,8 @@ namespace Educational_Courses_Platrom.Web.Controllers
             }
             return BadRequest();
         }
+
+        [Authorize]
         [HttpGet]
         [Route("GetAllPaidCourses")]
         public IActionResult GetAllPaidCourses()
@@ -81,6 +83,8 @@ namespace Educational_Courses_Platrom.Web.Controllers
             }
             return BadRequest();
         }
+
+      
         [HttpGet]
         [Route("GetAllCoursesWithEpisodes")]
         public IActionResult GetAllCoursesWithEpisodes()

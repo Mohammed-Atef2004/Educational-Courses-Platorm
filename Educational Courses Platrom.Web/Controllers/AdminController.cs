@@ -15,13 +15,19 @@ namespace Educational_Courses_Platrom.Web.Controllers
             _adminService = adminService;
         }
 
-        [HttpPost("AddCourseToAdmin")]
-        public async Task<IActionResult> AddCourseToAdmin([FromQuery] string adminId, [FromQuery] int courseId)
+        [HttpPost("AddCourseToUser")]
+        public async Task<IActionResult> AddCourseToUser([FromQuery] string UserId, [FromQuery] int courseId)
         {
 
-            if (string.IsNullOrWhiteSpace(adminId))
+            if(!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            if (string.IsNullOrWhiteSpace(UserId))
             {
                 return BadRequest("Admin ID is required.");
+               
             }
 
             if (courseId <= 0)
@@ -29,7 +35,7 @@ namespace Educational_Courses_Platrom.Web.Controllers
                 return BadRequest("Valid course ID is required.");
             }
 
-            var result = await _adminService.AddCourseToUserAsync(adminId, courseId);
+            var result = await _adminService.AddCourseToUserAsync(UserId, courseId);
 
 
             if (result.Contains("not found") || result.Contains("error") || result.Contains("cannot"))
@@ -42,16 +48,16 @@ namespace Educational_Courses_Platrom.Web.Controllers
 
 
 
-        [HttpGet("GetCoursesOfAdmin")]
-        public async Task<IActionResult> GetCoursesOfAdmin([FromQuery] string adminId)
+        [HttpGet("GetCoursesOfUser")]
+        public async Task<IActionResult> GetCoursesOfAdmin([FromQuery] string UserId)
         {
 
-            if (string.IsNullOrWhiteSpace(adminId))
+            if (string.IsNullOrWhiteSpace(UserId))
             {
                 return BadRequest("Admin ID is required.");
             }
 
-            var result = await _adminService.GetCoursesOfUserAsync(adminId);
+            var result = await _adminService.GetCoursesOfUserAsync(UserId);
             return Ok(new { courses = result, success = true });
 
 

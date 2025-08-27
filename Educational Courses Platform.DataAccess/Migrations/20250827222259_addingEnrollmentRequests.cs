@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Educational_Courses_Platform.DataAccess.Migrations
 {
     /// <inheritdoc />
-    public partial class downloading : Migration
+    public partial class addingEnrollmentRequests : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -65,6 +65,20 @@ namespace Educational_Courses_Platform.DataAccess.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Courses", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "EnrollmentsRequests",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    UserId = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CourseId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_EnrollmentsRequests", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -297,6 +311,9 @@ namespace Educational_Courses_Platform.DataAccess.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUserTokens");
+
+            migrationBuilder.DropTable(
+                name: "EnrollmentsRequests");
 
             migrationBuilder.DropTable(
                 name: "Episodes");

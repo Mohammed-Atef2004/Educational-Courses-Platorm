@@ -11,7 +11,6 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Security.Claims;
 using System.Text;
-using System.Text.Json;
 
 namespace Educational_Courses_Platform
 {
@@ -37,7 +36,8 @@ namespace Educational_Courses_Platform
                 {
                     policy.WithOrigins("http://localhost:5000", "https://localhost:5001", "http://localhost:4200", "https://localhost:5160")
                           .AllowAnyHeader()
-                          .AllowAnyMethod();
+                          .AllowAnyMethod()
+                          .AllowCredentials();
                 });
             });
 
@@ -88,6 +88,24 @@ namespace Educational_Courses_Platform
                     ClockSkew = TimeSpan.FromMinutes(5),
                     NameClaimType = ClaimTypes.Name,
                     RoleClaimType = ClaimTypes.Role
+                };
+
+                
+                options.Events = new JwtBearerEvents
+                {
+                    OnMessageReceived = context =>
+                    {
+                       
+                        var token = context.Request.Headers["Authorization"].FirstOrDefault()?.Split(" ").Last();
+
+                        if (string.IsNullOrEmpty(token))
+                        {
+                            token = context.Request.Cookies["accessToken"];
+                        }
+
+                        context.Token = token;
+                        return Task.CompletedTask;
+                    }
                 };
             });
 

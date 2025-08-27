@@ -49,14 +49,14 @@
   },
   {
     "ContainingType": "Educational_Courses_Platrom.Web.Controllers.AdminController",
-    "Method": "AddCourseToAdmin",
-    "RelativePath": "api/Admin/AddCourseToAdmin",
+    "Method": "AddCourseToUser",
+    "RelativePath": "api/Admin/AddCourseToUser",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "adminId",
+        "Name": "UserId",
         "Type": "System.String",
         "IsRequired": false
       },
@@ -71,13 +71,13 @@
   {
     "ContainingType": "Educational_Courses_Platrom.Web.Controllers.AdminController",
     "Method": "GetCoursesOfAdmin",
-    "RelativePath": "api/Admin/GetCoursesOfAdmin",
+    "RelativePath": "api/Admin/GetCoursesOfUser",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "adminId",
+        "Name": "UserId",
         "Type": "System.String",
         "IsRequired": false
       }
