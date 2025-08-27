@@ -205,6 +205,105 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Educational_Courses_Platrom.Web.Controllers.EnrollmentController",
+    "Method": "ApproveEnrollment",
+    "RelativePath": "api/Enrollment/ApproveEnrollment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "courseId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educational_Courses_Platrom.Web.Controllers.EnrollmentController",
+    "Method": "EnrollCourse",
+    "RelativePath": "api/Enrollment/EnrollCourse",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "courseId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educational_Courses_Platrom.Web.Controllers.EnrollmentController",
+    "Method": "RejectEnrollment",
+    "RelativePath": "api/Enrollment/RejectEnrollment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "courseId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educational_Courses_Platrom.Web.Controllers.EnrollmentController",
+    "Method": "UpdateEnrollment",
+    "RelativePath": "api/Enrollment/UpdateEnrollment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "courseId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "newCourseId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educational_Courses_Platrom.Web.Controllers.EnrollmentController",
+    "Method": "ViewAllEnrollments",
+    "RelativePath": "api/Enrollment/ViewAllEnrollments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Educational_Courses_Platrom.Web.Controllers.EpisodeController",
     "Method": "AddEpisode",
     "RelativePath": "api/Episode/AddEpisode",

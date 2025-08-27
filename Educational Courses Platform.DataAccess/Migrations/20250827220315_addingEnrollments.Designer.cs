@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Educational_Courses_Platform.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250821194413_m1")]
-    partial class m1
+    [Migration("20250827220315_addingEnrollments")]
+    partial class addingEnrollments
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,6 +24,21 @@ namespace Educational_Courses_Platform.DataAccess.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("ApplicationUserCourse", b =>
+                {
+                    b.Property<int>("EnrolledCoursesId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("EnrolledUsersId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("EnrolledCoursesId", "EnrolledUsersId");
+
+                    b.HasIndex("EnrolledUsersId");
+
+                    b.ToTable("ApplicationUserCourse");
+                });
 
             modelBuilder.Entity("Educational_Courses_Platform.Entities.Models.ApplicationUser", b =>
                 {
@@ -79,6 +94,10 @@ namespace Educational_Courses_Platform.DataAccess.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Email")
+                        .IsUnique()
+                        .HasFilter("[Email] IS NOT NULL");
+
                     b.HasIndex("NormalizedEmail")
                         .HasDatabaseName("EmailIndex");
 
@@ -102,9 +121,20 @@ namespace Educational_Courses_Platform.DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Link")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("Price")
+                        .HasColumnType("float");
 
                     b.HasKey("Id");
 
@@ -126,6 +156,14 @@ namespace Educational_Courses_Platform.DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Link")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -137,12 +175,10 @@ namespace Educational_Courses_Platform.DataAccess.Migrations
 
                     b.HasIndex("CourseId");
 
-                    b.HasIndex("PaidCourseId");
-
                     b.ToTable("Episodes");
                 });
 
-            modelBuilder.Entity("Educational_Courses_Platform.Entities.Models.PaidCourse", b =>
+            modelBuilder.Entity("Educational_Courses_Platform.Models.Models.EnrollmentsRequest", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -150,20 +186,16 @@ namespace Educational_Courses_Platform.DataAccess.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Description")
+                    b.Property<int>("CourseId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<double>("Price")
-                        .HasColumnType("float");
 
                     b.HasKey("Id");
 
-                    b.ToTable("PaidCourses");
+                    b.ToTable("EnrollmentsRequests");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -299,19 +331,28 @@ namespace Educational_Courses_Platform.DataAccess.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("ApplicationUserCourse", b =>
+                {
+                    b.HasOne("Educational_Courses_Platform.Entities.Models.Course", null)
+                        .WithMany()
+                        .HasForeignKey("EnrolledCoursesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Educational_Courses_Platform.Entities.Models.ApplicationUser", null)
+                        .WithMany()
+                        .HasForeignKey("EnrolledUsersId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("Educational_Courses_Platform.Entities.Models.Episode", b =>
                 {
                     b.HasOne("Educational_Courses_Platform.Entities.Models.Course", "Course")
                         .WithMany("Episodes")
                         .HasForeignKey("CourseId");
 
-                    b.HasOne("Educational_Courses_Platform.Entities.Models.PaidCourse", "PaidCourse")
-                        .WithMany("Episodes")
-                        .HasForeignKey("PaidCourseId");
-
                     b.Navigation("Course");
-
-                    b.Navigation("PaidCourse");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -366,11 +407,6 @@ namespace Educational_Courses_Platform.DataAccess.Migrations
                 });
 
             modelBuilder.Entity("Educational_Courses_Platform.Entities.Models.Course", b =>
-                {
-                    b.Navigation("Episodes");
-                });
-
-            modelBuilder.Entity("Educational_Courses_Platform.Entities.Models.PaidCourse", b =>
                 {
                     b.Navigation("Episodes");
                 });

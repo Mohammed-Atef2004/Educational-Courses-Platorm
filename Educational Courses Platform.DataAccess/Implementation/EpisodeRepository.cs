@@ -10,7 +10,7 @@ using Educational_Courses_Platform.DataAccess.Implementation;
 
 namespace Educational_Courses_Platform.DataAccess.Implementation
 {
-    internal class EpisodeRepository : GenericRepository<Episode>, IEpisodeRepository
+    public class EpisodeRepository : GenericRepository<Episode>, IEpisodeRepository
     {
         private readonly ApplicationDbContext _context;
         public EpisodeRepository(ApplicationDbContext context) : base(context)

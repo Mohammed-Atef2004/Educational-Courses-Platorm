@@ -17,6 +17,7 @@ namespace Educational_Courses_Platform.DataAccess.Implementation
         public ICourseRepository Course { get; private set; }
         public IAdminRepository Admin { get; private set; }
         public IEpisodeRepository Episode { get; private set; }
+        public IEnrollmentRequestsRepository EnrollmnentsRequests { get; private set; }
 
         public UnitOfWork(ApplicationDbContext context)
         {
@@ -25,6 +26,7 @@ namespace Educational_Courses_Platform.DataAccess.Implementation
            
             Episode=new EpisodeRepository(context);
             Admin=new AdminRepository(context);
+            EnrollmnentsRequests = new EnrollmentRequestsRepository(context);
 
         }
 

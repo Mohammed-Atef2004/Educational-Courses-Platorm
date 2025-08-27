@@ -14,6 +14,7 @@ namespace Educational_Courses_Platform.Entities.Repositories
        
         IAdminRepository Admin { get; }
         IEpisodeRepository Episode { get; }
+        IEnrollmentRequestsRepository EnrollmnentsRequests { get; }
         int Complete();
     }
 }

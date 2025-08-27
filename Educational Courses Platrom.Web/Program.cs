@@ -106,6 +106,7 @@ namespace Educational_Courses_Platform
             builder.Services.AddScoped<ICourseService, CourseService>();
             builder.Services.AddScoped<IEpisodeService, EpisodeService>();
             builder.Services.AddScoped<IAdminService, AdminService>();
+            builder.Services.AddScoped<IEnrollmentsRequestsService, EnrollmentsRequestsService>();  
 
             // Swagger
             builder.Services.AddEndpointsApiExplorer();

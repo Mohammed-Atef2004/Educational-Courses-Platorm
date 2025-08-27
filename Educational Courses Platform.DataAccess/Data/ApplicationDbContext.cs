@@ -1,4 +1,5 @@
 ﻿using Educational_Courses_Platform.Entities.Models;
+using Educational_Courses_Platform.Models.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,6 +11,7 @@ namespace Educational_Courses_Platform.DataAccess.Data
         public DbSet<Course> Courses { get; set; }
        
         public DbSet<Episode> Episodes { get; set; }
+        public DbSet<EnrollmentsRequest> EnrollmentsRequests { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
