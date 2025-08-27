@@ -148,6 +148,16 @@ namespace Educational_Courses_Platform.Web.Controllers
                 signingCredentials: signingCred
             );
 
+            var tokenString = new JwtSecurityTokenHandler().WriteToken(token);
+            Response.Cookies.Append("accessToken", tokenString, new CookieOptions
+            {
+                HttpOnly = true,
+                Secure = false, 
+                SameSite = SameSiteMode.Strict,
+                Expires = tokenExpiry
+            });
+
+
             return Ok(new ResponseDto<object>(
                   success: true,
                   message: "Login successful",

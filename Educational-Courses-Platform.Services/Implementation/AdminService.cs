@@ -25,7 +25,10 @@ namespace Educational_Courses_Platform.Services.Implementation
 
             var user = _unitOfWork.Admin.GetFirstOrDefault(
                  u => u.Id == userId);
-
+            if(user == null)
+            {
+                return "User not found";
+            }
             var course = await _courseService.GetCourseByIdAsync(courseId);
             user.EnrolledCourses= user.EnrolledCourses ?? new List<Course>();
             user.EnrolledCourses.Add(course);

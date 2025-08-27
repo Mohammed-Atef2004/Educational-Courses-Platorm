@@ -73,7 +73,9 @@ namespace Educational_Courses_Platform.Services.Implementation
             {
                 Name = courseDto.Name,
                 Description = courseDto.Description,
-                Price = courseDto.Price
+                Price = courseDto.Price,
+                ImageUrl = courseDto.ImageUrl,
+                Link = courseDto.Link
             };
 
             _unitOfWork.Course.Add(course);

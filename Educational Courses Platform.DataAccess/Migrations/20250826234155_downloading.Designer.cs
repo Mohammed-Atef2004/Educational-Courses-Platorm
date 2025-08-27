@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Educational_Courses_Platform.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250824230133_addingManytoManyRelationship1")]
-    partial class addingManytoManyRelationship1
+    [Migration("20250826234155_downloading")]
+    partial class downloading
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

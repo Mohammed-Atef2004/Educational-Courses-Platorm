@@ -68,14 +68,14 @@
         }
       }
     },
-    "/api/Admin/AddCourseToAdmin": {
+    "/api/Admin/AddCourseToUser": {
       "post": {
         "tags": [
           "Admin"
         ],
         "parameters": [
           {
-            "name": "adminId",
+            "name": "UserId",
             "in": "query",
             "schema": {
               "type": "string"
@@ -97,14 +97,14 @@
         }
       }
     },
-    "/api/Admin/GetCoursesOfAdmin": {
+    "/api/Admin/GetCoursesOfUser": {
       "get": {
         "tags": [
           "Admin"
         ],
         "parameters": [
           {
-            "name": "adminId",
+            "name": "UserId",
             "in": "query",
             "schema": {
               "type": "string"
@@ -462,6 +462,10 @@
             "format": "double"
           },
           "imageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "link": {
             "type": "string",
             "nullable": true
           }
