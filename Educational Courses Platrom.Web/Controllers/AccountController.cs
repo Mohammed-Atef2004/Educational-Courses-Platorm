@@ -259,7 +259,7 @@ namespace Educational_Courses_Platform.Web.Controllers
             var token = await userManager.GeneratePasswordResetTokenAsync(user);
 
             // Generate reset URL pointing to HTML page in wwwroot
-            var resetUrl = $"http://localhost:5160/reset-password.html?userId={user.Id}&token={HttpUtility.UrlEncode(token)}";
+             var resetUrl = $"{Request.Scheme}://{Request.Host}/reset-password.html?userId={user.Id}&token={HttpUtility.UrlEncode(token)}";
 
            
             var templatePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "ForgotPasswordEmail.html");
