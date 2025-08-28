@@ -14,10 +14,12 @@ namespace Educational_Courses_Platform.Services.Implementation
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly ICourseService _courseService;
-        public EnrollmentsRequestsService(IUnitOfWork unitOfWork, ICourseService courseService)
+        private readonly IEmailSender emailSender;
+        public EnrollmentsRequestsService(IUnitOfWork unitOfWork, ICourseService courseService, IEmailSender emailSender)
         {
             _unitOfWork = unitOfWork;
             _courseService = courseService;
+            this.emailSender = emailSender;
         }
 
         public  bool EnrollCourse(string userId, int courseId)
@@ -40,20 +42,41 @@ namespace Educational_Courses_Platform.Services.Implementation
             return false;
             
         }
-        public bool ApproveEnrollment(string userId, int courseId) 
+        public async Task<bool> ApproveEnrollment(string userId, int courseId)
         {
-            var user = _unitOfWork.Admin.GetFirstOrDefault(
-                 u => u.Id == userId);
 
-            var course =  _courseService.GetCourseByIdAsync(courseId);
-            if (course != null)
+            var user = _unitOfWork.Admin.GetFirstOrDefault(u => u.Id == userId);
+            if (user == null)
+                return false;
+
+
+            var course = await _courseService.GetCourseByIdAsync(courseId);
+            if (course == null)
+                return false;
+
+
+            if (user.EnrolledCourses == null)
+                user.EnrolledCourses = new List<Course>();
+
+
+            user.EnrolledCourses.Add(course);
+            user.EmailConfirmed = true;
+
+
+            _unitOfWork.Complete();
+
+
+            if (!string.IsNullOrEmpty(user.Email))
             {
-                user.EnrolledCourses.Add(course.Result);
-                _unitOfWork.Complete();
-                return true;
+                var subject = "Your enrollment has been approved";
+                var body = $"Hello {user.UserName},<br/>Your enrollment in the course <b>{course.Name}</b> has been successfully approved.";
+
+                await emailSender.SendEmailAsync(user.Email, subject, body);
             }
-            return false;
+
+            return true;
         }
+
         public bool RejectEnrollment(string userId, int courseId)
         {
             var user = _unitOfWork.Admin.GetFirstOrDefault(

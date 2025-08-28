@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dKA28K4idU0=",
+  "dgSpecHash": "0bXjfIND7eE=",
   "success": true,
-  "projectFilePath": "D:\\ASU\\Real Projects\\e3\\Educational Courses Platform.DataAccess\\Educational Courses Platform.DataAccess.csproj",
+  "projectFilePath": "D:\\ASU\\Real Projects\\e4\\Educational Courses Platform.DataAccess\\Educational Courses Platform.DataAccess.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP Elite BOOK\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\HP Elite BOOK\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

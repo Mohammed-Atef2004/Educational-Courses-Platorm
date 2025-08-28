@@ -4,25 +4,25 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\ForgotPasswordEmail.html'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"fbhisbtje1"},{"Name":"integrity","Value":"sha256-K2A1ztAJFDlDo5CnWV7beREgwrigmI5D38xuJ/V/HH4="},{"Name":"label","Value":"_content/Educational Courses Platrom.Web/ForgotPasswordEmail.html"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1791"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022K2A1ztAJFDlDo5CnWV7beREgwrigmI5D38xuJ/V/HH4=\u0022"},{"Name":"Last-Modified","Value":"Thu, 28 Aug 2025 03:49:32 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1791"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022K2A1ztAJFDlDo5CnWV7beREgwrigmI5D38xuJ/V/HH4=\u0022"},{"Name":"Last-Modified","Value":"Thu, 28 Aug 2025 05:36:48 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Educational Courses Platrom.Web/ForgotPasswordEmail.html">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\ForgotPasswordEmail.html'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-K2A1ztAJFDlDo5CnWV7beREgwrigmI5D38xuJ/V/HH4="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1791"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022K2A1ztAJFDlDo5CnWV7beREgwrigmI5D38xuJ/V/HH4=\u0022"},{"Name":"Last-Modified","Value":"Thu, 28 Aug 2025 03:49:32 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1791"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022K2A1ztAJFDlDo5CnWV7beREgwrigmI5D38xuJ/V/HH4=\u0022"},{"Name":"Last-Modified","Value":"Thu, 28 Aug 2025 05:36:48 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Educational Courses Platrom.Web/reset-password.html">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\reset-password.html'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-hH8R7xPZ46Ugd5ujUsj1wv9aPGXULrtWXspxYO3Qyg0="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"4889"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022hH8R7xPZ46Ugd5ujUsj1wv9aPGXULrtWXspxYO3Qyg0=\u0022"},{"Name":"Last-Modified","Value":"Thu, 28 Aug 2025 04:00:11 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"4889"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022hH8R7xPZ46Ugd5ujUsj1wv9aPGXULrtWXspxYO3Qyg0=\u0022"},{"Name":"Last-Modified","Value":"Thu, 28 Aug 2025 05:36:48 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Educational Courses Platrom.Web/reset-password.whgoequf7x.html">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\reset-password.html'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"whgoequf7x"},{"Name":"integrity","Value":"sha256-hH8R7xPZ46Ugd5ujUsj1wv9aPGXULrtWXspxYO3Qyg0="},{"Name":"label","Value":"_content/Educational Courses Platrom.Web/reset-password.html"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"4889"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022hH8R7xPZ46Ugd5ujUsj1wv9aPGXULrtWXspxYO3Qyg0=\u0022"},{"Name":"Last-Modified","Value":"Thu, 28 Aug 2025 04:00:11 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"4889"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022hH8R7xPZ46Ugd5ujUsj1wv9aPGXULrtWXspxYO3Qyg0=\u0022"},{"Name":"Last-Modified","Value":"Thu, 28 Aug 2025 05:36:48 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
   </ItemGroup>
 </Project>

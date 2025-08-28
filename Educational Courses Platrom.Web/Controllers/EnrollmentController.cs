@@ -31,15 +31,14 @@ namespace Educational_Courses_Platrom.Web.Controllers
         [HttpPost]
         [Authorize(Roles = "Admin")]
         [Route("ApproveEnrollment")]
-        public IActionResult ApproveEnrollment(string userId, int courseId)
+        public async Task<IActionResult> ApproveEnrollment(string userId, int courseId)
         {
-            bool check = _enrollmentsRequestsService.ApproveEnrollment(userId, courseId);
-            if (check == true)
-            {
-                return Ok("Enrollment Approved Successfully");
-            }
-            return BadRequest();
+            bool check = await _enrollmentsRequestsService.ApproveEnrollment(userId, courseId);
 
+            if (check)
+                return Ok("Enrollment Approved Successfully");
+
+            return BadRequest("Failed to approve enrollment");
         }
         [HttpPost]
         [Authorize(Roles = "Admin")]

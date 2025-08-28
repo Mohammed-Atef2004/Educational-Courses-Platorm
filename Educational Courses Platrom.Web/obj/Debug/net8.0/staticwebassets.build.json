@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "twf/sWM+VqqsxEglZV/G09TXwkHUuDhcrgNo8SffekI=",
+  "Hash": "avj3vzOvBuouXgGd26DVSv60aVK+ZZJLtCOrE2qidvY=",
   "Source": "Educational Courses Platrom.Web",
   "BasePath": "_content/Educational Courses Platrom.Web",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "Educational Courses Platrom.Web\\wwwroot",
       "Source": "Educational Courses Platrom.Web",
-      "ContentRoot": "D:\\ASU\\Real Projects\\e3\\Educational Courses Platrom.Web\\wwwroot\\",
+      "ContentRoot": "D:\\ASU\\Real Projects\\e4\\Educational Courses Platrom.Web\\wwwroot\\",
       "BasePath": "_content/Educational Courses Platrom.Web",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\ASU\\Real Projects\\e3\\Educational Courses Platrom.Web\\wwwroot\\ForgotPasswordEmail.html",
+      "Identity": "D:\\ASU\\Real Projects\\e4\\Educational Courses Platrom.Web\\wwwroot\\ForgotPasswordEmail.html",
       "SourceId": "Educational Courses Platrom.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ASU\\Real Projects\\e3\\Educational Courses Platrom.Web\\wwwroot\\",
+      "ContentRoot": "D:\\ASU\\Real Projects\\e4\\Educational Courses Platrom.Web\\wwwroot\\",
       "BasePath": "_content/Educational Courses Platrom.Web",
       "RelativePath": "ForgotPasswordEmail#[.{fingerprint}]?.html",
       "AssetKind": "All",
@@ -38,10 +38,10 @@
       "OriginalItemSpec": "wwwroot\\ForgotPasswordEmail.html"
     },
     {
-      "Identity": "D:\\ASU\\Real Projects\\e3\\Educational Courses Platrom.Web\\wwwroot\\reset-password.html",
+      "Identity": "D:\\ASU\\Real Projects\\e4\\Educational Courses Platrom.Web\\wwwroot\\reset-password.html",
       "SourceId": "Educational Courses Platrom.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ASU\\Real Projects\\e3\\Educational Courses Platrom.Web\\wwwroot\\",
+      "ContentRoot": "D:\\ASU\\Real Projects\\e4\\Educational Courses Platrom.Web\\wwwroot\\",
       "BasePath": "_content/Educational Courses Platrom.Web",
       "RelativePath": "reset-password#[.{fingerprint}]?.html",
       "AssetKind": "All",
@@ -62,7 +62,7 @@
   "Endpoints": [
     {
       "Route": "ForgotPasswordEmail.fbhisbtje1.html",
-      "AssetFile": "D:\\ASU\\Real Projects\\e3\\Educational Courses Platrom.Web\\wwwroot\\ForgotPasswordEmail.html",
+      "AssetFile": "D:\\ASU\\Real Projects\\e4\\Educational Courses Platrom.Web\\wwwroot\\ForgotPasswordEmail.html",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -83,7 +83,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 28 Aug 2025 03:49:32 GMT"
+          "Value": "Thu, 28 Aug 2025 05:36:48 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -107,7 +107,7 @@
     },
     {
       "Route": "ForgotPasswordEmail.html",
-      "AssetFile": "D:\\ASU\\Real Projects\\e3\\Educational Courses Platrom.Web\\wwwroot\\ForgotPasswordEmail.html",
+      "AssetFile": "D:\\ASU\\Real Projects\\e4\\Educational Courses Platrom.Web\\wwwroot\\ForgotPasswordEmail.html",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -128,7 +128,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 28 Aug 2025 03:49:32 GMT"
+          "Value": "Thu, 28 Aug 2025 05:36:48 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -144,7 +144,7 @@
     },
     {
       "Route": "reset-password.html",
-      "AssetFile": "D:\\ASU\\Real Projects\\e3\\Educational Courses Platrom.Web\\wwwroot\\reset-password.html",
+      "AssetFile": "D:\\ASU\\Real Projects\\e4\\Educational Courses Platrom.Web\\wwwroot\\reset-password.html",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -165,7 +165,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 28 Aug 2025 04:00:11 GMT"
+          "Value": "Thu, 28 Aug 2025 05:36:48 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -181,7 +181,7 @@
     },
     {
       "Route": "reset-password.whgoequf7x.html",
-      "AssetFile": "D:\\ASU\\Real Projects\\e3\\Educational Courses Platrom.Web\\wwwroot\\reset-password.html",
+      "AssetFile": "D:\\ASU\\Real Projects\\e4\\Educational Courses Platrom.Web\\wwwroot\\reset-password.html",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -202,7 +202,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 28 Aug 2025 04:00:11 GMT"
+          "Value": "Thu, 28 Aug 2025 05:36:48 GMT"
         },
         {
           "Name": "Cache-Control",

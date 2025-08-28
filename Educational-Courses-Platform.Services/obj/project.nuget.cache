@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZtFKqGSOOUA=",
+  "dgSpecHash": "YcB8OLtes7M=",
   "success": true,
-  "projectFilePath": "D:\\ASU\\Real Projects\\e3\\Educational-Courses-Platform.Services\\Educational-Courses-Platform.Services.csproj",
+  "projectFilePath": "D:\\ASU\\Real Projects\\e4\\Educational-Courses-Platform.Services\\Educational-Courses-Platform.Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP Elite BOOK\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\HP Elite BOOK\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
