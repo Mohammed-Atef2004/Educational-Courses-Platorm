@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Educational Courses Platrom.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b1d333337db4e05ff2552fbb059b3b475fa74955")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+29f551bcc44cea7c6f1cf2b7ede1a1a37982262b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Educational Courses Platrom.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Educational Courses Platrom.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

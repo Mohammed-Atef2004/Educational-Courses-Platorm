@@ -1608,3 +1608,4 @@ D:\ASU\Real Projects\e3\Educational Courses Platrom.Web\obj\Debug\net8.0\refint\
 D:\ASU\Real Projects\e3\Educational Courses Platrom.Web\obj\Debug\net8.0\Educational Courses Platrom.Web.pdb
 D:\ASU\Real Projects\e3\Educational Courses Platrom.Web\obj\Debug\net8.0\Educational Courses Platrom.Web.genruntimeconfig.cache
 D:\ASU\Real Projects\e3\Educational Courses Platrom.Web\obj\Debug\net8.0\ref\Educational Courses Platrom.Web.dll
+D:\ASU\Real Projects\e3\Educational Courses Platrom.Web\bin\Debug\net8.0\Educational Courses Platrom.Web.staticwebassets.runtime.json

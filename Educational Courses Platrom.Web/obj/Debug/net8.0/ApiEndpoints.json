@@ -38,6 +38,22 @@
   },
   {
     "ContainingType": "Educational_Courses_Platform.Web.Controllers.AccountController",
+    "Method": "ForgotPassword",
+    "RelativePath": "api/Account/ForgotPassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Educational_Courses_Platform.Models.Dto.ForgotPasswordDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educational_Courses_Platform.Web.Controllers.AccountController",
     "Method": "Login",
     "RelativePath": "api/Account/Login",
     "HttpMethod": "POST",
@@ -63,6 +79,22 @@
       {
         "Name": "userDto",
         "Type": "Educational_Courses_Platform.Models.Dto.RegisterUserDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educational_Courses_Platform.Web.Controllers.AccountController",
+    "Method": "ResetPassword",
+    "RelativePath": "api/Account/ResetPassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Educational_Courses_Platform.Models.Dto.ResetPasswordDto",
         "IsRequired": true
       }
     ],

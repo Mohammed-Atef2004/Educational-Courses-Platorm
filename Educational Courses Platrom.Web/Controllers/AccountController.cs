@@ -10,6 +10,8 @@ using Educational_Courses_Platform.Entities.Models;
 using Educational_Courses_Platform.Models.Dto;
 using Microsoft.IdentityModel.Tokens.Experimental;
 using Educational_Courses_Platform.Services.Interfaces;
+using Microsoft.AspNetCore.WebUtilities;
+using System.Web;
 
 namespace Educational_Courses_Platform.Web.Controllers
 {
@@ -58,6 +60,7 @@ namespace Educational_Courses_Platform.Web.Controllers
                 UserName = userDto.UserName,
                 Email = userDto.Email,
                 EmailConfirmed = false
+                
             };
 
             IdentityResult result = await userManager.CreateAsync(user, userDto.Password);
@@ -79,7 +82,6 @@ namespace Educational_Courses_Platform.Web.Controllers
                 var templatePath = Path.Combine(Directory.GetCurrentDirectory(), "Templates", "ConfirmEmail.cshtml");
                 var templateContent = await System.IO.File.ReadAllTextAsync(templatePath);
 
-              
                 var emailBody = templateContent
                     .Replace("{{UserName}}", user.UserName)
                     .Replace("{{ConfirmUrl}}", confirmationLink);
@@ -222,13 +224,13 @@ namespace Educational_Courses_Platform.Web.Controllers
 
             var result = await userManager.ConfirmEmailAsync(user, token);
 
-            // هنا نختار أي تمبليت بناءً على النتيجة
+          
             string templateFile = result.Succeeded ? "ConfirmEmailSuccess.cshtml" : "ConfirmEmailFailed.cshtml";
             var templatePath = Path.Combine(Directory.GetCurrentDirectory(), "Templates", templateFile);
 
             if (!System.IO.File.Exists(templatePath))
             {
-                // fallback
+                
                 return result.Succeeded
                     ? Ok("Email confirmed successfully. You can now login.")
                     : BadRequest("Email confirmation failed.");
@@ -236,11 +238,80 @@ namespace Educational_Courses_Platform.Web.Controllers
 
             var templateContent = await System.IO.File.ReadAllTextAsync(templatePath);
 
-            // استبدال المتغيرات لو حابب (مثلاً اسم المستخدم)
+            
             var htmlContent = templateContent.Replace("{{UserName}}", user.UserName);
 
             return Content(htmlContent, "text/html");
         }
+
+
+        [HttpPost("ForgotPassword")]
+        public async Task<IActionResult> ForgotPassword([FromBody] ForgotPasswordDto model)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(new { message = "Invalid request." });
+
+            var user = await userManager.FindByEmailAsync(model.Email);
+            if (user == null || !(await userManager.IsEmailConfirmedAsync(user)))
+                return Ok(new { message = "If an account with that email exists, a password reset link has been sent." });
+
+          
+            var token = await userManager.GeneratePasswordResetTokenAsync(user);
+
+            // Generate reset URL pointing to HTML page in wwwroot
+            var resetUrl = $"http://localhost:5160/reset-password.html?userId={user.Id}&token={HttpUtility.UrlEncode(token)}";
+
+           
+            var templatePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "ForgotPasswordEmail.html");
+
+            if (!System.IO.File.Exists(templatePath))
+            {
+                return StatusCode(500, "Email template not found.");
+            }
+
+            var templateContent = await System.IO.File.ReadAllTextAsync(templatePath);
+
+            // Replace placeholders with actual values
+            var emailBody = templateContent
+                .Replace("{{UserName}}", user.UserName)
+                .Replace("{{ResetUrl}}", resetUrl);
+
+            // Send email
+            await emailSender.SendEmailAsync(
+                user.Email,
+                "Reset Your Password",
+                emailBody
+            );
+
+            return Ok(new { message = "If an account with that email exists, a password reset link has been sent." });
+        }
+
+
+
+
+
+        [HttpPost("ResetPassword")]
+        public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordDto model)
+        {
+            var user = await userManager.FindByIdAsync(model.UserId);
+            if (user == null)
+                return NotFound(new { success = false, message = "User not found" });
+
+            if (model.NewPassword != model.ConfirmPassword)
+                return BadRequest(new { success = false, message = "Passwords do not match" });
+
+            var result = await userManager.ResetPasswordAsync(user, model.Token, model.NewPassword);
+            if (result.Succeeded)
+                return Ok(new { success = true, message = "Password reset successful!" });
+
+            return BadRequest(new
+            {
+                success = false,
+                message = "Password reset failed",
+                errors = result.Errors.Select(e => e.Description)
+            });
+        }
+
 
 
     }
