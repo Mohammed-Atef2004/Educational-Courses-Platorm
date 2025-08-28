@@ -1,21 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\ASU\\Real Projects\\e3\\",
+  "WorkspaceRootPath": "D:\\ASU\\Real Projects\\e4\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{46A15066-DD07-4FDE-9A11-881D4D874A85}|Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj|d:\\asu\\real projects\\e3\\educational courses platrom.web\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3B1EC70F-18A8-4507-B755-E06B3517A20E}|Educational-Courses-Platform.Services\\Educational-Courses-Platform.Services.csproj|d:\\asu\\real projects\\e4\\educational-courses-platform.services\\implementation\\enrollmentsrequestsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3B1EC70F-18A8-4507-B755-E06B3517A20E}|Educational-Courses-Platform.Services\\Educational-Courses-Platform.Services.csproj|solutionrelative:educational-courses-platform.services\\implementation\\enrollmentsrequestsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46A15066-DD07-4FDE-9A11-881D4D874A85}|Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj|d:\\asu\\real projects\\e4\\educational courses platrom.web\\controllers\\enrollmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46A15066-DD07-4FDE-9A11-881D4D874A85}|Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj|solutionrelative:educational courses platrom.web\\controllers\\enrollmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B1EC70F-18A8-4507-B755-E06B3517A20E}|Educational-Courses-Platform.Services\\Educational-Courses-Platform.Services.csproj|d:\\asu\\real projects\\e4\\educational-courses-platform.services\\interfaces\\ienrollmentsrequestsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3B1EC70F-18A8-4507-B755-E06B3517A20E}|Educational-Courses-Platform.Services\\Educational-Courses-Platform.Services.csproj|solutionrelative:educational-courses-platform.services\\interfaces\\ienrollmentsrequestsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46A15066-DD07-4FDE-9A11-881D4D874A85}|Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj|d:\\asu\\real projects\\e4\\educational courses platrom.web\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{46A15066-DD07-4FDE-9A11-881D4D874A85}|Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj|solutionrelative:educational courses platrom.web\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{46A15066-DD07-4FDE-9A11-881D4D874A85}|Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj|d:\\asu\\real projects\\e3\\educational courses platrom.web\\wwwroot\\forgotpasswordemail.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{46A15066-DD07-4FDE-9A11-881D4D874A85}|Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj|solutionrelative:educational courses platrom.web\\wwwroot\\forgotpasswordemail.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{46A15066-DD07-4FDE-9A11-881D4D874A85}|Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj|d:\\asu\\real projects\\e3\\educational courses platrom.web\\wwwroot\\reset-password.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{46A15066-DD07-4FDE-9A11-881D4D874A85}|Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj|solutionrelative:educational courses platrom.web\\wwwroot\\reset-password.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{17B819EA-A962-4135-81B1-8C325F7B1118}|Educational Courses Platform.Models\\Educational Courses Platform.Entities.csproj|d:\\asu\\real projects\\e3\\educational courses platform.models\\dto\\resetpassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{17B819EA-A962-4135-81B1-8C325F7B1118}|Educational Courses Platform.Models\\Educational Courses Platform.Entities.csproj|d:\\asu\\real projects\\e4\\educational courses platform.models\\dto\\resetpassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{17B819EA-A962-4135-81B1-8C325F7B1118}|Educational Courses Platform.Models\\Educational Courses Platform.Entities.csproj|solutionrelative:educational courses platform.models\\dto\\resetpassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -26,8 +30,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EnrollmentController.cs",
+              "DocumentMoniker": "D:\\ASU\\Real Projects\\e4\\Educational Courses Platrom.Web\\Controllers\\EnrollmentController.cs",
+              "RelativeDocumentMoniker": "Educational Courses Platrom.Web\\Controllers\\EnrollmentController.cs",
+              "ToolTip": "D:\\ASU\\Real Projects\\e4\\Educational Courses Platrom.Web\\Controllers\\EnrollmentController.cs",
+              "RelativeToolTip": "Educational Courses Platrom.Web\\Controllers\\EnrollmentController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwCkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-28T05:41:38.3Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EnrollmentsRequestsService.cs",
+              "DocumentMoniker": "D:\\ASU\\Real Projects\\e4\\Educational-Courses-Platform.Services\\Implementation\\EnrollmentsRequestsService.cs",
+              "RelativeDocumentMoniker": "Educational-Courses-Platform.Services\\Implementation\\EnrollmentsRequestsService.cs",
+              "ToolTip": "D:\\ASU\\Real Projects\\e4\\Educational-Courses-Platform.Services\\Implementation\\EnrollmentsRequestsService.cs*",
+              "RelativeToolTip": "Educational-Courses-Platform.Services\\Implementation\\EnrollmentsRequestsService.cs*",
+              "ViewState": "AgIAACwAAAAAAAAAAAAuwEQAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-28T05:38:59.239Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{80c411e8-fd5e-4b16-914b-0d9d84172cc1}"
@@ -54,38 +84,25 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ForgotPasswordEmail.html",
-              "DocumentMoniker": "D:\\ASU\\Real Projects\\e3\\Educational Courses Platrom.Web\\wwwroot\\ForgotPasswordEmail.html",
-              "RelativeDocumentMoniker": "Educational Courses Platrom.Web\\wwwroot\\ForgotPasswordEmail.html",
-              "ToolTip": "D:\\ASU\\Real Projects\\e3\\Educational Courses Platrom.Web\\wwwroot\\ForgotPasswordEmail.html",
-              "RelativeToolTip": "Educational Courses Platrom.Web\\wwwroot\\ForgotPasswordEmail.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-28T03:48:10.647Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "reset-password.html",
-              "DocumentMoniker": "D:\\ASU\\Real Projects\\e3\\Educational Courses Platrom.Web\\wwwroot\\reset-password.html",
-              "RelativeDocumentMoniker": "Educational Courses Platrom.Web\\wwwroot\\reset-password.html",
-              "ToolTip": "D:\\ASU\\Real Projects\\e3\\Educational Courses Platrom.Web\\wwwroot\\reset-password.html*",
-              "RelativeToolTip": "Educational Courses Platrom.Web\\wwwroot\\reset-password.html*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-28T03:37:11.774Z",
+              "Title": "IEnrollmentsRequestsService.cs",
+              "DocumentMoniker": "D:\\ASU\\Real Projects\\e4\\Educational-Courses-Platform.Services\\Interfaces\\IEnrollmentsRequestsService.cs",
+              "RelativeDocumentMoniker": "Educational-Courses-Platform.Services\\Interfaces\\IEnrollmentsRequestsService.cs",
+              "ToolTip": "D:\\ASU\\Real Projects\\e4\\Educational-Courses-Platform.Services\\Interfaces\\IEnrollmentsRequestsService.cs",
+              "RelativeToolTip": "Educational-Courses-Platform.Services\\Interfaces\\IEnrollmentsRequestsService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-28T05:38:32.369Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "AccountController.cs",
-              "DocumentMoniker": "D:\\ASU\\Real Projects\\e3\\Educational Courses Platrom.Web\\Controllers\\AccountController.cs",
+              "DocumentMoniker": "D:\\ASU\\Real Projects\\e4\\Educational Courses Platrom.Web\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "Educational Courses Platrom.Web\\Controllers\\AccountController.cs",
-              "ToolTip": "D:\\ASU\\Real Projects\\e3\\Educational Courses Platrom.Web\\Controllers\\AccountController.cs*",
-              "RelativeToolTip": "Educational Courses Platrom.Web\\Controllers\\AccountController.cs*",
+              "ToolTip": "D:\\ASU\\Real Projects\\e4\\Educational Courses Platrom.Web\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Educational Courses Platrom.Web\\Controllers\\AccountController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-28T02:29:12.663Z",
@@ -93,16 +110,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ResetPasswordDto.cs",
-              "DocumentMoniker": "D:\\ASU\\Real Projects\\e3\\Educational Courses Platform.Models\\Dto\\ResetPasswordDto.cs",
+              "DocumentMoniker": "D:\\ASU\\Real Projects\\e4\\Educational Courses Platform.Models\\Dto\\ResetPasswordDto.cs",
               "RelativeDocumentMoniker": "Educational Courses Platform.Models\\Dto\\ResetPasswordDto.cs",
-              "ToolTip": "D:\\ASU\\Real Projects\\e3\\Educational Courses Platform.Models\\Dto\\ResetPasswordDto.cs",
+              "ToolTip": "D:\\ASU\\Real Projects\\e4\\Educational Courses Platform.Models\\Dto\\ResetPasswordDto.cs",
               "RelativeToolTip": "Educational Courses Platform.Models\\Dto\\ResetPasswordDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T02:45:08.148Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-28T02:45:08.148Z"
             }
           ]
         }

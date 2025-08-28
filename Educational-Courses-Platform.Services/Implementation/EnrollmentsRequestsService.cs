@@ -55,17 +55,21 @@ namespace Educational_Courses_Platform.Services.Implementation
                 return false;
 
 
+
+
             if (user.EnrolledCourses == null)
                 user.EnrolledCourses = new List<Course>();
 
 
             user.EnrolledCourses.Add(course);
+            var request = _unitOfWork.EnrollmnentsRequests.GetFirstOrDefault(r => r.UserId == userId && r.CourseId == courseId);
+            if (request != null)
+                _unitOfWork.EnrollmnentsRequests.Remove(request);
+
+          
+           _unitOfWork.Complete();
+
             user.EmailConfirmed = true;
-
-
-            _unitOfWork.Complete();
-
-
             if (!string.IsNullOrEmpty(user.Email))
             {
                 var subject = "Your enrollment has been approved";
