@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Confirmed</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #4caf50, #2e7d32);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #fff;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        a {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #fff;
+            color: #2e7d32;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+            a:hover {
+                background: #f1f1f1;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Email Confirmed 🎉</h1>
+        <p>Hi <b>{{UserName}}</b>, your email has been successfully confirmed.</p>
+        <a href="/login">Go to Login</a>
+    </div>
+</body>
+</html>

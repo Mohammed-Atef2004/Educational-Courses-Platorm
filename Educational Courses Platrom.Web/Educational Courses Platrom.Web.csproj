@@ -8,6 +8,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Templates\ConfirmEmail.cshtml" />
+    <Content Remove="Templates\ConfirmEmailFailed.cshtml" />
+    <Content Remove="Templates\ConfirmEmailSuccess.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Templates\ConfirmEmail.cshtml" />
+    <None Include="Templates\ConfirmEmailFailed.cshtml" />
+    <None Include="Templates\ConfirmEmailSuccess.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.19" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.19" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.19">

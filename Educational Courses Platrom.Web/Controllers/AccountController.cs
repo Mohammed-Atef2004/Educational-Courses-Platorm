@@ -9,6 +9,7 @@ using Educational_Courses_Platform.DataAccess;
 using Educational_Courses_Platform.Entities.Models;
 using Educational_Courses_Platform.Models.Dto;
 using Microsoft.IdentityModel.Tokens.Experimental;
+using Educational_Courses_Platform.Services.Interfaces;
 
 namespace Educational_Courses_Platform.Web.Controllers
 {
@@ -18,14 +19,16 @@ namespace Educational_Courses_Platform.Web.Controllers
     {
         private readonly UserManager<ApplicationUser> userManager;
         private readonly IConfiguration config;
+        private readonly IEmailSender emailSender;
 
-        public AccountController(UserManager<ApplicationUser> userManager, IConfiguration config)
+        public AccountController(UserManager<ApplicationUser> userManager, IConfiguration config, IEmailSender emailSender)
         {
             this.userManager = userManager;
             this.config = config;
+            this.emailSender = emailSender;
         }
 
-        [HttpPost("Register")] // api/account/Register
+        [HttpPost("Register")]
         public async Task<IActionResult> Registration(RegisterUserDto userDto)
         {
             var existingUser = await userManager.FindByEmailAsync(userDto.Email);
@@ -53,19 +56,40 @@ namespace Educational_Courses_Platform.Web.Controllers
             var user = new ApplicationUser
             {
                 UserName = userDto.UserName,
-                Email = userDto.Email
+                Email = userDto.Email,
+                EmailConfirmed = false
             };
 
             IdentityResult result = await userManager.CreateAsync(user, userDto.Password);
 
             if (result.Succeeded)
             {
-                //  Student Role aotomatic
                 await userManager.AddToRoleAsync(user, "Student");
+
+                var token = await userManager.GenerateEmailConfirmationTokenAsync(user);
+
+                var confirmationLink = Url.Action(
+                    action: "ConfirmEmail",
+                    controller: "Account",
+                    values: new { userId = user.Id, token = token },
+                    protocol: HttpContext.Request.Scheme
+                );
+
+                
+                var templatePath = Path.Combine(Directory.GetCurrentDirectory(), "Templates", "ConfirmEmail.cshtml");
+                var templateContent = await System.IO.File.ReadAllTextAsync(templatePath);
+
+              
+                var emailBody = templateContent
+                    .Replace("{{UserName}}", user.UserName)
+                    .Replace("{{ConfirmUrl}}", confirmationLink);
+
+              
+                await emailSender.SendEmailAsync(user.Email, "Confirm your email", emailBody);
 
                 return Ok(new ResponseDto<object>(
                     success: true,
-                    message: "Account added successfully with Student role"
+                    message: "Account created successfully. Please check your email to confirm your account."
                 ));
             }
 
@@ -76,6 +100,8 @@ namespace Educational_Courses_Platform.Web.Controllers
                 errors: identityErrors
             ));
         }
+
+
 
 
         [HttpPost("Login")] // api/account/Login
@@ -101,6 +127,14 @@ namespace Educational_Courses_Platform.Web.Controllers
                      errors: new[] { "Email not found" }
                 ));
 
+            }
+
+            if (!user.EmailConfirmed)
+            {
+                return Unauthorized(new ResponseDto<object>(
+                    success: false,
+                    errors: new[] { "Email is not confirmed. Please check your inbox." }
+                ));
             }
 
             if (!await userManager.CheckPasswordAsync(user, userDto.Password))
@@ -173,6 +207,41 @@ namespace Educational_Courses_Platform.Web.Controllers
             ));
 
         }
+
+
+
+        [HttpGet("ConfirmEmail")]
+        public async Task<IActionResult> ConfirmEmail(string userId, string token)
+        {
+            if (string.IsNullOrEmpty(userId) || string.IsNullOrEmpty(token))
+                return BadRequest("Invalid confirmation request.");
+
+            var user = await userManager.FindByIdAsync(userId);
+            if (user == null)
+                return NotFound("User not found.");
+
+            var result = await userManager.ConfirmEmailAsync(user, token);
+
+            // هنا نختار أي تمبليت بناءً على النتيجة
+            string templateFile = result.Succeeded ? "ConfirmEmailSuccess.cshtml" : "ConfirmEmailFailed.cshtml";
+            var templatePath = Path.Combine(Directory.GetCurrentDirectory(), "Templates", templateFile);
+
+            if (!System.IO.File.Exists(templatePath))
+            {
+                // fallback
+                return result.Succeeded
+                    ? Ok("Email confirmed successfully. You can now login.")
+                    : BadRequest("Email confirmation failed.");
+            }
+
+            var templateContent = await System.IO.File.ReadAllTextAsync(templatePath);
+
+            // استبدال المتغيرات لو حابب (مثلاً اسم المستخدم)
+            var htmlContent = templateContent.Replace("{{UserName}}", user.UserName);
+
+            return Content(htmlContent, "text/html");
+        }
+
 
     }
 }

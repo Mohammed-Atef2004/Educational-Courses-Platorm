@@ -3,40 +3,24 @@
   "WorkspaceRootPath": "D:\\ASU\\Real Projects\\e3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{46A15066-DD07-4FDE-9A11-881D4D874A85}|Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj|d:\\asu\\real projects\\e3\\educational courses platrom.web\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46A15066-DD07-4FDE-9A11-881D4D874A85}|Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj|solutionrelative:educational courses platrom.web\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{46A15066-DD07-4FDE-9A11-881D4D874A85}|Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj|d:\\asu\\real projects\\e3\\educational courses platrom.web\\controllers\\enrollmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46A15066-DD07-4FDE-9A11-881D4D874A85}|Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj|solutionrelative:educational courses platrom.web\\controllers\\enrollmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{46A15066-DD07-4FDE-9A11-881D4D874A85}|Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj|d:\\asu\\real projects\\e3\\educational courses platrom.web\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46A15066-DD07-4FDE-9A11-881D4D874A85}|Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj|solutionrelative:educational courses platrom.web\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{46A15066-DD07-4FDE-9A11-881D4D874A85}|Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj|d:\\asu\\real projects\\e3\\educational courses platrom.web\\templates\\confirmemail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{46A15066-DD07-4FDE-9A11-881D4D874A85}|Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj|solutionrelative:educational courses platrom.web\\templates\\confirmemail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{46A15066-DD07-4FDE-9A11-881D4D874A85}|Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj|d:\\asu\\real projects\\e3\\educational courses platrom.web\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{46A15066-DD07-4FDE-9A11-881D4D874A85}|Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj|solutionrelative:educational courses platrom.web\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{46A15066-DD07-4FDE-9A11-881D4D874A85}|Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj|d:\\asu\\real projects\\e3\\educational courses platrom.web\\controllers\\rolestestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46A15066-DD07-4FDE-9A11-881D4D874A85}|Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj|solutionrelative:educational courses platrom.web\\controllers\\rolestestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{46A15066-DD07-4FDE-9A11-881D4D874A85}|Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj|d:\\asu\\real projects\\e3\\educational courses platrom.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{46A15066-DD07-4FDE-9A11-881D4D874A85}|Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj|solutionrelative:educational courses platrom.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{46A15066-DD07-4FDE-9A11-881D4D874A85}|Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj|d:\\asu\\real projects\\e3\\educational courses platrom.web\\controllers\\episodecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46A15066-DD07-4FDE-9A11-881D4D874A85}|Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj|solutionrelative:educational courses platrom.web\\controllers\\episodecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3B1EC70F-18A8-4507-B755-E06B3517A20E}|Educational-Courses-Platform.Services\\Educational-Courses-Platform.Services.csproj|d:\\asu\\real projects\\e3\\educational-courses-platform.services\\implementation\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3B1EC70F-18A8-4507-B755-E06B3517A20E}|Educational-Courses-Platform.Services\\Educational-Courses-Platform.Services.csproj|solutionrelative:educational-courses-platform.services\\implementation\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{46A15066-DD07-4FDE-9A11-881D4D874A85}|Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj|d:\\asu\\real projects\\e3\\educational courses platrom.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46A15066-DD07-4FDE-9A11-881D4D874A85}|Educational Courses Platrom.Web\\Educational Courses Platrom.Web.csproj|solutionrelative:educational courses platrom.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3B1EC70F-18A8-4507-B755-E06B3517A20E}|Educational-Courses-Platform.Services\\Educational-Courses-Platform.Services.csproj|d:\\asu\\real projects\\e3\\educational-courses-platform.services\\implementation\\roleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3B1EC70F-18A8-4507-B755-E06B3517A20E}|Educational-Courses-Platform.Services\\Educational-Courses-Platform.Services.csproj|solutionrelative:educational-courses-platform.services\\implementation\\roleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3B1EC70F-18A8-4507-B755-E06B3517A20E}|Educational-Courses-Platform.Services\\Educational-Courses-Platform.Services.csproj|d:\\asu\\real projects\\e3\\educational-courses-platform.services\\interfaces\\iroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3B1EC70F-18A8-4507-B755-E06B3517A20E}|Educational-Courses-Platform.Services\\Educational-Courses-Platform.Services.csproj|solutionrelative:educational-courses-platform.services\\interfaces\\iroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3B1EC70F-18A8-4507-B755-E06B3517A20E}|Educational-Courses-Platform.Services\\Educational-Courses-Platform.Services.csproj|d:\\asu\\real projects\\e3\\educational-courses-platform.services\\interfaces\\iemailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3B1EC70F-18A8-4507-B755-E06B3517A20E}|Educational-Courses-Platform.Services\\Educational-Courses-Platform.Services.csproj|solutionrelative:educational-courses-platform.services\\interfaces\\iemailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,119 +58,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "EpisodeController.cs",
-              "DocumentMoniker": "D:\\ASU\\Real Projects\\e3\\Educational Courses Platrom.Web\\Controllers\\EpisodeController.cs",
-              "RelativeDocumentMoniker": "Educational Courses Platrom.Web\\Controllers\\EpisodeController.cs",
-              "ToolTip": "D:\\ASU\\Real Projects\\e3\\Educational Courses Platrom.Web\\Controllers\\EpisodeController.cs",
-              "RelativeToolTip": "Educational Courses Platrom.Web\\Controllers\\EpisodeController.cs",
-              "ViewState": "AgIAAHYAAAAAAAAAAAAowE8AAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T23:55:50.309Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EnrollmentController.cs",
-              "DocumentMoniker": "D:\\ASU\\Real Projects\\e3\\Educational Courses Platrom.Web\\Controllers\\EnrollmentController.cs",
-              "RelativeDocumentMoniker": "Educational Courses Platrom.Web\\Controllers\\EnrollmentController.cs",
-              "ToolTip": "D:\\ASU\\Real Projects\\e3\\Educational Courses Platrom.Web\\Controllers\\EnrollmentController.cs",
-              "RelativeToolTip": "Educational Courses Platrom.Web\\Controllers\\EnrollmentController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAEYAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T23:54:54.144Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CourseController.cs",
-              "DocumentMoniker": "D:\\ASU\\Real Projects\\e3\\Educational Courses Platrom.Web\\Controllers\\CourseController.cs",
-              "RelativeDocumentMoniker": "Educational Courses Platrom.Web\\Controllers\\CourseController.cs",
-              "ToolTip": "D:\\ASU\\Real Projects\\e3\\Educational Courses Platrom.Web\\Controllers\\CourseController.cs",
-              "RelativeToolTip": "Educational Courses Platrom.Web\\Controllers\\CourseController.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAYwK4AAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T23:53:30.315Z",
+              "Title": "ConfirmEmail.cshtml",
+              "DocumentMoniker": "D:\\ASU\\Real Projects\\e3\\Educational Courses Platrom.Web\\Templates\\ConfirmEmail.cshtml",
+              "RelativeDocumentMoniker": "Educational Courses Platrom.Web\\Templates\\ConfirmEmail.cshtml",
+              "ToolTip": "D:\\ASU\\Real Projects\\e3\\Educational Courses Platrom.Web\\Templates\\ConfirmEmail.cshtml",
+              "RelativeToolTip": "Educational Courses Platrom.Web\\Templates\\ConfirmEmail.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-28T01:49:54.746Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "D:\\ASU\\Real Projects\\e3\\Educational Courses Platrom.Web\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "Educational Courses Platrom.Web\\Controllers\\AdminController.cs",
-              "ToolTip": "D:\\ASU\\Real Projects\\e3\\Educational Courses Platrom.Web\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "Educational Courses Platrom.Web\\Controllers\\AdminController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAgAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T23:52:08.798Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "RolesTestController.cs",
-              "DocumentMoniker": "D:\\ASU\\Real Projects\\e3\\Educational Courses Platrom.Web\\Controllers\\RolesTestController.cs",
-              "RelativeDocumentMoniker": "Educational Courses Platrom.Web\\Controllers\\RolesTestController.cs",
-              "ToolTip": "D:\\ASU\\Real Projects\\e3\\Educational Courses Platrom.Web\\Controllers\\RolesTestController.cs",
-              "RelativeToolTip": "Educational Courses Platrom.Web\\Controllers\\RolesTestController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T23:41:36.25Z",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\ASU\\Real Projects\\e3\\Educational Courses Platrom.Web\\appsettings.json",
+              "RelativeDocumentMoniker": "Educational Courses Platrom.Web\\appsettings.json",
+              "ToolTip": "D:\\ASU\\Real Projects\\e3\\Educational Courses Platrom.Web\\appsettings.json",
+              "RelativeToolTip": "Educational Courses Platrom.Web\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-28T00:52:49.141Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "EmailSender.cs",
+              "DocumentMoniker": "D:\\ASU\\Real Projects\\e3\\Educational-Courses-Platform.Services\\Implementation\\EmailSender.cs",
+              "RelativeDocumentMoniker": "Educational-Courses-Platform.Services\\Implementation\\EmailSender.cs",
+              "ToolTip": "D:\\ASU\\Real Projects\\e3\\Educational-Courses-Platform.Services\\Implementation\\EmailSender.cs",
+              "RelativeToolTip": "Educational-Courses-Platform.Services\\Implementation\\EmailSender.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAuwCEAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-28T00:50:50.215Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IEmailSender.cs",
+              "DocumentMoniker": "D:\\ASU\\Real Projects\\e3\\Educational-Courses-Platform.Services\\Interfaces\\IEmailSender.cs",
+              "RelativeDocumentMoniker": "Educational-Courses-Platform.Services\\Interfaces\\IEmailSender.cs",
+              "ToolTip": "D:\\ASU\\Real Projects\\e3\\Educational-Courses-Platform.Services\\Interfaces\\IEmailSender.cs",
+              "RelativeToolTip": "Educational-Courses-Platform.Services\\Interfaces\\IEmailSender.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-28T00:50:14.566Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "AccountController.cs",
               "DocumentMoniker": "D:\\ASU\\Real Projects\\e3\\Educational Courses Platrom.Web\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "Educational Courses Platrom.Web\\Controllers\\AccountController.cs",
               "ToolTip": "D:\\ASU\\Real Projects\\e3\\Educational Courses Platrom.Web\\Controllers\\AccountController.cs",
               "RelativeToolTip": "Educational Courses Platrom.Web\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAANYAAAAAAAAAAAAAwPMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T23:30:15.142Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "RoleService.cs",
-              "DocumentMoniker": "D:\\ASU\\Real Projects\\e3\\Educational-Courses-Platform.Services\\Implementation\\RoleService.cs",
-              "RelativeDocumentMoniker": "Educational-Courses-Platform.Services\\Implementation\\RoleService.cs",
-              "ToolTip": "D:\\ASU\\Real Projects\\e3\\Educational-Courses-Platform.Services\\Implementation\\RoleService.cs",
-              "RelativeToolTip": "Educational-Courses-Platform.Services\\Implementation\\RoleService.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAA1wBsAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T23:34:20.586Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IRoleService.cs",
-              "DocumentMoniker": "D:\\ASU\\Real Projects\\e3\\Educational-Courses-Platform.Services\\Interfaces\\IRoleService.cs",
-              "RelativeDocumentMoniker": "Educational-Courses-Platform.Services\\Interfaces\\IRoleService.cs",
-              "ToolTip": "D:\\ASU\\Real Projects\\e3\\Educational-Courses-Platform.Services\\Interfaces\\IRoleService.cs",
-              "RelativeToolTip": "Educational-Courses-Platform.Services\\Interfaces\\IRoleService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T23:33:40.51Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\ASU\\Real Projects\\e3\\Educational Courses Platrom.Web\\Program.cs",
-              "RelativeDocumentMoniker": "Educational Courses Platrom.Web\\Program.cs",
-              "ToolTip": "D:\\ASU\\Real Projects\\e3\\Educational Courses Platrom.Web\\Program.cs",
-              "RelativeToolTip": "Educational Courses Platrom.Web\\Program.cs",
-              "ViewState": "AgIAAMsAAAAAAAAAAAAswNgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T23:30:24.857Z",
+              "WhenOpened": "2025-08-28T00:43:46.602Z",
               "EditorCaption": ""
             }
           ]
