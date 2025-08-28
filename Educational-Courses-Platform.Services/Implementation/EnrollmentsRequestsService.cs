@@ -84,8 +84,9 @@ namespace Educational_Courses_Platform.Services.Implementation
         }
         public IEnumerable<EnrollmentsRequest> ViewAllEnrollmentRequests()
         {
-           return _unitOfWork.EnrollmnentsRequests.GetAll();
+            return _unitOfWork.EnrollmnentsRequests.GetAll().ToList();
         }
+
 
     }
 }

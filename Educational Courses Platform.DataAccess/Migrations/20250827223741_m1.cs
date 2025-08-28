@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Educational_Courses_Platform.DataAccess.Migrations
 {
     /// <inheritdoc />
-    public partial class addingEnrollmentRequests : Migration
+    public partial class m1 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

@@ -70,7 +70,7 @@
   },
   {
     "ContainingType": "Educational_Courses_Platrom.Web.Controllers.AdminController",
-    "Method": "GetCoursesOfAdmin",
+    "Method": "GetCoursesOfUser",
     "RelativePath": "api/Admin/GetCoursesOfUser",
     "HttpMethod": "GET",
     "IsController": true,
@@ -375,6 +375,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educational_Courses_Platrom.Web.Controllers.RolesTestController",
+    "Method": "GetAllRoles",
+    "RelativePath": "api/RolesTest/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {

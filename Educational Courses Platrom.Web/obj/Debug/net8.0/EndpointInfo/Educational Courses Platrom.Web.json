@@ -578,6 +578,18 @@
           }
         }
       }
+    },
+    "/api/RolesTest/all": {
+      "get": {
+        "tags": [
+          "RolesTest"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {

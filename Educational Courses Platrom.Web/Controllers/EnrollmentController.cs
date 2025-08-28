@@ -1,4 +1,5 @@
 ﻿using Educational_Courses_Platform.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,6 +16,7 @@ namespace Educational_Courses_Platrom.Web.Controllers
            _enrollmentsRequestsService = enrollmentsRequestsService;
         }
         [HttpPost]
+        [Authorize(Roles = "Student")]
         [Route("EnrollCourse")]
         public IActionResult EnrollCourse(string userId,int  courseId)
         {
@@ -27,6 +29,7 @@ namespace Educational_Courses_Platrom.Web.Controllers
             
         }
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         [Route("ApproveEnrollment")]
         public IActionResult ApproveEnrollment(string userId, int courseId)
         {
@@ -39,6 +42,7 @@ namespace Educational_Courses_Platrom.Web.Controllers
 
         }
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         [Route("RejectEnrollment")]
         public IActionResult RejectEnrollment(string userId, int courseId)
         {
@@ -51,6 +55,7 @@ namespace Educational_Courses_Platrom.Web.Controllers
 
         }
         [HttpPost]
+        [Authorize(Roles = "Student")]
         [Route("UpdateEnrollment")]
         public IActionResult UpdateEnrollment(string userId, int courseId,int newCourseId)
         {
@@ -63,12 +68,13 @@ namespace Educational_Courses_Platrom.Web.Controllers
 
         }
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         [Route("ViewAllEnrollments")]
         public IActionResult ViewAllEnrollments()
         {
             var result=_enrollmentsRequestsService.ViewAllEnrollmentRequests();
             if (result!=null)
-            return Ok();
+            return Ok(result);
             return BadRequest();
         }
     }

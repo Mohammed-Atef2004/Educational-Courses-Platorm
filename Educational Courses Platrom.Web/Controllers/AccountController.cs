@@ -28,31 +28,27 @@ namespace Educational_Courses_Platform.Web.Controllers
         [HttpPost("Register")] // api/account/Register
         public async Task<IActionResult> Registration(RegisterUserDto userDto)
         {
-
             var existingUser = await userManager.FindByEmailAsync(userDto.Email);
             if (existingUser != null)
             {
                 return BadRequest(new ResponseDto<object>(
-                  success: false,
-                  message: " Registration Failed",
-                  errors: new[] { "Email is already registered." }
+                    success: false,
+                    message: "Registration Failed",
+                    errors: new[] { "Email is already registered." }
                 ));
-
             }
+
             if (!ModelState.IsValid)
             {
-               
                 var validationErrors = ModelState.Values
                     .SelectMany(v => v.Errors)
                     .Select(e => e.ErrorMessage);
 
                 return BadRequest(new ResponseDto<object>(
-                  success: false,
-                  errors: validationErrors
+                    success: false,
+                    errors: validationErrors
                 ));
-
             }
-          
 
             var user = new ApplicationUser
             {
@@ -64,19 +60,21 @@ namespace Educational_Courses_Platform.Web.Controllers
 
             if (result.Succeeded)
             {
+                //  Student Role aotomatic
+                await userManager.AddToRoleAsync(user, "Student");
+
                 return Ok(new ResponseDto<object>(
-                 success: true,
-                  message: "Account added successfully"
+                    success: true,
+                    message: "Account added successfully with Student role"
                 ));
             }
 
             var identityErrors = result.Errors.Select(e => e.Description);
 
             return BadRequest(new ResponseDto<object>(
-              success: false,
-              errors: identityErrors
+                success: false,
+                errors: identityErrors
             ));
-
         }
 
 

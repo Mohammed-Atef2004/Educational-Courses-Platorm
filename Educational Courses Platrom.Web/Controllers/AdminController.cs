@@ -1,10 +1,12 @@
 ﻿using Educational_Courses_Platform.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Educational_Courses_Platrom.Web.Controllers
 {
     [Route("api/[controller]")]
+    [Authorize(Roles = "Admin")]
     [ApiController]
     public class AdminController : ControllerBase
     {
@@ -49,7 +51,7 @@ namespace Educational_Courses_Platrom.Web.Controllers
 
 
         [HttpGet("GetCoursesOfUser")]
-        public async Task<IActionResult> GetCoursesOfAdmin([FromQuery] string UserId)
+        public async Task<IActionResult> GetCoursesOfUser([FromQuery] string UserId)
         {
 
             if (string.IsNullOrWhiteSpace(UserId))

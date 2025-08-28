@@ -4350,23 +4350,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\moham\\.nuget\\packages\\": {},
+    "C:\\Users\\HP Elite BOOK\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Educational-Courses-Platorm\\Educational Courses Platform.DataAccess\\Educational Courses Platform.DataAccess.csproj",
+      "projectUniqueName": "D:\\ASU\\Real Projects\\e3\\Educational Courses Platform.DataAccess\\Educational Courses Platform.DataAccess.csproj",
       "projectName": "Educational Courses Platform.DataAccess",
-      "projectPath": "D:\\Educational-Courses-Platorm\\Educational Courses Platform.DataAccess\\Educational Courses Platform.DataAccess.csproj",
-      "packagesPath": "C:\\Users\\moham\\.nuget\\packages\\",
-      "outputPath": "D:\\Educational-Courses-Platorm\\Educational Courses Platform.DataAccess\\obj\\",
+      "projectPath": "D:\\ASU\\Real Projects\\e3\\Educational Courses Platform.DataAccess\\Educational Courses Platform.DataAccess.csproj",
+      "packagesPath": "C:\\Users\\HP Elite BOOK\\.nuget\\packages\\",
+      "outputPath": "D:\\ASU\\Real Projects\\e3\\Educational Courses Platform.DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\moham\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\HP Elite BOOK\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4381,8 +4381,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Educational-Courses-Platorm\\Educational Courses Platform.Models\\Educational Courses Platform.Entities.csproj": {
-              "projectPath": "D:\\Educational-Courses-Platorm\\Educational Courses Platform.Models\\Educational Courses Platform.Entities.csproj"
+            "D:\\ASU\\Real Projects\\e3\\Educational Courses Platform.Models\\Educational Courses Platform.Entities.csproj": {
+              "projectPath": "D:\\ASU\\Real Projects\\e3\\Educational Courses Platform.Models\\Educational Courses Platform.Entities.csproj"
             }
           }
         }
@@ -4397,7 +4397,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.300"
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net8.0": {
@@ -4442,7 +4442,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

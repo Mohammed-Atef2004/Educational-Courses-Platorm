@@ -22,6 +22,7 @@ namespace Educational_Courses_Platrom.Web.Controllers
 
         }
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         [Route("CreateCourse")]
         public IActionResult CreateCourse(CourseDto dto)
         {
@@ -40,6 +41,7 @@ namespace Educational_Courses_Platrom.Web.Controllers
 
       
         [HttpGet]
+        [Authorize(Roles = "Admin,Student")]
         [Route("GetAllCourses")]
         public IActionResult GetAllCourses()
         {
@@ -54,6 +56,7 @@ namespace Educational_Courses_Platrom.Web.Controllers
             return BadRequest();
         }
         [HttpGet]
+        [Authorize(Roles = "Admin,Student")]
         [Route("GetAllFreeCourses")]
         public IActionResult GetAllFreeCourses()
         {
@@ -70,6 +73,7 @@ namespace Educational_Courses_Platrom.Web.Controllers
 
         [Authorize]
         [HttpGet]
+        [Authorize(Roles = "Admin,Student")]
         [Route("GetAllPaidCourses")]
         public IActionResult GetAllPaidCourses()
         {
@@ -86,6 +90,7 @@ namespace Educational_Courses_Platrom.Web.Controllers
 
       
         [HttpGet]
+        [Authorize(Roles = "Admin,Student")]
         [Route("GetAllCoursesWithEpisodes")]
         public IActionResult GetAllCoursesWithEpisodes()
         {
@@ -100,6 +105,7 @@ namespace Educational_Courses_Platrom.Web.Controllers
             return BadRequest();
         }
         [HttpDelete]
+        [Authorize(Roles = "Admin")]
         [Route("RemoveCourseById")]
         public IActionResult RemoveCourse(int id)
         {
@@ -122,6 +128,7 @@ namespace Educational_Courses_Platrom.Web.Controllers
         }
 
         [HttpDelete]
+        [Authorize(Roles = "Admin")]
         [Route("RemoveCourseByName")]
         public IActionResult RemoveCourseByName(string name)
         {
@@ -143,6 +150,7 @@ namespace Educational_Courses_Platrom.Web.Controllers
 
 
       [HttpPost]
+        [Authorize(Roles = "Admin")]
         [Route("UpdateCourse")]
         public IActionResult UpdateCourse(CourseWithIdDto dto)
         {
@@ -164,6 +172,7 @@ namespace Educational_Courses_Platrom.Web.Controllers
             return BadRequest();
         }
         [HttpGet]
+        [Authorize(Roles = "Admin,Student")]
         [Route("GetEpisodesByCourse")]
         public async Task<IActionResult> GetEpisodesByCourse(int courseId)
         {

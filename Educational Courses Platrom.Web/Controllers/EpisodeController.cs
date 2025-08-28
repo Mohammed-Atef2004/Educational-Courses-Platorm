@@ -3,6 +3,7 @@ using Educational_Courses_Platform.Entities.Models;
 using Educational_Courses_Platform.Entities.Repositories;
 using Educational_Courses_Platform.Services.Implementation;
 using Educational_Courses_Platform.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -23,6 +24,7 @@ namespace Educational_Courses_Platrom.Web.Controllers
         }
 
         [HttpGet("GetEpisodesById")]
+        [Authorize(Roles = "Admin,Student")]
         public async Task<IActionResult> GetEpisodes(int id)
         {
             if (!ModelState.IsValid)
@@ -35,9 +37,10 @@ namespace Educational_Courses_Platrom.Web.Controllers
 
             return Ok(episode);
         }
-        
 
+        [Authorize(Roles = "Admin")]
         [HttpPost("AddEpisode")]
+
         public async Task<IActionResult> AddEpisode(int courseId, [FromBody] EpisodeDto dto)
         {
             if (!ModelState.IsValid)
@@ -59,7 +62,7 @@ namespace Educational_Courses_Platrom.Web.Controllers
                 }
             });
         }
-
+        [Authorize(Roles = "Admin")]
         [HttpPost("UpdateEpisode")]
         public async Task<IActionResult> UpdateEpisode(int id, [FromBody] EpisodeDto dto)
         {
@@ -74,6 +77,7 @@ namespace Educational_Courses_Platrom.Web.Controllers
             return Ok("Episode Updated Successfully");
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpDelete("DeleteEpisode")]
         public async Task<IActionResult> DeleteEpisode(int id)
         {

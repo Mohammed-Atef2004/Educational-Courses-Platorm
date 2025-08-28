@@ -124,6 +124,7 @@ namespace Educational_Courses_Platform
             builder.Services.AddScoped<ICourseService, CourseService>();
             builder.Services.AddScoped<IEpisodeService, EpisodeService>();
             builder.Services.AddScoped<IAdminService, AdminService>();
+            builder.Services.AddScoped<IRoleService, RoleService>();
             builder.Services.AddScoped<IEnrollmentsRequestsService, EnrollmentsRequestsService>();  
 
             // Swagger
@@ -213,6 +214,15 @@ namespace Educational_Courses_Platform
             logger.LogInformation("Educational Courses Platform starting...");
             logger.LogInformation("Environment: {Environment}", app.Environment.EnvironmentName);
             logger.LogInformation("Swagger UI available at: /swagger");
+
+
+            using (var scope = app.Services.CreateScope())
+            {
+                var roleService = scope.ServiceProvider.GetRequiredService<IRoleService>();
+                roleService.EnsureRolesSeededAsync().GetAwaiter().GetResult();
+
+            }
+
 
             app.Run();
         }
