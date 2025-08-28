@@ -1,21 +1,5 @@
 [
   {
-    "ContainingType": "Educational_Courses_Platform.Program\u002B\u003C\u003Ec",
-    "Method": "\u003CMain\u003Eb__0_9",
-    "RelativePath": "",
-    "HttpMethod": "GET",
-    "IsController": false,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
     "ContainingType": "Educational_Courses_Platform.Web.Controllers.AccountController",
     "Method": "ConfirmEmail",
     "RelativePath": "api/Account/ConfirmEmail",
@@ -101,43 +85,6 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Educational_Courses_Platrom.Web.Controllers.AdminController",
-    "Method": "AddCourseToUser",
-    "RelativePath": "api/Admin/AddCourseToUser",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "UserId",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "courseId",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Educational_Courses_Platrom.Web.Controllers.AdminController",
-    "Method": "GetCoursesOfUser",
-    "RelativePath": "api/Admin/GetCoursesOfUser",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "UserId",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "Educational_Courses_Platrom.Web.Controllers.CourseController",
     "Method": "CreateCourse",
     "RelativePath": "api/Course/CreateCourse",
@@ -146,9 +93,29 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "dto",
-        "Type": "CourseDto",
-        "IsRequired": true
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Price",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "ImageUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Link",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -195,6 +162,22 @@
   },
   {
     "ContainingType": "Educational_Courses_Platrom.Web.Controllers.CourseController",
+    "Method": "GetCourseById",
+    "RelativePath": "api/Course/GetCourseById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Educational_Courses_Platrom.Web.Controllers.CourseController",
     "Method": "GetEpisodesByCourse",
     "RelativePath": "api/Course/GetEpisodesByCourse",
     "HttpMethod": "GET",
@@ -212,7 +195,7 @@
   {
     "ContainingType": "Educational_Courses_Platrom.Web.Controllers.CourseController",
     "Method": "RemoveCourse",
-    "RelativePath": "api/Course/RemoveCourseById",
+    "RelativePath": "api/Course/RemoveCourse",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -439,21 +422,5 @@
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Educational_Courses_Platform.Program\u002B\u003C\u003Ec",
-    "Method": "\u003CMain\u003Eb__0_8",
-    "RelativePath": "health",
-    "HttpMethod": "GET",
-    "IsController": false,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      }
-    ]
   }
 ]

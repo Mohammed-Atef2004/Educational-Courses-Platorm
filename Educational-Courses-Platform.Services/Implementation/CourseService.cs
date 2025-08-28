@@ -1,15 +1,8 @@
-﻿using Educational_Courses_Platform.DataAccess.Data;
-using Educational_Courses_Platform.Entities.Models;
+﻿using Educational_Courses_Platform.Entities.Models;
 using Educational_Courses_Platform.Entities.Repositories;
 using Educational_Courses_Platform.Models.Dto;
 using Educational_Courses_Platform.Services.Interfaces;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 
 namespace Educational_Courses_Platform.Services.Implementation
 {
@@ -23,6 +16,10 @@ namespace Educational_Courses_Platform.Services.Implementation
         public async Task<IEnumerable<CourseWithIdDto>> GetAllCoursesAsync()
         {
             List<Course> courses = _unitOfWork.Course.GetAll().ToList();
+            if (courses == null || !courses.Any())
+            {
+                return Enumerable.Empty<CourseWithIdDto>();
+            }
             List<CourseWithIdDto> courseDtos = courses.Select(c => new CourseWithIdDto
             {
                 Id = c.Id,
@@ -32,11 +29,19 @@ namespace Educational_Courses_Platform.Services.Implementation
                 ImageUrl= c.ImageUrl
 
             }).ToList();
+            if(courseDtos == null || !courseDtos.Any())
+            {
+                return Enumerable.Empty<CourseWithIdDto>();
+            }
             return courseDtos;
         }
         public async Task<IEnumerable<CourseWithIdDto>> GetAllFreeCoursesAsync()
         {
             List<Course> courses = _unitOfWork.Course.GetAll(c=>c.Price==0).ToList();
+            if (courses == null || !courses.Any())
+            {
+                return Enumerable.Empty<CourseWithIdDto>();
+            }
             List<CourseWithIdDto> courseDtos = courses.Select(c => new CourseWithIdDto
             {
                 Id = c.Id,
@@ -46,11 +51,19 @@ namespace Educational_Courses_Platform.Services.Implementation
                 ImageUrl = c.ImageUrl
 
             }).ToList();
+            if (courseDtos == null || !courseDtos.Any())
+            {
+                return Enumerable.Empty<CourseWithIdDto>();
+            }
             return courseDtos;
         }
         public async Task<IEnumerable<CourseWithIdDto>> GetAllPaidCoursesAsync()
         {
             List<Course> courses = _unitOfWork.Course.GetAll(c => c.Price > 0).ToList();
+            if (courses == null || !courses.Any())
+            {
+                return Enumerable.Empty<CourseWithIdDto>();
+            }
             List<CourseWithIdDto> courseDtos = courses.Select(c => new CourseWithIdDto
             {
                 Id = c.Id,
@@ -60,15 +73,25 @@ namespace Educational_Courses_Platform.Services.Implementation
                 ImageUrl = c.ImageUrl
 
             }).ToList();
+            if (courseDtos == null || !courseDtos.Any())
+            {
+                return Enumerable.Empty<CourseWithIdDto>();
+            }
             return courseDtos;
         }
 
         public async Task<Course> GetCourseByIdAsync(int id)
         {
-            return await Task.Run(() => _unitOfWork.Course.GetFirstOrDefault(x => x.Id == id, includeword: "Episodes"));
+            var result= await Task.Run(() => _unitOfWork.Course.GetFirstOrDefault(x => x.Id == id, includeword: "Episodes"));
+            if (result == null)
+            {
+                return null;
+            }
+            return result;
         }
         public async Task<Course> CreateCourseAsync(CourseDto courseDto)
         {
+            
             var course = new Course
             {
                 Name = courseDto.Name,
@@ -129,6 +152,10 @@ namespace Educational_Courses_Platform.Services.Implementation
        public async Task<IEnumerable<CourseWithEpisodesDto>> GetAllCoursesWithEpisodesAsync()
         {
             List<Course> courses = _unitOfWork.Course.GetAll(includeword: "Episodes").ToList();
+            if (courses == null || !courses.Any())
+            {
+                return Enumerable.Empty<CourseWithEpisodesDto>();
+            }
             List<CourseWithEpisodesDto> courseDtos = courses.Select(c => new CourseWithEpisodesDto
             {
                 Id = c.Id,
@@ -146,6 +173,10 @@ namespace Educational_Courses_Platform.Services.Implementation
 
                 }).ToList()
             }).ToList();
+            if (courseDtos == null || !courseDtos.Any())
+            {
+                return Enumerable.Empty<CourseWithEpisodesDto>();
+            }
             return courseDtos;
         }
         public Task<IEnumerable<EpisodeDto>> GetAllEpisodeOfCourseAsync(int courseId)
@@ -154,7 +185,7 @@ namespace Educational_Courses_Platform.Services.Implementation
                 .GetAll(c => c.CourseId == courseId)
                 .ToList();
 
-            if (!episodes.Any())
+            if (!episodes.Any()||episodes==null)
                 return Task.FromResult(Enumerable.Empty<EpisodeDto>());
 
             var episodeDtos = episodes.Select(e => new EpisodeDto

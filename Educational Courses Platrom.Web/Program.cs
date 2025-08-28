@@ -123,7 +123,6 @@ namespace Educational_Courses_Platform
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
             builder.Services.AddScoped<ICourseService, CourseService>();
             builder.Services.AddScoped<IEpisodeService, EpisodeService>();
-            builder.Services.AddScoped<IAdminService, AdminService>();
             builder.Services.AddScoped<IRoleService, RoleService>();
             builder.Services.AddScoped<IEnrollmentsRequestsService, EnrollmentsRequestsService>();
             builder.Services.AddTransient<IEmailSender, EmailSender>();
@@ -194,23 +193,23 @@ namespace Educational_Courses_Platform
 
             app.MapControllers();
 
-            // Health check endpoint
-            app.MapGet("/health", () => Results.Ok(new
-            {
-                status = "Healthy",
-                timestamp = DateTime.UtcNow,
-                application = "Educational Courses Platform",
-                version = "1.0.0"
-            }));
+            //// Health check endpoint
+            //app.MapGet("/health", () => Results.Ok(new
+            //{
+            //    status = "Healthy",
+            //    timestamp = DateTime.UtcNow,
+            //    application = "Educational Courses Platform",
+            //    version = "1.0.0"
+            //}));
 
             // Root endpoint
-            app.MapGet("/", () => Results.Ok(new
-            {
-                message = "Welcome to Educational Courses Platform API",
-                documentation = "/swagger",
-                health = "/health",
-                timestamp = DateTime.UtcNow
-            }));
+            //app.MapGet("/", () => Results.Ok(new
+            //{
+            //    message = "Welcome to Educational Courses Platform API",
+            //    documentation = "/swagger",
+            //    health = "/health",
+            //    timestamp = DateTime.UtcNow
+            //}));
 
             var logger = app.Services.GetRequiredService<ILogger<Program>>();
             logger.LogInformation("Educational Courses Platform starting...");

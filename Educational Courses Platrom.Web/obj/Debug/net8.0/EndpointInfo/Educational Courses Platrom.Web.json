@@ -158,56 +158,6 @@
         }
       }
     },
-    "/api/Admin/AddCourseToUser": {
-      "post": {
-        "tags": [
-          "Admin"
-        ],
-        "parameters": [
-          {
-            "name": "UserId",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "courseId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Admin/GetCoursesOfUser": {
-      "get": {
-        "tags": [
-          "Admin"
-        ],
-        "parameters": [
-          {
-            "name": "UserId",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/api/Course/CreateCourse": {
       "post": {
         "tags": [
@@ -215,19 +165,44 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/CourseDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CourseDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/CourseDto"
+                "type": "object",
+                "properties": {
+                  "Name": {
+                    "type": "string"
+                  },
+                  "Description": {
+                    "type": "string"
+                  },
+                  "Price": {
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "ImageUrl": {
+                    "type": "string"
+                  },
+                  "Link": {
+                    "type": "string"
+                  }
+                }
+              },
+              "encoding": {
+                "Name": {
+                  "style": "form"
+                },
+                "Description": {
+                  "style": "form"
+                },
+                "Price": {
+                  "style": "form"
+                },
+                "ImageUrl": {
+                  "style": "form"
+                },
+                "Link": {
+                  "style": "form"
+                }
               }
             }
           }
@@ -275,6 +250,28 @@
         }
       }
     },
+    "/api/Course/GetCourseById": {
+      "get": {
+        "tags": [
+          "Course"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Course/GetAllCoursesWithEpisodes": {
       "get": {
         "tags": [
@@ -287,7 +284,7 @@
         }
       }
     },
-    "/api/Course/RemoveCourseById": {
+    "/api/Course/RemoveCourse": {
       "delete": {
         "tags": [
           "Course"
@@ -375,30 +372,6 @@
               "format": "int32"
             }
           }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/health": {
-      "get": {
-        "tags": [
-          "Educational Courses Platrom.Web"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/": {
-      "get": {
-        "tags": [
-          "Educational Courses Platrom.Web"
         ],
         "responses": {
           "200": {
@@ -684,32 +657,6 @@
   },
   "components": {
     "schemas": {
-      "CourseDto": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "nullable": true
-          },
-          "description": {
-            "type": "string",
-            "nullable": true
-          },
-          "price": {
-            "type": "number",
-            "format": "double"
-          },
-          "imageUrl": {
-            "type": "string",
-            "nullable": true
-          },
-          "link": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "CourseWithIdDto": {
         "type": "object",
         "properties": {

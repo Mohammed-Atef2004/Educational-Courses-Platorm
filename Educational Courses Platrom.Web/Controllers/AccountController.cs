@@ -60,7 +60,7 @@ namespace Educational_Courses_Platform.Web.Controllers
                 UserName = userDto.UserName,
                 Email = userDto.Email,
                 EmailConfirmed = false
-                
+
             };
 
             IdentityResult result = await userManager.CreateAsync(user, userDto.Password);
@@ -78,7 +78,7 @@ namespace Educational_Courses_Platform.Web.Controllers
                     protocol: HttpContext.Request.Scheme
                 );
 
-                
+
                 var templatePath = Path.Combine(Directory.GetCurrentDirectory(), "Templates", "ConfirmEmail.cshtml");
                 var templateContent = await System.IO.File.ReadAllTextAsync(templatePath);
 
@@ -86,7 +86,7 @@ namespace Educational_Courses_Platform.Web.Controllers
                     .Replace("{{UserName}}", user.UserName)
                     .Replace("{{ConfirmUrl}}", confirmationLink);
 
-              
+
                 await emailSender.SendEmailAsync(user.Email, "Confirm your email", emailBody);
 
                 return Ok(new ResponseDto<object>(
@@ -186,7 +186,7 @@ namespace Educational_Courses_Platform.Web.Controllers
             Response.Cookies.Append("accessToken", tokenString, new CookieOptions
             {
                 HttpOnly = true,
-                Secure = false, 
+                Secure = false,
                 SameSite = SameSiteMode.Strict,
                 Expires = tokenExpiry
             });
@@ -197,14 +197,14 @@ namespace Educational_Courses_Platform.Web.Controllers
                   message: "Login successful",
                   data: new
                   {
-                    token = new JwtSecurityTokenHandler().WriteToken(token),
-                    expiration = tokenExpiry,
-                     user = new
-                     {
-                       Id = user.Id,
-                       UserName = user.UserName,
-                       Email = user.Email
-                     }
+                      token = new JwtSecurityTokenHandler().WriteToken(token),
+                      expiration = tokenExpiry,
+                      user = new
+                      {
+                          Id = user.Id,
+                          UserName = user.UserName,
+                          Email = user.Email
+                      }
                   }
             ));
 
@@ -224,13 +224,13 @@ namespace Educational_Courses_Platform.Web.Controllers
 
             var result = await userManager.ConfirmEmailAsync(user, token);
 
-          
+
             string templateFile = result.Succeeded ? "ConfirmEmailSuccess.cshtml" : "ConfirmEmailFailed.cshtml";
             var templatePath = Path.Combine(Directory.GetCurrentDirectory(), "Templates", templateFile);
 
             if (!System.IO.File.Exists(templatePath))
             {
-                
+
                 return result.Succeeded
                     ? Ok("Email confirmed successfully. You can now login.")
                     : BadRequest("Email confirmation failed.");
@@ -238,7 +238,7 @@ namespace Educational_Courses_Platform.Web.Controllers
 
             var templateContent = await System.IO.File.ReadAllTextAsync(templatePath);
 
-            
+
             var htmlContent = templateContent.Replace("{{UserName}}", user.UserName);
 
             return Content(htmlContent, "text/html");
@@ -255,13 +255,13 @@ namespace Educational_Courses_Platform.Web.Controllers
             if (user == null || !(await userManager.IsEmailConfirmedAsync(user)))
                 return Ok(new { message = "If an account with that email exists, a password reset link has been sent." });
 
-          
+
             var token = await userManager.GeneratePasswordResetTokenAsync(user);
 
             // Generate reset URL pointing to HTML page in wwwroot
-             var resetUrl = $"{Request.Scheme}://{Request.Host}/reset-password.html?userId={user.Id}&token={HttpUtility.UrlEncode(token)}";
+            var resetUrl = $"{Request.Scheme}://{Request.Host}/reset-password.html?userId={user.Id}&token={HttpUtility.UrlEncode(token)}";
 
-           
+
             var templatePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "ForgotPasswordEmail.html");
 
             if (!System.IO.File.Exists(templatePath))

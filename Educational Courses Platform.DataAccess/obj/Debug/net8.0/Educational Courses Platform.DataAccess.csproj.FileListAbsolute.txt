@@ -194,3 +194,21 @@ D:\ASU\Real Projects\e4\Educational Courses Platform.DataAccess\obj\Debug\net8.0
 D:\ASU\Real Projects\e4\Educational Courses Platform.DataAccess\obj\Debug\net8.0\Educational Courses Platform.DataAccess.pdb
 D:\ASU\Real Projects\e4\Educational Courses Platform.DataAccess\obj\Debug\net8.0\Educational Courses Platform.DataAccess.genruntimeconfig.cache
 D:\ASU\Real Projects\e4\Educational Courses Platform.DataAccess\obj\Debug\net8.0\ref\Educational Courses Platform.DataAccess.dll
+D:\visual-studio-programs\Educational-Courses-Platorm\Educational Courses Platform.DataAccess\bin\Debug\net8.0\Educational Courses Platform.DataAccess.deps.json
+D:\visual-studio-programs\Educational-Courses-Platorm\Educational Courses Platform.DataAccess\bin\Debug\net8.0\Educational Courses Platform.DataAccess.runtimeconfig.json
+D:\visual-studio-programs\Educational-Courses-Platorm\Educational Courses Platform.DataAccess\bin\Debug\net8.0\Educational Courses Platform.DataAccess.dll
+D:\visual-studio-programs\Educational-Courses-Platorm\Educational Courses Platform.DataAccess\bin\Debug\net8.0\Educational Courses Platform.DataAccess.pdb
+D:\visual-studio-programs\Educational-Courses-Platorm\Educational Courses Platform.DataAccess\bin\Debug\net8.0\Educational Courses Platform.Entities.dll
+D:\visual-studio-programs\Educational-Courses-Platorm\Educational Courses Platform.DataAccess\bin\Debug\net8.0\Educational Courses Platform.Entities.pdb
+D:\visual-studio-programs\Educational-Courses-Platorm\Educational Courses Platform.DataAccess\obj\Debug\net8.0\Educational Courses Platform.DataAccess.csproj.AssemblyReference.cache
+D:\visual-studio-programs\Educational-Courses-Platorm\Educational Courses Platform.DataAccess\obj\Debug\net8.0\Educational Courses Platform.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\visual-studio-programs\Educational-Courses-Platorm\Educational Courses Platform.DataAccess\obj\Debug\net8.0\Educational Courses Platform.DataAccess.AssemblyInfoInputs.cache
+D:\visual-studio-programs\Educational-Courses-Platorm\Educational Courses Platform.DataAccess\obj\Debug\net8.0\Educational Courses Platform.DataAccess.AssemblyInfo.cs
+D:\visual-studio-programs\Educational-Courses-Platorm\Educational Courses Platform.DataAccess\obj\Debug\net8.0\Educational Courses Platform.DataAccess.csproj.CoreCompileInputs.cache
+D:\visual-studio-programs\Educational-Courses-Platorm\Educational Courses Platform.DataAccess\obj\Debug\net8.0\Educational Courses Platform.DataAccess.sourcelink.json
+D:\visual-studio-programs\Educational-Courses-Platorm\Educational Courses Platform.DataAccess\obj\Debug\net8.0\Educatio.A6EE5FCF.Up2Date
+D:\visual-studio-programs\Educational-Courses-Platorm\Educational Courses Platform.DataAccess\obj\Debug\net8.0\Educational Courses Platform.DataAccess.dll
+D:\visual-studio-programs\Educational-Courses-Platorm\Educational Courses Platform.DataAccess\obj\Debug\net8.0\refint\Educational Courses Platform.DataAccess.dll
+D:\visual-studio-programs\Educational-Courses-Platorm\Educational Courses Platform.DataAccess\obj\Debug\net8.0\Educational Courses Platform.DataAccess.pdb
+D:\visual-studio-programs\Educational-Courses-Platorm\Educational Courses Platform.DataAccess\obj\Debug\net8.0\Educational Courses Platform.DataAccess.genruntimeconfig.cache
+D:\visual-studio-programs\Educational-Courses-Platorm\Educational Courses Platform.DataAccess\obj\Debug\net8.0\ref\Educational Courses Platform.DataAccess.dll

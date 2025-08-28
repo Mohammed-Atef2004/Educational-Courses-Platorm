@@ -15,7 +15,7 @@ namespace Educational_Courses_Platrom.Web.Controllers
     public class CourseController : ControllerBase
     {
         private readonly ICourseService _courseService;
-      
+
         public CourseController(IUnitOfWork unitOfWork,ICourseService courseService) { 
            
             _courseService = courseService;
@@ -24,51 +24,68 @@ namespace Educational_Courses_Platrom.Web.Controllers
         [HttpPost]
         [Authorize(Roles = "Admin")]
         [Route("CreateCourse")]
-        public IActionResult CreateCourse(CourseDto dto)
+        [HttpPost]
+        [Consumes("multipart/form-data")]
+        public async Task<IActionResult> CreateCourse([FromForm] CourseDto dto)
         {
-            if (ModelState.IsValid)
-            {
-                
-                _courseService.CreateCourseAsync(dto)
-                    .ContinueWith(task => Ok(task.Result))
-                    .Wait();
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
 
-                return Ok("Course Added Successfully");
-            }
-            return BadRequest();
+
+            await _courseService.CreateCourseAsync(dto);
+            return Created();
+
         }
 
-
-      
         [HttpGet]
         [Authorize(Roles = "Admin,Student")]
         [Route("GetAllCourses")]
         public IActionResult GetAllCourses()
         {
-            
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-               
-                return _courseService.GetAllCoursesAsync()
-                    .ContinueWith(task => Ok(task.Result))
-                    .Result;
+                var errors = ModelState
+                    .SelectMany(x => x.Value.Errors)
+                    .Select(x => x.ErrorMessage);
+    
+                return BadRequest(new { 
+                    message = "Validation failed", 
+                    errors = errors 
+                });
             }
-            return BadRequest();
+
+            var result = _courseService.GetAllCoursesAsync().Result;
+            if (result == null || !result.Any())
+            {
+                return NotFound("No courses found");
+            }
+
+            return Ok(result);
         }
         [HttpGet]
         [Authorize(Roles = "Admin,Student")]
         [Route("GetAllFreeCourses")]
         public IActionResult GetAllFreeCourses()
         {
-
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
+                var errors = ModelState
+                    .SelectMany(x => x.Value.Errors)
+                    .Select(x => x.ErrorMessage);
 
-                return _courseService.GetAllFreeCoursesAsync()
-                    .ContinueWith(task => Ok(task.Result))
-                    .Result;
+                return BadRequest(new
+                {
+                    message = "Validation failed",
+                    errors = errors
+                });
             }
-            return BadRequest();
+            var result = _courseService.GetAllFreeCoursesAsync().Result;
+            if (result == null || !result.Any())
+            { 
+                return NotFound("No free courses found");
+            }
+            return Ok(result);
+
         }
 
         [Authorize]
@@ -77,54 +94,103 @@ namespace Educational_Courses_Platrom.Web.Controllers
         [Route("GetAllPaidCourses")]
         public IActionResult GetAllPaidCourses()
         {
-
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
+                var errors = ModelState
+                    .SelectMany(x => x.Value.Errors)
+                    .Select(x => x.ErrorMessage);
 
-                return _courseService.GetAllPaidCoursesAsync()
-                    .ContinueWith(task => Ok(task.Result))
-                    .Result;
+                return BadRequest(new
+                {
+                    message = "Validation failed",
+                    errors = errors
+                });
             }
-            return BadRequest();
+            var result = _courseService.GetAllPaidCoursesAsync().Result;
+            if (result == null || !result.Any())
+            {
+                return NotFound("No Paid courses found");
+            }
+            return Ok(result);
         }
 
-      
+
+        [HttpGet]
+        [Authorize(Roles = "Admin,Student")]
+        [Route("GetCourseById")]
+        public IActionResult GetCourseById(int id)
+        {
+            if (!ModelState.IsValid)
+            {
+                var errors = ModelState
+                    .SelectMany(x => x.Value.Errors)
+                    .Select(x => x.ErrorMessage);
+
+                return BadRequest(new
+                {
+                    message = "Validation failed",
+                    errors = errors
+                });
+            }
+
+            var course = _courseService.GetCourseByIdAsync(id).Result;
+            if (course == null)
+            {
+                return NotFound("Course not found");
+            }
+            return Ok(course);
+        }
+        
+
         [HttpGet]
         [Authorize(Roles = "Admin,Student")]
         [Route("GetAllCoursesWithEpisodes")]
         public IActionResult GetAllCoursesWithEpisodes()
         {
-
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
+                var errors = ModelState
+                    .SelectMany(x => x.Value.Errors)
+                    .Select(x => x.ErrorMessage);
 
-                return _courseService.GetAllCoursesWithEpisodesAsync()
-                    .ContinueWith(task => Ok(task.Result))
-                    .Result;
+                return BadRequest(new
+                {
+                    message = "Validation failed",
+                    errors = errors
+                });
             }
-            return BadRequest();
+
+            var result = _courseService.GetAllCoursesWithEpisodesAsync().Result;
+            if (result == null || !result.Any())
+            {
+                return NotFound("No courses found");
+            }
+
+            return Ok(result);
         }
         [HttpDelete]
         [Authorize(Roles = "Admin")]
-        [Route("RemoveCourseById")]
+        [Route("RemoveCourse")]
         public IActionResult RemoveCourse(int id)
         {
-            if (ModelState.IsValid)
+            if(!ModelState.IsValid)
             {
-                var course = _courseService.RemoveCourseByIdAsync(id)
-                    .ContinueWith(task => task.Result)
-                    .Result;
+                var errors = ModelState
+                    .SelectMany(x => x.Value.Errors)
+                    .Select(x => x.ErrorMessage);
 
-                if (course == false)
+                return BadRequest(new
                 {
-                    return NotFound("Course not found");
-                }
-
-               
-
-                return Ok("Course deleted successfully");
+                    message = "Validation failed",
+                    errors = errors
+                });
             }
-            return BadRequest();
+            var course = _courseService.RemoveCourseByIdAsync(id).Result;
+            if (course == false)
+            {
+                return NotFound("Course not found");
+            }
+            return Ok(course);
         }
 
         [HttpDelete]
@@ -132,44 +198,55 @@ namespace Educational_Courses_Platrom.Web.Controllers
         [Route("RemoveCourseByName")]
         public IActionResult RemoveCourseByName(string name)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                var course = _courseService.RemoveCourseByNameAsync(name)
-                    .ContinueWith(task => task.Result)
-                    .Result;
+                var errors = ModelState
+                    .SelectMany(x => x.Value.Errors)
+                    .Select(x => x.ErrorMessage);
 
-                if (course == false)
+                return BadRequest(new
                 {
-                    return NotFound("Course not found");
-                }
-
-                return Ok("Course deleted successfully");
-            } 
-            return BadRequest();
+                    message = "Validation failed",
+                    errors = errors
+                });
+            }
+            var course = _courseService.RemoveCourseByNameAsync(name).Result;
+            if (course == false)
+            {
+                return NotFound("Course not found");
+            }
+            return Ok(course);
         }
 
 
-      [HttpPost]
+        [HttpPost]
         [Authorize(Roles = "Admin")]
         [Route("UpdateCourse")]
         public IActionResult UpdateCourse(CourseWithIdDto dto)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                var course = _courseService.GetCourseByIdAsync(dto.Id)
-                    .ContinueWith(task => task.Result)
-                    .Result;
+                var errors = ModelState
+                    .SelectMany(x => x.Value.Errors)
+                    .Select(x => x.ErrorMessage);
 
-                if (course == null)
+                return BadRequest(new
                 {
-                    return NotFound("Course not found");
-                }
-
-
-                return Ok("Course updated successfully");
-
+                    message = "Validation failed",
+                    errors = errors
+                });
             }
-            return BadRequest();
+
+            var course = _courseService.GetCourseByIdAsync(dto.Id)
+                .ContinueWith(task => task.Result)
+                .Result;
+
+            if (course == null)
+            {
+                return NotFound("Course not found");
+            }
+            return Ok("Course updated successfully");
+
         }
         [HttpGet]
         [Authorize(Roles = "Admin,Student")]
@@ -177,11 +254,21 @@ namespace Educational_Courses_Platrom.Web.Controllers
         public async Task<IActionResult> GetEpisodesByCourse(int courseId)
         {
             if (!ModelState.IsValid)
-                return BadRequest(ModelState);
+            {
+                var errors = ModelState
+                    .SelectMany(x => x.Value.Errors)
+                    .Select(x => x.ErrorMessage);
+
+                return BadRequest(new
+                {
+                    message = "Validation failed",
+                    errors = errors
+                });
+            }
 
             var episodes = await _courseService.GetAllEpisodeOfCourseAsync(courseId);
 
-            if (!episodes.Any())
+            if (!episodes.Any()||episodes==null)
                 return NotFound("No episodes found for this course.");
 
             return Ok(episodes);
