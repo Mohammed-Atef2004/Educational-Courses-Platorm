@@ -91,7 +91,10 @@ namespace Educational_Courses_Platform.Services.Implementation
         }
         public async Task<Course> CreateCourseAsync(CourseDto courseDto)
         {
-            
+            if(courseDto==null)
+            {
+                return null;
+            }
             var course = new Course
             {
                 Name = courseDto.Name,

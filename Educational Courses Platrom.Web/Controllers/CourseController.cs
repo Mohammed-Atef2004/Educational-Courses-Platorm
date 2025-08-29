@@ -25,7 +25,6 @@ namespace Educational_Courses_Platrom.Web.Controllers
         [Authorize(Roles = "Admin")]
         [Route("CreateCourse")]
         [HttpPost]
-        [Consumes("multipart/form-data")]
         public async Task<IActionResult> CreateCourse([FromForm] CourseDto dto)
         {
             if (!ModelState.IsValid)
@@ -33,7 +32,7 @@ namespace Educational_Courses_Platrom.Web.Controllers
 
 
             await _courseService.CreateCourseAsync(dto);
-            return Created();
+            return Ok("The course created successfully");
 
         }
 

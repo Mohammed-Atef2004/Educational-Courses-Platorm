@@ -27,8 +27,11 @@ namespace Educational_Courses_Platform.Services.Implementation
 
             var user = _unitOfWork.Admin.GetFirstOrDefault(
                  u => u.Id == userId);
-
+            if(user == null)
+                return false;
             var course =  _courseService.GetCourseByIdAsync(courseId);
+            if (course == null)
+                return false;
             EnrollmentsRequest enrollmentsRequest = new EnrollmentsRequest() {
                 CourseId = courseId ,
                  UserId = userId ,
@@ -53,9 +56,6 @@ namespace Educational_Courses_Platform.Services.Implementation
             var course = await _courseService.GetCourseByIdAsync(courseId);
             if (course == null)
                 return false;
-
-
-
 
             if (user.EnrolledCourses == null)
                 user.EnrolledCourses = new List<Course>();
@@ -85,8 +85,11 @@ namespace Educational_Courses_Platform.Services.Implementation
         {
             var user = _unitOfWork.Admin.GetFirstOrDefault(
                  u => u.Id == userId);
-
+            if (user == null)
+                return false;
             var course = _courseService.GetCourseByIdAsync(courseId);
+            if (course == null)
+                return false;
             EnrollmentsRequest enrollmentsRequest = new EnrollmentsRequest()
             {
                 CourseId = courseId,
@@ -111,7 +114,10 @@ namespace Educational_Courses_Platform.Services.Implementation
         }
         public IEnumerable<EnrollmentsRequest> ViewAllEnrollmentRequests()
         {
-            return _unitOfWork.EnrollmnentsRequests.GetAll().ToList();
+            var result= _unitOfWork.EnrollmnentsRequests.GetAll().ToList();
+            if(result == null||!result.Any())
+                return null;
+            return result;
         }
 
 

@@ -20,12 +20,26 @@ namespace Educational_Courses_Platrom.Web.Controllers
         [Route("EnrollCourse")]
         public IActionResult EnrollCourse(string userId,int  courseId)
         {
-           bool check= _enrollmentsRequestsService.EnrollCourse(userId, courseId);
-            if(check==true)
+            if (!ModelState.IsValid)
             {
-                return Ok("Enrollment Done Successfully");
+                var errors = ModelState
+                    .SelectMany(x => x.Value.Errors)
+                    .Select(x => x.ErrorMessage);
+
+                return BadRequest(new
+                {
+                    message = "Validation failed",
+                    errors = errors
+                });
             }
-            return BadRequest();
+            bool check= _enrollmentsRequestsService.EnrollCourse(userId, courseId);
+            if(check==false)
+            {
+                return BadRequest("Enrollment Failed");
+            }
+            
+               return CreatedAtAction("Enrollment Done Successfully",check);
+         
             
         }
         [HttpPost]
@@ -33,24 +47,48 @@ namespace Educational_Courses_Platrom.Web.Controllers
         [Route("ApproveEnrollment")]
         public async Task<IActionResult> ApproveEnrollment(string userId, int courseId)
         {
+            if (!ModelState.IsValid)
+            {
+                var errors = ModelState
+                    .SelectMany(x => x.Value.Errors)
+                    .Select(x => x.ErrorMessage);
+
+                return BadRequest(new
+                {
+                    message = "Validation failed",
+                    errors = errors
+                });
+            } 
             bool check = await _enrollmentsRequestsService.ApproveEnrollment(userId, courseId);
 
             if (check)
                 return Ok("Enrollment Approved Successfully");
 
-            return BadRequest("Failed to approve enrollment");
+            return NotFound("Failed to approve enrollment,Enrollment not found");
         }
         [HttpPost]
         [Authorize(Roles = "Admin")]
         [Route("RejectEnrollment")]
         public IActionResult RejectEnrollment(string userId, int courseId)
         {
+            if (!ModelState.IsValid)
+            {
+                var errors = ModelState
+                    .SelectMany(x => x.Value.Errors)
+                    .Select(x => x.ErrorMessage);
+
+                return BadRequest(new
+                {
+                    message = "Validation failed",
+                    errors = errors
+                });
+            }
             bool check = _enrollmentsRequestsService.RejectEnrollment(userId, courseId);
             if (check == true)
             {
                 return Ok("Enrollment Rejected Successfully");
             }
-            return BadRequest();
+            return NotFound("Can't Found this enrollment ");
 
         }
         [HttpPost]
@@ -58,12 +96,24 @@ namespace Educational_Courses_Platrom.Web.Controllers
         [Route("UpdateEnrollment")]
         public IActionResult UpdateEnrollment(string userId, int courseId,int newCourseId)
         {
+            if (!ModelState.IsValid)
+            {
+                var errors = ModelState
+                    .SelectMany(x => x.Value.Errors)
+                    .Select(x => x.ErrorMessage);
+
+                return BadRequest(new
+                {
+                    message = "Validation failed",
+                    errors = errors
+                });
+            }
             bool check = _enrollmentsRequestsService.UpdateEnrollment(userId, courseId,newCourseId);
             if (check == true)
             {
                 return Ok("Enrollment Updated Successfully");
             }
-            return BadRequest();
+            return BadRequest("Can't Update The Enrollment");
 
         }
         [HttpGet]
@@ -71,10 +121,25 @@ namespace Educational_Courses_Platrom.Web.Controllers
         [Route("ViewAllEnrollments")]
         public IActionResult ViewAllEnrollments()
         {
+            if (!ModelState.IsValid)
+            {
+                var errors = ModelState
+                    .SelectMany(x => x.Value.Errors)
+                    .Select(x => x.ErrorMessage);
+
+                return BadRequest(new
+                {
+                    message = "Validation failed",
+                    errors = errors
+                });
+            }
             var result=_enrollmentsRequestsService.ViewAllEnrollmentRequests();
-            if (result!=null)
+            if (result==null)
+            {
+                return NotFound("No Enrollment Requests Found");
+            }
             return Ok(result);
-            return BadRequest();
+            
         }
     }
 }
