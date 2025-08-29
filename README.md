@@ -66,7 +66,28 @@ The project follows a clean architecture pattern with clear separation of concer
 - **Input Validation**: Comprehensive input validation and sanitization
 - **CORS Configuration**: Cross-origin resource sharing configuration
 
-## 📸 Screenshots & Code Snapshots
+## 📸 Screenshots
+### Account 
+<img width="1342" height="294" alt="image" src="https://github.com/user-attachments/assets/efd09617-ec48-40d6-bed6-3a86876c899c" />
+### Course 
+<img width="1324" height="549" alt="image" src="https://github.com/user-attachments/assets/e75838fc-c81b-45ca-afb3-3c2b44c5b699" />
+### Enrollment
+<img width="1338" height="281" alt="image" src="https://github.com/user-attachments/assets/491883aa-ce16-46ef-a6d9-1093f8542280" />
+### Episode
+<img width="1332" height="230" alt="image" src="https://github.com/user-attachments/assets/0d2ea215-5a5c-4b03-9aa7-bb4aa34587a9" />
+### RolesTest
+<img width="1326" height="63" alt="image" src="https://github.com/user-attachments/assets/ccfcbc03-7f3e-4427-acf8-dadb2ff3767e" />
+
+## Code Snapshots
+### Requesting Services
+ 
+            builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+            builder.Services.AddScoped<ICourseService, CourseService>();
+            builder.Services.AddScoped<IEpisodeService, EpisodeService>();
+            builder.Services.AddScoped<IRoleService, RoleService>();
+            builder.Services.AddScoped<IEnrollmentsRequestsService, EnrollmentsRequestsService>();
+            builder.Services.AddTransient<IEmailSender, EmailSender>();
+
 
 ## 🛠️ Technology Stack
 
