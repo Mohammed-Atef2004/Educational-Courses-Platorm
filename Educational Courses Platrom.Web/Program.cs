@@ -32,14 +32,14 @@ namespace Educational_Courses_Platform
             // CORS
             builder.Services.AddCors(options =>
             {
-                options.AddPolicy("AllowLocalhost", policy =>
+                options.AddPolicy("AllowAll", policy =>
                 {
-                    policy.WithOrigins("http://localhost:5000", "https://localhost:5001", "http://localhost:4200", "https://localhost:5160")
+                    policy.AllowAnyOrigin()
                           .AllowAnyHeader()
-                          .AllowAnyMethod()
-                          .AllowCredentials();
+                          .AllowAnyMethod();
                 });
             });
+
 
             // JWT settings
             var issuerSigningKey = builder.Configuration["JWT:IssuerSigningKey"];
