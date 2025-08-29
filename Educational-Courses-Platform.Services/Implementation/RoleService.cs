@@ -15,26 +15,46 @@ namespace Educational_Courses_Platform.Services.Implementation
             _userManager = userManager;
         }
 
-      
+
         public async Task EnsureRolesSeededAsync()
         {
-            if (!await _roleManager.RoleExistsAsync("Admin"))
-                await _roleManager.CreateAsync(new IdentityRole("Admin"));
+            try
+            {
+                if (!await _roleManager.RoleExistsAsync("Admin"))
+                {
+                    var result = await _roleManager.CreateAsync(new IdentityRole("Admin"));
+                    if (!result.Succeeded)
+                        throw new InvalidOperationException(string.Join(", ", result.Errors.Select(e => e.Description)));
+                }
 
-            if (!await _roleManager.RoleExistsAsync("Student"))
-                await _roleManager.CreateAsync(new IdentityRole("Student"));
+                if (!await _roleManager.RoleExistsAsync("Student"))
+                {
+                    var result = await _roleManager.CreateAsync(new IdentityRole("Student"));
+                    if (!result.Succeeded)
+                        throw new InvalidOperationException(string.Join(", ", result.Errors.Select(e => e.Description)));
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error while seeding roles", ex);
+            }
         }
 
-       
-        public async Task<bool> AssignRoleToUserAsync(string userId, string roleName)
+
+
+        public async Task AssignRoleToUserAsync(string userId, string roleName)
         {
             var user = await _userManager.FindByIdAsync(userId);
-            if (user == null) return false;
+            if (user == null)
+                throw new KeyNotFoundException("User not found");
 
-            if (!await _roleManager.RoleExistsAsync(roleName)) return false;
+            if (!await _roleManager.RoleExistsAsync(roleName))
+                throw new ArgumentException("Role does not exist");
 
             var result = await _userManager.AddToRoleAsync(user, roleName);
-            return result.Succeeded;
+            if (!result.Succeeded)
+                throw new InvalidOperationException(string.Join(", ", result.Errors.Select(e => e.Description)));
         }
+
     }
 }

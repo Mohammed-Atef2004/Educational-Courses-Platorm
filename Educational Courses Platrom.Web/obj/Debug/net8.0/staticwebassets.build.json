@@ -1,1 +1,228 @@
-{"Version":1,"Hash":"kTrOYXT5OVI9QGtQ9XAxeEbR3j8lZJr6Aw1OnORlPjk=","Source":"Educational Courses Platrom.Web","BasePath":"_content/Educational Courses Platrom.Web","Mode":"Default","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[{"Name":"Educational Courses Platrom.Web\\wwwroot","Source":"Educational Courses Platrom.Web","ContentRoot":"D:\\visual-studio-programs\\Educational-Courses-Platorm\\Educational Courses Platrom.Web\\wwwroot\\","BasePath":"_content/Educational Courses Platrom.Web","Pattern":"**"}],"Assets":[{"Identity":"D:\\visual-studio-programs\\Educational-Courses-Platorm\\Educational Courses Platrom.Web\\wwwroot\\ForgotPasswordEmail.html","SourceId":"Educational Courses Platrom.Web","SourceType":"Discovered","ContentRoot":"D:\\visual-studio-programs\\Educational-Courses-Platorm\\Educational Courses Platrom.Web\\wwwroot\\","BasePath":"_content/Educational Courses Platrom.Web","RelativePath":"ForgotPasswordEmail#[.{fingerprint}]?.html","AssetKind":"All","AssetMode":"All","AssetRole":"Primary","AssetMergeBehavior":"","AssetMergeSource":"","RelatedAsset":"","AssetTraitName":"","AssetTraitValue":"","Fingerprint":"fbhisbtje1","Integrity":"K2A1ztAJFDlDo5CnWV7beREgwrigmI5D38xuJ/V/HH4=","CopyToOutputDirectory":"Never","CopyToPublishDirectory":"PreserveNewest","OriginalItemSpec":"wwwroot\\ForgotPasswordEmail.html","FileLength":1791,"LastWriteTime":"2025-08-28T15:05:43+00:00"},{"Identity":"D:\\visual-studio-programs\\Educational-Courses-Platorm\\Educational Courses Platrom.Web\\wwwroot\\reset-password.html","SourceId":"Educational Courses Platrom.Web","SourceType":"Discovered","ContentRoot":"D:\\visual-studio-programs\\Educational-Courses-Platorm\\Educational Courses Platrom.Web\\wwwroot\\","BasePath":"_content/Educational Courses Platrom.Web","RelativePath":"reset-password#[.{fingerprint}]?.html","AssetKind":"All","AssetMode":"All","AssetRole":"Primary","AssetMergeBehavior":"","AssetMergeSource":"","RelatedAsset":"","AssetTraitName":"","AssetTraitValue":"","Fingerprint":"whgoequf7x","Integrity":"hH8R7xPZ46Ugd5ujUsj1wv9aPGXULrtWXspxYO3Qyg0=","CopyToOutputDirectory":"Never","CopyToPublishDirectory":"PreserveNewest","OriginalItemSpec":"wwwroot\\reset-password.html","FileLength":4889,"LastWriteTime":"2025-08-28T15:05:43+00:00"}],"Endpoints":[{"Route":"ForgotPasswordEmail.fbhisbtje1.html","AssetFile":"D:\\visual-studio-programs\\Educational-Courses-Platorm\\Educational Courses Platrom.Web\\wwwroot\\ForgotPasswordEmail.html","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"1791"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\"K2A1ztAJFDlDo5CnWV7beREgwrigmI5D38xuJ/V/HH4=\""},{"Name":"Last-Modified","Value":"Thu, 28 Aug 2025 15:05:43 GMT"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"}],"EndpointProperties":[{"Name":"fingerprint","Value":"fbhisbtje1"},{"Name":"label","Value":"ForgotPasswordEmail.html"},{"Name":"integrity","Value":"sha256-K2A1ztAJFDlDo5CnWV7beREgwrigmI5D38xuJ/V/HH4="}]},{"Route":"ForgotPasswordEmail.html","AssetFile":"D:\\visual-studio-programs\\Educational-Courses-Platorm\\Educational Courses Platrom.Web\\wwwroot\\ForgotPasswordEmail.html","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"1791"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\"K2A1ztAJFDlDo5CnWV7beREgwrigmI5D38xuJ/V/HH4=\""},{"Name":"Last-Modified","Value":"Thu, 28 Aug 2025 15:05:43 GMT"},{"Name":"Cache-Control","Value":"no-cache"}],"EndpointProperties":[{"Name":"integrity","Value":"sha256-K2A1ztAJFDlDo5CnWV7beREgwrigmI5D38xuJ/V/HH4="}]},{"Route":"reset-password.html","AssetFile":"D:\\visual-studio-programs\\Educational-Courses-Platorm\\Educational Courses Platrom.Web\\wwwroot\\reset-password.html","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"4889"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\"hH8R7xPZ46Ugd5ujUsj1wv9aPGXULrtWXspxYO3Qyg0=\""},{"Name":"Last-Modified","Value":"Thu, 28 Aug 2025 15:05:43 GMT"},{"Name":"Cache-Control","Value":"no-cache"}],"EndpointProperties":[{"Name":"integrity","Value":"sha256-hH8R7xPZ46Ugd5ujUsj1wv9aPGXULrtWXspxYO3Qyg0="}]},{"Route":"reset-password.whgoequf7x.html","AssetFile":"D:\\visual-studio-programs\\Educational-Courses-Platorm\\Educational Courses Platrom.Web\\wwwroot\\reset-password.html","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"4889"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\"hH8R7xPZ46Ugd5ujUsj1wv9aPGXULrtWXspxYO3Qyg0=\""},{"Name":"Last-Modified","Value":"Thu, 28 Aug 2025 15:05:43 GMT"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"}],"EndpointProperties":[{"Name":"fingerprint","Value":"whgoequf7x"},{"Name":"label","Value":"reset-password.html"},{"Name":"integrity","Value":"sha256-hH8R7xPZ46Ugd5ujUsj1wv9aPGXULrtWXspxYO3Qyg0="}]}]}
+{
+  "Version": 1,
+  "Hash": "pEn66hThfsfbOCmV0Z6zXaShsmCDPTIsvaoFyly9YhE=",
+  "Source": "Educational Courses Platrom.Web",
+  "BasePath": "_content/Educational Courses Platrom.Web",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Educational Courses Platrom.Web\\wwwroot",
+      "Source": "Educational Courses Platrom.Web",
+      "ContentRoot": "D:\\ASU\\Real Projects\\e2\\Educational Courses Platrom.Web\\wwwroot\\",
+      "BasePath": "_content/Educational Courses Platrom.Web",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\ASU\\Real Projects\\e2\\Educational Courses Platrom.Web\\wwwroot\\ForgotPasswordEmail.html",
+      "SourceId": "Educational Courses Platrom.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ASU\\Real Projects\\e2\\Educational Courses Platrom.Web\\wwwroot\\",
+      "BasePath": "_content/Educational Courses Platrom.Web",
+      "RelativePath": "ForgotPasswordEmail#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "fbhisbtje1",
+      "Integrity": "K2A1ztAJFDlDo5CnWV7beREgwrigmI5D38xuJ/V/HH4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\ForgotPasswordEmail.html"
+    },
+    {
+      "Identity": "D:\\ASU\\Real Projects\\e2\\Educational Courses Platrom.Web\\wwwroot\\reset-password.html",
+      "SourceId": "Educational Courses Platrom.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ASU\\Real Projects\\e2\\Educational Courses Platrom.Web\\wwwroot\\",
+      "BasePath": "_content/Educational Courses Platrom.Web",
+      "RelativePath": "reset-password#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "whgoequf7x",
+      "Integrity": "hH8R7xPZ46Ugd5ujUsj1wv9aPGXULrtWXspxYO3Qyg0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\reset-password.html"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "ForgotPasswordEmail.fbhisbtje1.html",
+      "AssetFile": "D:\\ASU\\Real Projects\\e2\\Educational Courses Platrom.Web\\wwwroot\\ForgotPasswordEmail.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1791"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"K2A1ztAJFDlDo5CnWV7beREgwrigmI5D38xuJ/V/HH4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 29 Aug 2025 00:57:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fbhisbtje1"
+        },
+        {
+          "Name": "label",
+          "Value": "ForgotPasswordEmail.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-K2A1ztAJFDlDo5CnWV7beREgwrigmI5D38xuJ/V/HH4="
+        }
+      ]
+    },
+    {
+      "Route": "ForgotPasswordEmail.html",
+      "AssetFile": "D:\\ASU\\Real Projects\\e2\\Educational Courses Platrom.Web\\wwwroot\\ForgotPasswordEmail.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1791"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"K2A1ztAJFDlDo5CnWV7beREgwrigmI5D38xuJ/V/HH4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 29 Aug 2025 00:57:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-K2A1ztAJFDlDo5CnWV7beREgwrigmI5D38xuJ/V/HH4="
+        }
+      ]
+    },
+    {
+      "Route": "reset-password.html",
+      "AssetFile": "D:\\ASU\\Real Projects\\e2\\Educational Courses Platrom.Web\\wwwroot\\reset-password.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4889"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hH8R7xPZ46Ugd5ujUsj1wv9aPGXULrtWXspxYO3Qyg0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 29 Aug 2025 00:57:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-hH8R7xPZ46Ugd5ujUsj1wv9aPGXULrtWXspxYO3Qyg0="
+        }
+      ]
+    },
+    {
+      "Route": "reset-password.whgoequf7x.html",
+      "AssetFile": "D:\\ASU\\Real Projects\\e2\\Educational Courses Platrom.Web\\wwwroot\\reset-password.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4889"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hH8R7xPZ46Ugd5ujUsj1wv9aPGXULrtWXspxYO3Qyg0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 29 Aug 2025 00:57:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "whgoequf7x"
+        },
+        {
+          "Name": "label",
+          "Value": "reset-password.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-hH8R7xPZ46Ugd5ujUsj1wv9aPGXULrtWXspxYO3Qyg0="
+        }
+      ]
+    }
+  ]
+}

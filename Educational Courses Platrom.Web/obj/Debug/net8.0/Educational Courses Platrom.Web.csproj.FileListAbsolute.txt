@@ -1936,3 +1936,4 @@ D:\visual-studio-programs\Educational-Courses-Platorm\Educational Courses Platro
 D:\visual-studio-programs\Educational-Courses-Platorm\Educational Courses Platrom.Web\obj\Debug\net8.0\Educational Courses Platrom.Web.pdb
 D:\visual-studio-programs\Educational-Courses-Platorm\Educational Courses Platrom.Web\obj\Debug\net8.0\Educational Courses Platrom.Web.genruntimeconfig.cache
 D:\visual-studio-programs\Educational-Courses-Platorm\Educational Courses Platrom.Web\obj\Debug\net8.0\ref\Educational Courses Platrom.Web.dll
+D:\ASU\Real Projects\e2\Educational Courses Platrom.Web\bin\Debug\net8.0\Educational Courses Platrom.Web.staticwebassets.runtime.json

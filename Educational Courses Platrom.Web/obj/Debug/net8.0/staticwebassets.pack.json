@@ -1,11 +1,11 @@
 {
   "Files": [
     {
-      "Id": "D:\\ASU\\Real Projects\\e4\\Educational Courses Platrom.Web\\wwwroot\\ForgotPasswordEmail.html",
+      "Id": "D:\\ASU\\Real Projects\\e2\\Educational Courses Platrom.Web\\wwwroot\\ForgotPasswordEmail.html",
       "PackagePath": "staticwebassets\\ForgotPasswordEmail.html"
     },
     {
-      "Id": "D:\\ASU\\Real Projects\\e4\\Educational Courses Platrom.Web\\wwwroot\\reset-password.html",
+      "Id": "D:\\ASU\\Real Projects\\e2\\Educational Courses Platrom.Web\\wwwroot\\reset-password.html",
       "PackagePath": "staticwebassets\\reset-password.html"
     },
     {

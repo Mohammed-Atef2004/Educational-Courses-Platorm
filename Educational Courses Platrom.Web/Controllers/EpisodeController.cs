@@ -15,120 +15,156 @@ namespace Educational_Courses_Platrom.Web.Controllers
     public class EpisodeController : ControllerBase
     {
         private readonly IEpisodeService _episodeService;
-    
+        private readonly ILogger<EpisodeController> _logger;
 
-       
-        public EpisodeController(IUnitOfWork unitOfWork, IEpisodeService episodeService)
+        public EpisodeController(IUnitOfWork unitOfWork, IEpisodeService episodeService, ILogger<EpisodeController> logger)
         {
             _episodeService = episodeService;
+            _logger = logger;
         }
+
+
+
 
         [HttpGet("GetEpisodesById")]
         [Authorize(Roles = "Admin,Student")]
         public async Task<IActionResult> GetEpisodes(int id)
         {
             if (!ModelState.IsValid)
-                return BadRequest(ModelState);
+            {
+                var errors = ModelState
+                    .SelectMany(x => x.Value.Errors)
+                    .Select(x => x.ErrorMessage);
+
+                return BadRequest(new
+                {
+                    message = "Validation failed",
+                    errors = errors
+                });
+            }
 
             var episode = await _episodeService.GetEpisodeByIdAsync(id);
 
             if (episode == null)
-                return NotFound("Not found");
+            {
+                _logger.LogWarning("Episode not found with id {EpisodeId}", id);
+                return NotFound($"Episode with ID {id} not found.");
+            }
 
             return Ok(episode);
         }
 
+
+
         [Authorize(Roles = "Admin")]
         [HttpPost("AddEpisode")]
-
         public async Task<IActionResult> AddEpisode(int courseId, [FromBody] EpisodeDto dto)
         {
             if (!ModelState.IsValid)
-                return BadRequest(ModelState);
+            {
+                var errors = ModelState
+                    .SelectMany(x => x.Value.Errors)
+                    .Select(x => x.ErrorMessage);
+
+                return BadRequest(new
+                {
+                    message = "Validation failed",
+                    errors = errors
+                });
+            }
 
             var episode = await _episodeService.CreateEpisodeAsync(courseId, dto);
 
             if (episode == null)
-                return BadRequest("Failed to add episode.");
-
-            return Ok(new
             {
-                Message = "Episode Added Successfully",
-                Episode = new
+                _logger.LogWarning("Failed to add episode for courseId {CourseId}", courseId);
+                return BadRequest("Failed to add episode.");
+            }
+
+            return CreatedAtAction(
+                nameof(GetEpisodes),
+                new { id = episode.Id },
+                new
                 {
-                    episode.Name,
-                    episode.Description,
-                    episode.CourseId
-                }
-            });
+                    Message = "Episode Added Successfully",
+                    Episode = new
+                    {
+                        episode.Name,
+                        episode.Description,
+                        episode.CourseId
+                    }
+                });
         }
+
+
+
+
         [Authorize(Roles = "Admin")]
         [HttpPost("UpdateEpisode")]
         public async Task<IActionResult> UpdateEpisode(int id, [FromBody] EpisodeDto dto)
         {
             if (!ModelState.IsValid)
-                return BadRequest(ModelState);
+            {
+                var errors = ModelState
+                    .SelectMany(x => x.Value.Errors)
+                    .Select(x => x.ErrorMessage);
+
+                return BadRequest(new
+                {
+                    message = "Validation failed",
+                    errors = errors
+                });
+            }
 
             var updated = await _episodeService.UpdateEpisodeAsync(id, dto);
 
             if (!updated)
-                return NotFound("Episode not found");
+            {
+                _logger.LogWarning("Episode not found for update with id {EpisodeId}", id);
+                return NotFound($"Episode with ID {id} not found.");
+            }
 
-            return Ok("Episode Updated Successfully");
+            return Ok(new
+            {
+                Message = "Episode Updated Successfully",
+                EpisodeId = id
+            });
         }
+
+
+
 
         [Authorize(Roles = "Admin")]
         [HttpDelete("DeleteEpisode")]
         public async Task<IActionResult> DeleteEpisode(int id)
         {
             if (!ModelState.IsValid)
-                return BadRequest(ModelState);
+            {
+                var errors = ModelState
+                    .SelectMany(x => x.Value.Errors)
+                    .Select(x => x.ErrorMessage);
+
+                return BadRequest(new
+                {
+                    message = "Validation failed",
+                    errors = errors
+                });
+            }
 
             var deleted = await _episodeService.RemoveEpisodeByIdAsync(id);
 
             if (!deleted)
-                return NotFound("Episode not found");
-
-            return Ok("Episode Deleted Successfully");
-        }
-
-
-       /* [HttpPost("AddEpisodeToPaidCourse")]
-        public async Task<IActionResult> AddEpisodeToPaidCourse(int courseId, EpisodeDto dto)
-        {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
-            var episode = await _episodeService.CreateEpisodePaidCourseAsync(courseId, dto);
-
-            if (episode == null)
-                return BadRequest("Failed to add episode.");
+            {
+                _logger.LogWarning("Episode not found for deletion with id {EpisodeId}", id);
+                return NotFound($"Episode with ID {id} not found.");
+            }
 
             return Ok(new
             {
-                Message = "Episode Added Successfully",
-                Episode = new
-                {
-                    episode.Name,
-                    episode.Description,
-                    episode.PaidCourseId
-                }
+                Message = "Episode Deleted Successfully",
+                EpisodeId = id
             });
-        }*/
+        }
 
-
-       /* [HttpGet("GetByPaidCourse")]
-        public async Task<IActionResult> GetEpisodesByPaidCourse(int _PaidCourseId)
-        {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
-            var episodes = await _episodeService.GetAllEpisodeOfPaidCourseAsync(_PaidCourseId);
-
-            if (!episodes.Any())
-                return NotFound("No episodes found for this course.");
-
-            return Ok(episodes);
-        }*/
     }
 }
