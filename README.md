@@ -14,6 +14,9 @@ The project follows a clean architecture pattern with clear separation of concer
 - **Entities Layer**: Domain models and DTOs
 - **Database**: SQL Server with Entity Framework migrations
 
+##  Database Schema
+<img width="642" height="284" alt="image" src="https://github.com/user-attachments/assets/9d01e11d-19ca-4c0d-9057-07a94fd1a8b0" />
+
 ## 🚀 Features
 
 ### 👨‍🎓 User Management
