@@ -109,9 +109,7 @@ The project follows a clean architecture pattern with clear separation of concer
 ### Development Tools
 - **Visual Studio 2022**: Primary IDE
 - **Swagger/OpenAPI**: API documentation
-- **AutoMapper**: Object-object mapping
-- **FluentValidation**: Input validation library
-
+- 
 ## 📁 Project Structure
 
 ```
