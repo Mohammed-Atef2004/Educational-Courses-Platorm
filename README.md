@@ -346,18 +346,6 @@ dotnet test
 - [ ] Configure backup strategies
 
 
-### Application Screenshots
-*Add your application screenshots here to showcase the user interface and functionality*
-
-### Code Examples
-*Add code snippets and implementation examples here to demonstrate key features*
-
-### Database Schema Visuals
-*Include database diagrams and schema screenshots here*
-
-### API Testing Screenshots
-*Add Swagger/Postman screenshots showing API endpoints in action*
-
 ## 🤝 Contributing
 
 1. Fork the repository
