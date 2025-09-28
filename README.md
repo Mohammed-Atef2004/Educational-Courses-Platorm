@@ -15,7 +15,7 @@ The project follows a clean architecture pattern with clear separation of concer
 - **Database**: SQL Server with Entity Framework migrations
 
 ##  Database Schema
-<img width="642" height="284" alt="image" src="https://github.com/user-attachments/assets/9d01e11d-19ca-4c0d-9057-07a94fd1a8b0" />
+<img width="1347" height="579" alt="image" src="https://github.com/user-attachments/assets/b1a8b141-62ef-4d4d-9db0-b872e6060012" />
 
 ## 🚀 Features
 
